@@ -1,4 +1,4 @@
-import { AriaRadioButtonElement, AriaRadioGroupElement } from '@queelag/web'
+import type { AriaRadioButtonElement, AriaRadioGroupElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaRadioButtonProps, AriaRadioGroupProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

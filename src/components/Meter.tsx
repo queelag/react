@@ -1,4 +1,4 @@
-import { MeterElement } from '@queelag/web'
+import type { MeterElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { MeterProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

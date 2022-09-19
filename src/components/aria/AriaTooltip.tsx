@@ -1,4 +1,4 @@
-import { AriaTooltipArrowElement, AriaTooltipContentElement, AriaTooltipElement, AriaTooltipTriggerElement } from '@queelag/web'
+import type { AriaTooltipArrowElement, AriaTooltipContentElement, AriaTooltipElement, AriaTooltipTriggerElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaTooltipArrowProps, AriaTooltipContentProps, AriaTooltipProps, AriaTooltipTriggerProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

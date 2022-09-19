@@ -1,4 +1,4 @@
-import { AriaDialogDescriptionElement, AriaDialogElement, AriaDialogLabelElement } from '@queelag/web'
+import type { AriaDialogDescriptionElement, AriaDialogElement, AriaDialogLabelElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaDialogDescriptionProps, AriaDialogLabelProps, AriaDialogProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

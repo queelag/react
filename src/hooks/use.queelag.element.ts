@@ -1,5 +1,5 @@
 import type { AttributeChangedEvent, StateChangedEvent } from '@queelag/web'
-import { RefObject } from 'preact'
+import type { RefObject } from 'preact'
 import { useEffect, useReducer, useRef } from 'preact/hooks'
 import { useEventListener } from './use.event.listener'
 

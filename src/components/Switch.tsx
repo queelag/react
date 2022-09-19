@@ -1,4 +1,4 @@
-import { SwitchElement } from '@queelag/web'
+import type { SwitchElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { SwitchProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

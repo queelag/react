@@ -1,4 +1,4 @@
-import { ListElement, ListItemElement } from '@queelag/web'
+import type { ListElement, ListItemElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { ListItemProps, ListProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

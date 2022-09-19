@@ -1,4 +1,4 @@
-import { AriaTabsElement, AriaTabsPanelElement, AriaTabsTabElement } from '@queelag/web'
+import type { AriaTabsElement, AriaTabsPanelElement, AriaTabsTabElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaTabsPanelProps, AriaTabsProps, AriaTabsTabProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

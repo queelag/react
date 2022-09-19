@@ -1,4 +1,4 @@
-import { ButtonElement } from '@queelag/web'
+import type { ButtonElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { ButtonProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

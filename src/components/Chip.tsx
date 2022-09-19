@@ -1,4 +1,4 @@
-import { ChipElement } from '@queelag/web'
+import type { ChipElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { ChipProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

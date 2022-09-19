@@ -1,4 +1,4 @@
-import { AriaDisclosureButtonElement, AriaDisclosureElement, AriaDisclosurePanelElement, AriaDisclosureSectionElement } from '@queelag/web'
+import type { AriaDisclosureButtonElement, AriaDisclosureElement, AriaDisclosurePanelElement, AriaDisclosureSectionElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaDisclosureButtonProps, AriaDisclosurePanelProps, AriaDisclosureProps, AriaDisclosureSectionProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

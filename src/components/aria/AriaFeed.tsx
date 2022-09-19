@@ -1,4 +1,4 @@
-import { AriaFeedArticleDescriptionElement, AriaFeedArticleElement, AriaFeedArticleLabelElement, AriaFeedElement } from '@queelag/web'
+import type { AriaFeedArticleDescriptionElement, AriaFeedArticleElement, AriaFeedArticleLabelElement, AriaFeedElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaFeedArticleDescriptionProps, AriaFeedArticleLabelProps, AriaFeedArticleProps, AriaFeedProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

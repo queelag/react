@@ -1,4 +1,4 @@
-import { RefObject } from 'preact'
+import type { RefObject } from 'preact'
 import { Inputs, useEffect } from 'preact/hooks'
 
 export function useEventListener<T extends Element, E extends Event, K extends keyof HTMLElementEventMap>(

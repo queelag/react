@@ -1,4 +1,4 @@
-import { AvatarElement } from '@queelag/web'
+import type { AvatarElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AvatarProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

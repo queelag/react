@@ -1,4 +1,4 @@
-import { AriaSliderElement, AriaSliderThumbElement } from '@queelag/web'
+import type { AriaSliderElement, AriaSliderThumbElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaSliderProps, AriaSliderThumbProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

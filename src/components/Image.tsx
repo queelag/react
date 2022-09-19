@@ -1,4 +1,4 @@
-import { ImageElement } from '@queelag/web'
+import type { ImageElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { ImageProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

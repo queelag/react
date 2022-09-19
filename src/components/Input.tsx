@@ -1,4 +1,4 @@
-import { InputElement } from '@queelag/web'
+import type { InputElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { InputProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

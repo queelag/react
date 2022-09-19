@@ -1,4 +1,4 @@
-import { TextAreaElement } from '@queelag/web'
+import type { TextAreaElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { TextAreaProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

@@ -1,4 +1,4 @@
-import { BadgeElement } from '@queelag/web'
+import type { BadgeElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { BadgeProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

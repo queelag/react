@@ -1,5 +1,5 @@
 import { Environment } from '@queelag/core'
-import { RefObject } from 'preact'
+import type { RefObject } from 'preact'
 import { useRef } from 'preact/hooks'
 
 export function useSafeRef<K extends keyof HTMLElementTagNameMap>(tagName: K, options?: ElementCreationOptions): RefObject<HTMLElementTagNameMap[K]>

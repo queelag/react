@@ -1,4 +1,4 @@
-import {
+import type {
   AriaCarouselElement,
   AriaCarouselNextSlideControlElement,
   AriaCarouselPreviousSlideControlElement,
@@ -7,7 +7,7 @@ import {
   AriaCarouselSlidesElement,
   AriaCarouselTabElement,
   AriaCarouselTabsElement
-} from '@queelag/web'
+} from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import {
   AriaCarouselNextSlideControlProps,

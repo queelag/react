@@ -1,4 +1,4 @@
-import { AriaMenuButtonElement, AriaMenuElement, AriaMenuItemElement, AriaMenuListElement } from '@queelag/web'
+import type { AriaMenuButtonElement, AriaMenuElement, AriaMenuItemElement, AriaMenuListElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaMenuButtonProps, AriaMenuItemProps, AriaMenuListProps, AriaMenuProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

@@ -1,4 +1,4 @@
-import { AriaBreadcrumbElement, AriaBreadcrumbListElement, AriaBreadcrumbListItemElement } from '@queelag/web'
+import type { AriaBreadcrumbElement, AriaBreadcrumbListElement, AriaBreadcrumbListItemElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaBreadcrumbListItemProps, AriaBreadcrumbListProps, AriaBreadcrumbProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

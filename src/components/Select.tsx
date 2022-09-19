@@ -1,4 +1,4 @@
-import { SelectElement } from '@queelag/web'
+import type { SelectElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { SelectProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

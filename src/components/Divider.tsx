@@ -1,4 +1,4 @@
-import { DividerElement } from '@queelag/web'
+import type { DividerElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { DividerProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

@@ -1,4 +1,4 @@
-import { NavigationBarElement } from '@queelag/web'
+import type { NavigationBarElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { NavigationBarProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

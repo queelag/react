@@ -1,11 +1,11 @@
-import {
+import type {
   AriaComboBoxButtonElement,
   AriaComboBoxElement,
   AriaComboBoxGroupElement,
   AriaComboBoxInputElement,
   AriaComboBoxListElement,
   AriaComboBoxOptionElement
-} from '@queelag/web'
+} from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import {
   AriaComboBoxButtonProps,

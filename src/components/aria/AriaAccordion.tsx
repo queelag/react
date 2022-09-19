@@ -1,10 +1,10 @@
-import {
+import type {
   AriaAccordionButtonElement,
   AriaAccordionElement,
   AriaAccordionHeaderElement,
   AriaAccordionPanelElement,
   AriaAccordionSectionElement
-} from '@queelag/web'
+} from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import {
   AriaAccordionButtonProps,

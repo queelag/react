@@ -1,4 +1,4 @@
-import { AriaListBoxElement, AriaListBoxOptionElement } from '@queelag/web'
+import type { AriaListBoxElement, AriaListBoxOptionElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaListBoxOptionProps, AriaListBoxProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

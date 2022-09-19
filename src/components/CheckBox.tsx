@@ -1,4 +1,4 @@
-import { CheckBoxElement } from '@queelag/web'
+import type { CheckBoxElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { CheckBoxProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

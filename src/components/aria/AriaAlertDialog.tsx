@@ -1,4 +1,4 @@
-import { AriaAlertDialogDescriptionElement, AriaAlertDialogElement, AriaAlertDialogLabelElement } from '@queelag/web'
+import type { AriaAlertDialogDescriptionElement, AriaAlertDialogElement, AriaAlertDialogLabelElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { AriaAlertDialogDescriptionProps, AriaAlertDialogLabelProps, AriaAlertDialogProps } from '../../definitions/props'
 import { forwardRef } from '../../functions/forward.ref'

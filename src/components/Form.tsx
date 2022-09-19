@@ -1,4 +1,4 @@
-import { FormElement } from '@queelag/web'
+import type { FormElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { FormProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'

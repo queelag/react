@@ -1,4 +1,4 @@
-import { NavigationRailElement } from '@queelag/web'
+import type { NavigationRailElement } from '@queelag/web/elements'
 import { h, Ref } from 'preact'
 import { NavigationRailProps } from '../definitions/props'
 import { forwardRef } from '../functions/forward.ref'
