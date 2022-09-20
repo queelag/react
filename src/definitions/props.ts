@@ -155,7 +155,7 @@ import type {
   SelectElement,
   SwitchElement,
   TextAreaElement
-} from '@queelag/web/elements'
+} from '@queelag/web-components'
 import { DetailedHTMLProps, HTMLAttributes } from 'preact/compat'
 
 export interface AriaAccordionProps extends ElementProps<AriaAccordionElement, AriaAccordionElementAttributes> {}
