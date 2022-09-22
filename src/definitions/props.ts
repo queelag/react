@@ -7,6 +7,7 @@ import type {
   AriaAlertDialogDescriptionElementAttributes,
   AriaAlertDialogElementAttributes,
   AriaAlertDialogLabelElementAttributes,
+  AriaAlertElementAttributes,
   AriaBreadcrumbElementAttributes,
   AriaBreadcrumbListElementAttributes,
   AriaBreadcrumbListItemElementAttributes,
@@ -86,6 +87,7 @@ import type {
   AriaAlertDialogDescriptionElement,
   AriaAlertDialogElement,
   AriaAlertDialogLabelElement,
+  AriaAlertElement,
   AriaBreadcrumbElement,
   AriaBreadcrumbListElement,
   AriaBreadcrumbListItemElement,
@@ -163,6 +165,8 @@ export interface AriaAccordionButtonProps extends ElementProps<AriaAccordionButt
 export interface AriaAccordionHeaderProps extends ElementProps<AriaAccordionHeaderElement, AriaAccordionHeaderElementAttributes> {}
 export interface AriaAccordionPanelProps extends ElementProps<AriaAccordionPanelElement, AriaAccordionPanelElementAttributes> {}
 export interface AriaAccordionSectionProps extends ElementProps<AriaAccordionSectionElement, AriaAccordionSectionElementAttributes> {}
+
+export interface AriaAlertProps extends ElementProps<AriaAlertElement, AriaAlertElementAttributes> {}
 
 export interface AriaAlertDialogProps extends ElementProps<AriaAlertDialogElement, AriaAlertDialogElementAttributes> {}
 export interface AriaAlertDialogDescriptionProps extends ElementProps<AriaAlertDialogDescriptionElement, AriaAlertDialogDescriptionElementAttributes> {}
