@@ -1,41 +1,40 @@
 {
   "author": "Dario Sechi",
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.29.3",
-    "@queelag/core": "^1.1.4",
-    "@queelag/web": "^1.0.1",
-    "@rollup/plugin-strip": "^2.1.0",
-    "@rollup/plugin-typescript": "^8.3.4",
-    "@types/jest": "^28.1.7",
-    "jest": "^28.1.3",
-    "lit": "^2.3.1",
-    "preact": "^10.11.0",
+    "@microsoft/api-extractor": "^7.33.5",
+    "@preact/preset-vite": "^2.4.0",
+    "@queelag/core": "^1.1.11",
+    "@queelag/web": "^1.0.8",
+    "@rollup/plugin-strip": "^3.0.1",
+    "@rollup/plugin-typescript": "^9.0.2",
+    "@testing-library/preact": "^3.2.2",
+    "@vitest/coverage-c8": "^0.25.0",
+    "@vitest/ui": "^0.25.0",
+    "jsdom": "^20.0.2",
+    "preact": "^10.11.2",
     "prettier": "^2.7.1",
-    "rollup": "^2.78.1",
+    "rollup": "^3.2.5",
     "rollup-plugin-terser": "^7.0.2",
-    "ts-jest": "^28.0.8",
-    "tslib": "^2.4.0",
-    "typedoc": "^0.23.10",
-    "typescript": "4.7.4"
+    "tslib": "^2.4.1",
+    "typedoc": "^0.23.20",
+    "typescript": "4.8.4",
+    "vitest": "^0.25.0"
   },
   "license": "MIT",
   "main": "index.cjs",
   "module": "index.js",
   "name": "@queelag/preact",
   "peerDependencies": {
-    "@queelag/core": ">= 1.1.0",
-    "@queelag/web": ">= 1.0.0",
+    "@queelag/core": ">= 1.1.14",
+    "@queelag/web": ">= 1.0.10",
     "preact": ">= 10.11.0"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "repository": "https://github.com/queelag/preact",
   "scripts": {
-    "test": "yarn jest --coverage",
+    "test": "yarn vitest run",
     "build": "rm -rf dist && yarn rollup -c && yarn api-extractor run --local",
-    "tarball": "yarn version && cp package.json dist/. && cd dist && yarn pack",
-    "deploy": "yarn test && yarn build && yarn tarball && yarn publish dist/*.tgz --access public"
+    "tarball": "yarn version && cp package.json README.md dist/. && cd dist && yarn pack",
+    "deploy": "yarn test && yarn build && yarn tarball && yarn publish dist/*.tgz"
   },
   "sideEffects": false,
   "version": "1.0.1"
