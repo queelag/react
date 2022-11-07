@@ -144,100 +144,102 @@ import type {
   SwitchElement,
   TextAreaElement
 } from '@queelag/web-components'
-import { ComponentProps } from './types'
+import { ElementComponentProps } from './types'
 
-export interface AriaAccordionProps extends ComponentProps<AriaAccordionElement, AriaAccordionElementAttributes> {}
-export interface AriaAccordionButtonProps extends ComponentProps<AriaAccordionButtonElement, AriaAccordionButtonElementAttributes> {}
-export interface AriaAccordionHeaderProps extends ComponentProps<AriaAccordionHeaderElement, AriaAccordionHeaderElementAttributes> {}
-export interface AriaAccordionPanelProps extends ComponentProps<AriaAccordionPanelElement, AriaAccordionPanelElementAttributes> {}
-export interface AriaAccordionSectionProps extends ComponentProps<AriaAccordionSectionElement, AriaAccordionSectionElementAttributes> {}
+export type AriaAccordionProps = ElementComponentProps<AriaAccordionElement, AriaAccordionElementAttributes>
+export type AriaAccordionButtonProps = ElementComponentProps<AriaAccordionButtonElement, AriaAccordionButtonElementAttributes>
+export type AriaAccordionHeaderProps = ElementComponentProps<AriaAccordionHeaderElement, AriaAccordionHeaderElementAttributes>
+export type AriaAccordionPanelProps = ElementComponentProps<AriaAccordionPanelElement, AriaAccordionPanelElementAttributes>
+export type AriaAccordionSectionProps = ElementComponentProps<AriaAccordionSectionElement, AriaAccordionSectionElementAttributes>
 
-export interface AriaAlertProps extends ComponentProps<AriaAlertElement, AriaAlertElementAttributes> {}
+export type AriaAlertProps = ElementComponentProps<AriaAlertElement, AriaAlertElementAttributes>
 
-export interface AriaAlertDialogProps extends ComponentProps<AriaAlertDialogElement, AriaAlertDialogElementAttributes> {}
-export interface AriaAlertDialogDescriptionProps extends ComponentProps<AriaAlertDialogDescriptionElement, AriaAlertDialogDescriptionElementAttributes> {}
-export interface AriaAlertDialogLabelProps extends ComponentProps<AriaAlertDialogLabelElement, AriaAlertDialogLabelElementAttributes> {}
+export type AriaAlertDialogProps = ElementComponentProps<AriaAlertDialogElement, AriaAlertDialogElementAttributes>
+export type AriaAlertDialogDescriptionProps = ElementComponentProps<AriaAlertDialogDescriptionElement, AriaAlertDialogDescriptionElementAttributes>
+export type AriaAlertDialogLabelProps = ElementComponentProps<AriaAlertDialogLabelElement, AriaAlertDialogLabelElementAttributes>
 
-export interface AriaBreadcrumbProps extends ComponentProps<AriaBreadcrumbElement, AriaBreadcrumbElementAttributes> {}
-export interface AriaBreadcrumbListProps extends ComponentProps<AriaBreadcrumbListElement, AriaBreadcrumbListElementAttributes> {}
-// export interface AriaBreadcrumbListItemProps extends ComponentProps<AriaBreadcrumbListItemElement, AriaBreadcrumbListItemElementAttributes> {}
+export type AriaBreadcrumbProps = ElementComponentProps<AriaBreadcrumbElement, AriaBreadcrumbElementAttributes>
+export type AriaBreadcrumbListProps = ElementComponentProps<AriaBreadcrumbListElement, AriaBreadcrumbListElementAttributes>
+// export type AriaBreadcrumbListItemProps = ElementComponentProps<AriaBreadcrumbListItemElement, AriaBreadcrumbListItemElementAttributes>
 
-export interface AriaDialogProps extends ComponentProps<AriaDialogElement, AriaDialogElementAttributes> {}
-export interface AriaDialogDescriptionProps extends ComponentProps<AriaDialogDescriptionElement, AriaDialogDescriptionElementAttributes> {}
-export interface AriaDialogLabelProps extends ComponentProps<AriaDialogLabelElement, AriaDialogLabelElementAttributes> {}
+export type AriaDialogProps = ElementComponentProps<AriaDialogElement, AriaDialogElementAttributes>
+export type AriaDialogDescriptionProps = ElementComponentProps<AriaDialogDescriptionElement, AriaDialogDescriptionElementAttributes>
+export type AriaDialogLabelProps = ElementComponentProps<AriaDialogLabelElement, AriaDialogLabelElementAttributes>
 
-export interface AriaCarouselProps extends ComponentProps<AriaCarouselElement, AriaCarouselElementAttributes> {}
-export interface AriaCarouselNextSlideControlProps extends ComponentProps<AriaCarouselNextSlideControlElement, AriaCarouselNextSlideControlElementAttributes> {}
-export interface AriaCarouselPreviousSlideControlProps
-  extends ComponentProps<AriaCarouselPreviousSlideControlElement, AriaCarouselPreviousSlideControlElementAttributes> {}
-export interface AriaCarouselRotationControlProps extends ComponentProps<AriaCarouselRotationControlElement, AriaCarouselRotationControlElementAttributes> {}
-export interface AriaCarouselSlideProps extends ComponentProps<AriaCarouselSlideElement, AriaCarouselSlideElementAttributes> {}
-export interface AriaCarouselSlidesProps extends ComponentProps<AriaCarouselSlidesElement, AriaCarouselSlidesElementAttributes> {}
-export interface AriaCarouselTabProps extends ComponentProps<AriaCarouselTabElement, AriaCarouselTabElementAttributes> {}
-export interface AriaCarouselTabsProps extends ComponentProps<AriaCarouselTabsElement, AriaCarouselTabsElementAttributes> {}
+export type AriaCarouselProps = ElementComponentProps<AriaCarouselElement, AriaCarouselElementAttributes>
+export type AriaCarouselNextSlideControlProps = ElementComponentProps<AriaCarouselNextSlideControlElement, AriaCarouselNextSlideControlElementAttributes>
+export type AriaCarouselPreviousSlideControlProps = ElementComponentProps<
+  AriaCarouselPreviousSlideControlElement,
+  AriaCarouselPreviousSlideControlElementAttributes
+>
+export type AriaCarouselRotationControlProps = ElementComponentProps<AriaCarouselRotationControlElement, AriaCarouselRotationControlElementAttributes>
+export type AriaCarouselSlideProps = ElementComponentProps<AriaCarouselSlideElement, AriaCarouselSlideElementAttributes>
+export type AriaCarouselSlidesProps = ElementComponentProps<AriaCarouselSlidesElement, AriaCarouselSlidesElementAttributes>
+export type AriaCarouselTabProps = ElementComponentProps<AriaCarouselTabElement, AriaCarouselTabElementAttributes>
+export type AriaCarouselTabsProps = ElementComponentProps<AriaCarouselTabsElement, AriaCarouselTabsElementAttributes>
 
-export interface AriaComboBoxProps extends ComponentProps<AriaComboBoxElement, AriaComboBoxElementAttributes> {}
-export interface AriaComboBoxButtonProps extends ComponentProps<AriaComboBoxButtonElement, AriaComboBoxButtonElementAttributes> {}
-export interface AriaComboBoxGroupProps extends ComponentProps<AriaComboBoxGroupElement, AriaComboBoxGroupElementAttributes> {}
-export interface AriaComboBoxInputProps extends ComponentProps<AriaComboBoxInputElement, AriaComboBoxInputElementAttributes> {}
-export interface AriaComboBoxListProps extends ComponentProps<AriaComboBoxListElement, AriaComboBoxListElementAttributes> {}
-export interface AriaComboBoxOptionProps extends ComponentProps<AriaComboBoxOptionElement, AriaComboBoxOptionElementAttributes> {}
+export type AriaComboBoxProps = ElementComponentProps<AriaComboBoxElement, AriaComboBoxElementAttributes>
+export type AriaComboBoxButtonProps = ElementComponentProps<AriaComboBoxButtonElement, AriaComboBoxButtonElementAttributes>
+export type AriaComboBoxGroupProps = ElementComponentProps<AriaComboBoxGroupElement, AriaComboBoxGroupElementAttributes>
+export type AriaComboBoxInputProps = ElementComponentProps<AriaComboBoxInputElement, AriaComboBoxInputElementAttributes>
+export type AriaComboBoxListProps = ElementComponentProps<AriaComboBoxListElement, AriaComboBoxListElementAttributes>
+export type AriaComboBoxOptionProps = ElementComponentProps<AriaComboBoxOptionElement, AriaComboBoxOptionElementAttributes>
 
-export interface AriaDisclosureProps extends ComponentProps<AriaDisclosureElement, AriaDisclosureElementAttributes> {}
-export interface AriaDisclosureButtonProps extends ComponentProps<AriaDisclosureButtonElement, AriaDisclosureButtonElementAttributes> {}
-export interface AriaDisclosurePanelProps extends ComponentProps<AriaDisclosurePanelElement, AriaDisclosurePanelElementAttributes> {}
-export interface AriaDisclosureSectionProps extends ComponentProps<AriaDisclosureSectionElement, AriaDisclosureSectionElementAttributes> {}
+export type AriaDisclosureProps = ElementComponentProps<AriaDisclosureElement, AriaDisclosureElementAttributes>
+export type AriaDisclosureButtonProps = ElementComponentProps<AriaDisclosureButtonElement, AriaDisclosureButtonElementAttributes>
+export type AriaDisclosurePanelProps = ElementComponentProps<AriaDisclosurePanelElement, AriaDisclosurePanelElementAttributes>
+export type AriaDisclosureSectionProps = ElementComponentProps<AriaDisclosureSectionElement, AriaDisclosureSectionElementAttributes>
 
-export interface AriaFeedProps extends ComponentProps<AriaFeedElement, AriaFeedElementAttributes> {}
-export interface AriaFeedArticleProps extends ComponentProps<AriaFeedArticleElement, AriaFeedArticleElementAttributes> {}
-export interface AriaFeedArticleDescriptionProps extends ComponentProps<AriaFeedArticleDescriptionElement, AriaFeedArticleDescriptionElementAttributes> {}
-export interface AriaFeedArticleLabelProps extends ComponentProps<AriaFeedArticleLabelElement, AriaFeedArticleLabelElementAttributes> {}
+export type AriaFeedProps = ElementComponentProps<AriaFeedElement, AriaFeedElementAttributes>
+export type AriaFeedArticleProps = ElementComponentProps<AriaFeedArticleElement, AriaFeedArticleElementAttributes>
+export type AriaFeedArticleDescriptionProps = ElementComponentProps<AriaFeedArticleDescriptionElement, AriaFeedArticleDescriptionElementAttributes>
+export type AriaFeedArticleLabelProps = ElementComponentProps<AriaFeedArticleLabelElement, AriaFeedArticleLabelElementAttributes>
 
-export interface AriaListBoxProps extends ComponentProps<AriaListBoxElement, AriaListBoxElementAttributes> {}
-export interface AriaListBoxOptionProps extends ComponentProps<AriaListBoxOptionElement, AriaListBoxOptionElementAttributes> {}
+export type AriaListBoxProps = ElementComponentProps<AriaListBoxElement, AriaListBoxElementAttributes>
+export type AriaListBoxOptionProps = ElementComponentProps<AriaListBoxOptionElement, AriaListBoxOptionElementAttributes>
 
-export interface AriaMenuProps extends ComponentProps<AriaMenuElement, AriaMenuElementAttributes> {}
-export interface AriaMenuButtonProps extends ComponentProps<AriaMenuButtonElement, AriaMenuButtonElementAttributes> {}
-export interface AriaMenuItemProps extends ComponentProps<AriaMenuItemElement, AriaMenuItemElementAttributes> {}
-// export interface AriaMenuListProps extends ComponentProps<AriaMenuListElement, AriaMenuListElementAttributes> {}
+export type AriaMenuProps = ElementComponentProps<AriaMenuElement, AriaMenuElementAttributes>
+export type AriaMenuButtonProps = ElementComponentProps<AriaMenuButtonElement, AriaMenuButtonElementAttributes>
+export type AriaMenuItemProps = ElementComponentProps<AriaMenuItemElement, AriaMenuItemElementAttributes>
+// export type AriaMenuListProps = ElementComponentProps<AriaMenuListElement, AriaMenuListElementAttributes>
 
-// export interface AriaMenuBarProps extends ComponentProps<AriaMenuBarElement, AriaMenuBarElementAttributes> {}
-// export interface AriaMenuBarItemProps extends ComponentProps<AriaMenuBarItemElement, AriaMenuBarItemElementAttributes> {}
-// export interface AriaMenuBarSubMenuProps extends ComponentProps<AriaMenuBarSubMenuElement, AriaMenuBarSubMenuElementAttributes> {}
+// export type AriaMenuBarProps = ElementComponentProps<AriaMenuBarElement, AriaMenuBarElementAttributes>
+// export type AriaMenuBarItemProps = ElementComponentProps<AriaMenuBarItemElement, AriaMenuBarItemElementAttributes>
+// export type AriaMenuBarSubMenuProps = ElementComponentProps<AriaMenuBarSubMenuElement, AriaMenuBarSubMenuElementAttributes>
 
-export interface AriaRadioButtonProps extends ComponentProps<AriaRadioButtonElement, AriaRadioButtonElementAttributes> {}
-export interface AriaRadioGroupProps extends ComponentProps<AriaRadioGroupElement, AriaRadioGroupElementAttributes> {}
+export type AriaRadioButtonProps = ElementComponentProps<AriaRadioButtonElement, AriaRadioButtonElementAttributes>
+export type AriaRadioGroupProps = ElementComponentProps<AriaRadioGroupElement, AriaRadioGroupElementAttributes>
 
-export interface AriaSliderProps extends ComponentProps<AriaSliderElement, AriaSliderElementAttributes> {}
-export interface AriaSliderThumbProps extends ComponentProps<AriaSliderThumbElement, AriaSliderThumbElementAttributes> {}
+export type AriaSliderProps = ElementComponentProps<AriaSliderElement, AriaSliderElementAttributes>
+export type AriaSliderThumbProps = ElementComponentProps<AriaSliderThumbElement, AriaSliderThumbElementAttributes>
 
-export interface AriaTabsProps extends ComponentProps<AriaTabsElement, AriaTabsElementAttributes> {}
-export interface AriaTabsPanelProps extends ComponentProps<AriaTabsPanelElement, AriaTabsPanelElementAttributes> {}
-export interface AriaTabsTabProps extends ComponentProps<AriaTabsTabElement, AriaTabsTabElementAttributes> {}
+export type AriaTabsProps = ElementComponentProps<AriaTabsElement, AriaTabsElementAttributes>
+export type AriaTabsPanelProps = ElementComponentProps<AriaTabsPanelElement, AriaTabsPanelElementAttributes>
+export type AriaTabsTabProps = ElementComponentProps<AriaTabsTabElement, AriaTabsTabElementAttributes>
 
-export interface AriaTooltipProps extends ComponentProps<AriaTooltipElement, AriaTooltipElementAttributes> {}
-export interface AriaTooltipArrowProps extends ComponentProps<AriaTooltipArrowElement, AriaTooltipArrowElementAttributes> {}
-export interface AriaTooltipContentProps extends ComponentProps<AriaTooltipContentElement, AriaTooltipContentElementAttributes> {}
-export interface AriaTooltipTriggerProps extends ComponentProps<AriaTooltipTriggerElement, AriaTooltipTriggerElementAttributes> {}
+export type AriaTooltipProps = ElementComponentProps<AriaTooltipElement, AriaTooltipElementAttributes>
+export type AriaTooltipArrowProps = ElementComponentProps<AriaTooltipArrowElement, AriaTooltipArrowElementAttributes>
+export type AriaTooltipContentProps = ElementComponentProps<AriaTooltipContentElement, AriaTooltipContentElementAttributes>
+export type AriaTooltipTriggerProps = ElementComponentProps<AriaTooltipTriggerElement, AriaTooltipTriggerElementAttributes>
 
-export interface AvatarProps extends ComponentProps<AvatarElement, AvatarElementAttributes> {}
-export interface BadgeProps extends ComponentProps<BadgeElement, BadgeElementAttributes> {}
-export interface ButtonProps extends ComponentProps<ButtonElement, ButtonElementAttributes> {}
-export interface CheckBoxProps extends ComponentProps<CheckBoxElement, CheckBoxElementAttributes> {}
-export interface ChipProps extends ComponentProps<ChipElement, ChipElementAttributes> {}
-export interface DividerProps extends ComponentProps<DividerElement, DividerElementAttributes> {}
-export interface FormProps extends ComponentProps<FormElement, FormElementAttributes> {}
-export interface IconProps extends ComponentProps<IconElement, IconElementAttributes> {}
-export interface ImageProps extends ComponentProps<ImageElement, ImageElementAttributes> {}
-export interface InputProps extends ComponentProps<InputElement, InputElementAttributes> {}
-export interface InputFileProps extends ComponentProps<InputFileElement, InputFileElementAttributes> {}
-export interface ListProps extends ComponentProps<ListElement, ListElementAttributes> {}
-export interface ListItemProps extends ComponentProps<ListItemElement, ListItemElementAttributes> {}
-export interface MeterProps extends ComponentProps<MeterElement, MeterElementAttributes> {}
-export interface NavigationBarProps extends ComponentProps<NavigationBarElement, NavigationBarElementAttributes> {}
-export interface NavigationBarItemProps extends ComponentProps<NavigationBarItemElement, NavigationBarItemElementAttributes> {}
-// export interface NavigationRailProps extends ComponentProps<NavigationRailElement, NavigationRailElementAttributes> {}
-// export interface NavigationRailItemProps extends ComponentProps<NavigationRailItemElement, NavigationRailItemElementAttributes> {}
-export interface SelectProps extends ComponentProps<SelectElement, SelectElementAttributes> {}
-export interface SwitchProps extends ComponentProps<SwitchElement, SwitchElementAttributes> {}
-export interface TextAreaProps extends ComponentProps<TextAreaElement, TextAreaElementAttributes> {}
+export type AvatarProps = ElementComponentProps<AvatarElement, AvatarElementAttributes>
+export type BadgeProps = ElementComponentProps<BadgeElement, BadgeElementAttributes>
+export type ButtonProps = ElementComponentProps<ButtonElement, ButtonElementAttributes>
+export type CheckBoxProps = ElementComponentProps<CheckBoxElement, CheckBoxElementAttributes>
+export type ChipProps = ElementComponentProps<ChipElement, ChipElementAttributes>
+export type DividerProps = ElementComponentProps<DividerElement, DividerElementAttributes>
+export type FormProps = ElementComponentProps<FormElement, FormElementAttributes>
+export type IconProps = ElementComponentProps<IconElement, IconElementAttributes>
+export type ImageProps = ElementComponentProps<ImageElement, ImageElementAttributes>
+export type InputProps = ElementComponentProps<InputElement, InputElementAttributes>
+export type InputFileProps = ElementComponentProps<InputFileElement, InputFileElementAttributes>
+export type ListProps = ElementComponentProps<ListElement, ListElementAttributes>
+export type ListItemProps = ElementComponentProps<ListItemElement, ListItemElementAttributes>
+export type MeterProps = ElementComponentProps<MeterElement, MeterElementAttributes>
+export type NavigationBarProps = ElementComponentProps<NavigationBarElement, NavigationBarElementAttributes>
+export type NavigationBarItemProps = ElementComponentProps<NavigationBarItemElement, NavigationBarItemElementAttributes>
+// export type NavigationRailProps = ElementComponentProps<NavigationRailElement, NavigationRailElementAttributes>
+// export type NavigationRailItemProps = ElementComponentProps<NavigationRailItemElement, NavigationRailItemElementAttributes>
+export type SelectProps = ElementComponentProps<SelectElement, SelectElementAttributes>
+export type SwitchProps = ElementComponentProps<SwitchElement, SwitchElementAttributes>
+export type TextAreaProps = ElementComponentProps<TextAreaElement, TextAreaElementAttributes>
