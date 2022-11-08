@@ -1,27 +1,31 @@
-import type { RefObject } from 'preact'
-import { Inputs, useEffect } from 'preact/hooks'
+import { DependencyList, MutableRefObject, useEffect } from 'react'
 
 export function useEventListener<T extends Element, E extends Event, K extends keyof HTMLElementEventMap>(
-  ref: RefObject<T | null>,
+  ref: MutableRefObject<T | null>,
   type: K,
   listener: (event: HTMLElementEventMap[K]) => any,
-  inputs?: Inputs
+  deps?: DependencyList
 ): void
 export function useEventListener<T extends Element, E extends Event, K extends keyof SVGElementEventMap>(
-  ref: RefObject<T | null>,
+  ref: MutableRefObject<T | null>,
   type: K,
   listener: (event: SVGElementEventMap[K]) => any,
-  inputs?: Inputs
+  deps?: DependencyList
 ): void
-export function useEventListener<T extends Element, E extends Event>(ref: RefObject<T | null>, type: string, listener: (event: E) => any, inputs?: Inputs): void
 export function useEventListener<T extends Element, E extends Event>(
-  ref: RefObject<T | null>,
+  ref: MutableRefObject<T | null>,
+  type: string,
+  listener: (event: E) => any,
+  deps?: DependencyList
+): void
+export function useEventListener<T extends Element, E extends Event>(
+  ref: MutableRefObject<T | null>,
   type: any,
   listener: (event: E) => any,
-  inputs: Inputs = []
+  deps: DependencyList = []
 ): void {
   useEffect(() => {
     ref.current?.addEventListener(type, listener)
     return () => ref.current?.removeEventListener(type, listener)
-  }, inputs)
+  }, deps)
 }

@@ -144,7 +144,7 @@ import type {
   SwitchElement,
   TextAreaElement
 } from '@queelag/web-components'
-import { ElementComponentProps } from './types'
+import type { ElementComponentProps } from './types'
 
 export type AriaAccordionProps = ElementComponentProps<AriaAccordionElement, AriaAccordionElementAttributes>
 export type AriaAccordionButtonProps = ElementComponentProps<AriaAccordionButtonElement, AriaAccordionButtonElementAttributes>

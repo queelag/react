@@ -1,11 +1,10 @@
-import { Ref, VNode } from 'preact'
-import { forwardRef as _ } from 'preact/compat'
+import { ForwardedRef, forwardRef as _, ReactElement } from 'react'
 
-type ForwardRefRenderFunction<T, P = {}> = (props: P, ref: Ref<T>) => VNode<P>
-type NullableForwardRefRenderFunction<T, P = {}> = (props: P, ref: Ref<T>) => VNode<P> | null
+type ForwardRefRenderFunction<T, P = {}> = (props: P, ref: ForwardedRef<T>) => ReactElement<P>
+type NullableForwardRefRenderFunction<T, P = {}> = (props: P, ref: ForwardedRef<T>) => ReactElement<P> | null
 
-type ForwardRefExoticComponent<P = {}> = (props: P) => VNode
-type NullableForwardRefExoticComponent<P = {}> = (props: P) => VNode<P> | null
+type ForwardRefExoticComponent<P = {}> = (props: P) => ReactElement
+type NullableForwardRefExoticComponent<P = {}> = (props: P) => ReactElement<P> | null
 
 function forwardRef<T, P = {}>(render: ForwardRefRenderFunction<T, P>): ForwardRefExoticComponent<P>
 function forwardRef<T, P = {}>(render: NullableForwardRefRenderFunction<T, P>): NullableForwardRefExoticComponent<P>

@@ -1,5 +1,5 @@
-import { cleanup, render, screen } from '@testing-library/preact'
-import React, { createRef, RefObject } from 'preact'
+import { cleanup, render, screen } from '@testing-library/react'
+import React, { createRef, Ref } from 'react'
 import { afterEach, beforeAll, beforeEach, describe, expect, it, Mock, vi } from 'vitest'
 import { createElementComponent, ElementComponent, ElementComponentProps } from '../../src'
 
@@ -25,8 +25,8 @@ interface TestElementAttributes {
   partying?: boolean
 }
 
-interface TestElementEvents {
-  onParty?: PartyEvent
+type TestElementEvents = {
+  onParty: PartyEvent
 }
 
 type TestElementProps = ElementComponentProps<TestElement, TestElementAttributes, TestElementEvents>
@@ -39,7 +39,7 @@ describe('createElementComponent', () => {
   })
 
   beforeEach(() => {
-    Component = createElementComponent('test-element', ['onParty'])
+    Component = createElementComponent('test-element', TestElement, ['onParty'])
   })
 
   afterEach(() => {
@@ -63,7 +63,7 @@ describe('createElementComponent', () => {
   })
 
   it('forwards ref', () => {
-    let ref: RefObject<TestElement> = createRef()
+    let ref: Ref<TestElement> = createRef()
 
     render(<Component ref={ref} />)
 

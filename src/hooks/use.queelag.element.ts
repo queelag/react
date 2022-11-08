@@ -1,6 +1,5 @@
 import type { AttributeChangeEvent, StateChangeEvent } from '@queelag/web'
-import type { RefObject } from 'preact'
-import { useEffect, useReducer, useRef } from 'preact/hooks'
+import { MutableRefObject, useEffect, useReducer, useRef } from 'react'
 import { useEventListener } from './use.event.listener'
 
 interface Options {
@@ -18,7 +17,7 @@ interface Options {
 
 interface ReturnInterface<K extends keyof HTMLElementTagNameMap> {
   element: HTMLElementTagNameMap[K] | null
-  ref: RefObject<HTMLElementTagNameMap[K] | null>
+  ref: MutableRefObject<HTMLElementTagNameMap[K] | null>
 }
 
 export function useComponent<K extends keyof HTMLElementTagNameMap>(options?: Options): ReturnInterface<K> {
@@ -42,7 +41,7 @@ export function useComponent<K extends keyof HTMLElementTagNameMap>(options?: Op
       return
     }
 
-    dispatch({})
+    dispatch()
   }
 
   const onStateChanged = (event: StateChangeEvent<any>) => {
@@ -62,12 +61,12 @@ export function useComponent<K extends keyof HTMLElementTagNameMap>(options?: Op
       return
     }
 
-    dispatch({})
+    dispatch()
   }
 
   useEventListener(ref, 'attribute-changed', onAttributeChanged, [ref.current])
   useEventListener(ref, 'state-changed', onStateChanged, [ref.current])
-  useEffect(() => dispatch({}), [ref.current])
+  useEffect(() => dispatch(), [ref.current])
 
   return { element: ref.current, ref }
 }

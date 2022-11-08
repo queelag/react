@@ -1,7 +1,5 @@
 import { getKebabCaseString, getObjectProperty, KeyOf } from '@queelag/core'
-import { createElement, Ref, VNode } from 'preact'
-import { forwardRef } from 'preact/compat'
-import { useEffect, useRef } from 'preact/hooks'
+import { createElement, DOMElement, ForwardedRef, forwardRef, useEffect, useRef } from 'react'
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types'
 
 export function createElementComponent<
@@ -9,10 +7,10 @@ export function createElementComponent<
   Attributes extends ElementComponentAttributes = {},
   Events extends ElementComponentEvents = {},
   Props extends ElementComponentProps<Element, Attributes, Events> = ElementComponentProps<Element, Attributes, Events>
->(tag: any, events?: Extract<KeyOf.Shallow<Events>, string>[]): ElementComponent<Element, Props> {
-  return forwardRef((props: Props, _ref: Ref<Element>) => {
-    const ref = _ref ?? useRef<Element>()
-    const element: VNode<Props> = createElement(tag, { ...props, ref })
+>(tag: any, element: typeof Element, events?: Extract<KeyOf.Shallow<Events>, string>[]): ElementComponent<Element, Props> {
+  return forwardRef((props: Props, _ref: ForwardedRef<Element>) => {
+    const ref = _ref ?? useRef<Element>(null)
+    const element: DOMElement<Props, Element> = createElement(tag, { ...props, ref })
     const listeners: [string, EventListenerOrEventListenerObject][] = []
 
     const addEventListeners = () => {
@@ -50,5 +48,5 @@ export function createElementComponent<
     }, [])
 
     return element
-  })
+  }) as any
 }
