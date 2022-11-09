@@ -31,7 +31,8 @@
   "peerDependencies": {
     "@queelag/core": ">= 1.1.14",
     "@queelag/web": ">= 1.0.10",
-    "react": ">= 18.2.0"
+    "react": ">= 18.2.0",
+    "react-dom": ">= 18.0.8"
   },
   "repository": "https://github.com/queelag/react",
   "scripts": {
