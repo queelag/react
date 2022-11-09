@@ -374,6 +374,11 @@
     node-fetch-cjs "^3.2.10"
     rfc4648 "^1.5.2"
 
+"@queelag/web-components@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@queelag/web-components/-/web-components-1.0.6.tgz#4169d481e2ac9f767bad141d6b14803a7ca3708d"
+  integrity sha512-KFbDjrJkKyIiz+Wkx4XQWFmPILX7kLKRu18PHUHdabKDcg3aIkSFkqInFItYZ3D72nXT09frglOe+Gn8GmaPGg==
+
 "@queelag/web@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@queelag/web/-/web-1.0.10.tgz#497d5f5f97f6abee33705be24b81645499a719e7"
