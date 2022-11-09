@@ -3,11 +3,12 @@ import { createElement, DOMElement, ForwardedRef, forwardRef, useEffect, useRef 
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types'
 
 export function createElementComponent<
-  Element extends HTMLElement,
+  Element extends HTMLElementTagNameMap[Key],
   Attributes extends ElementComponentAttributes = {},
   Events extends ElementComponentEvents = {},
-  Props extends ElementComponentProps<Element, Attributes, Events> = ElementComponentProps<Element, Attributes, Events>
->(tag: any, element: typeof Element, events?: Extract<KeyOf.Shallow<Events>, string>[]): ElementComponent<Element, Props> {
+  Props extends ElementComponentProps<Element, Attributes, Events> = ElementComponentProps<Element, Attributes, Events>,
+  Key extends keyof HTMLElementTagNameMap = keyof HTMLElementTagNameMap
+>(tag: Key, element: { new (): Element }, events?: Extract<KeyOf.Shallow<Events>, string>[]): ElementComponent<Element, Props> {
   return forwardRef((props: Props, _ref: ForwardedRef<Element>) => {
     const ref = _ref ?? useRef<Element>(null)
     const element: DOMElement<Props, Element> = createElement(tag, { ...props, ref })

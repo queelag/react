@@ -132,82 +132,9 @@ import type {
   TooltipElementAttributes,
   TooltipTriggerElementAttributes
 } from '@queelag/web'
+import type { AvatarElement } from '@queelag/web-components/elements/data/avatar.element'
+import type { BadgeElement } from '@queelag/web-components/elements/data/badge.element'
 import type {
-  AccordionButtonElement,
-  AccordionElement,
-  AccordionHeaderElement,
-  AccordionPanelElement,
-  AccordionSectionElement,
-  AlertDialogDescriptionElement,
-  AlertDialogElement,
-  AlertDialogLabelElement,
-  AlertElement,
-  AriaAccordionButtonElement,
-  AriaAccordionElement,
-  AriaAccordionHeaderElement,
-  AriaAccordionPanelElement,
-  AriaAccordionSectionElement,
-  AriaAlertDialogDescriptionElement,
-  AriaAlertDialogElement,
-  AriaAlertDialogLabelElement,
-  AriaAlertElement,
-  AriaBreadcrumbElement,
-  AriaBreadcrumbItemElement,
-  AriaBreadcrumbListElement,
-  AriaButtonElement,
-  AriaCarouselElement,
-  AriaCarouselNextSlideControlElement,
-  AriaCarouselPreviousSlideControlElement,
-  AriaCarouselRotationControlElement,
-  AriaCarouselSlideElement,
-  AriaCarouselSlidesElement,
-  AriaCarouselTabElement,
-  AriaCarouselTabsElement,
-  AriaCheckBoxElement,
-  AriaComboBoxButtonElement,
-  AriaComboBoxElement,
-  AriaComboBoxGroupElement,
-  AriaComboBoxInputElement,
-  AriaComboBoxListElement,
-  AriaComboBoxOptionElement,
-  AriaDialogDescriptionElement,
-  AriaDialogElement,
-  AriaDialogLabelElement,
-  AriaDisclosureButtonElement,
-  AriaDisclosureElement,
-  AriaDisclosurePanelElement,
-  AriaDisclosureSectionElement,
-  AriaFeedArticleDescriptionElement,
-  AriaFeedArticleElement,
-  AriaFeedArticleLabelElement,
-  AriaFeedElement,
-  AriaLinkElement,
-  AriaListBoxElement,
-  AriaListBoxOptionElement,
-  AriaMenuButtonElement,
-  AriaMenuElement,
-  AriaMenuItemElement,
-  AriaMenuSubMenuElement,
-  AriaMeterElement,
-  AriaRadioButtonElement,
-  AriaRadioGroupElement,
-  AriaSliderElement,
-  AriaSliderThumbElement,
-  AriaSwitchElement,
-  AriaTabsElement,
-  AriaTabsPanelElement,
-  AriaTabsTabElement,
-  AriaTooltipArrowElement,
-  AriaTooltipContentElement,
-  AriaTooltipElement,
-  AriaTooltipTriggerElement,
-  AvatarElement,
-  BadgeElement,
-  BreadcrumbElement,
-  BreadcrumbItemElement,
-  BreadcrumbListElement,
-  ButtonElement,
-  ButtonGroupElement,
   CarouselElement,
   CarouselNextSlideControlElement,
   CarouselPreviousSlideControlElement,
@@ -215,57 +142,127 @@ import type {
   CarouselSlideElement,
   CarouselSlidesElement,
   CarouselTabElement,
-  CarouselTabsElement,
-  CheckBoxElement,
-  ChipElement,
-  DialogDescriptionElement,
-  DialogElement,
-  DialogLabelElement,
-  DisclosureButtonElement,
-  DisclosureElement,
-  DisclosurePanelElement,
-  DisclosureSectionElement,
-  DividerElement,
+  CarouselTabsElement
+} from '@queelag/web-components/elements/data/carousel.element'
+import type { ChipElement } from '@queelag/web-components/elements/data/chip.element'
+import type {
   FeedArticleDescriptionElement,
   FeedArticleElement,
   FeedArticleLabelElement,
-  FeedElement,
-  FormElement,
-  IconElement,
-  ImageElement,
-  InputElement,
-  InputFileElement,
-  ListElement,
-  ListItemElement,
-  MenuButtonElement,
-  MenuElement,
-  MenuItemElement,
-  MenuSubMenuElement,
-  MeterElement,
-  NavigationBarElement,
-  NavigationBarItemElement,
-  NavigationRailElement,
-  NavigationRailItemElement,
-  RadioButtonElement,
-  RadioGroupElement,
+  FeedElement
+} from '@queelag/web-components/elements/data/feed.element'
+import type { IconElement } from '@queelag/web-components/elements/data/icon.element'
+import type { ImageElement } from '@queelag/web-components/elements/data/image.element'
+import type { ListElement, ListItemElement } from '@queelag/web-components/elements/data/list.element'
+import type { TooltipArrowElement, TooltipContentElement, TooltipElement, TooltipTriggerElement } from '@queelag/web-components/elements/data/tooltip.element'
+import type { AlertDialogDescriptionElement, AlertDialogElement, AlertDialogLabelElement } from '@queelag/web-components/elements/feedback/alert.dialog.element'
+import type { AlertElement } from '@queelag/web-components/elements/feedback/alert.element'
+import type { DialogDescriptionElement, DialogElement, DialogLabelElement } from '@queelag/web-components/elements/feedback/dialog.element'
+import type { MeterElement } from '@queelag/web-components/elements/feedback/meter.element'
+import type { ButtonElement } from '@queelag/web-components/elements/input/button.element'
+import type { ButtonGroupElement } from '@queelag/web-components/elements/input/button.group.element'
+import type { CheckBoxElement } from '@queelag/web-components/elements/input/check.box.element'
+import type { FormElement } from '@queelag/web-components/elements/input/form.element'
+import type { InputElement } from '@queelag/web-components/elements/input/input.element'
+import type { InputFileElement } from '@queelag/web-components/elements/input/input.file.element'
+import type { RadioButtonElement, RadioGroupElement } from '@queelag/web-components/elements/input/radio.group.element'
+import type {
   SelectButtonElement,
   SelectElement,
   SelectGroupElement,
   SelectInputElement,
   SelectListElement,
-  SelectOptionElement,
-  SliderElement,
-  SliderThumbElement,
-  SwitchElement,
-  TabsElement,
-  TabsPanelElement,
-  TabsTabElement,
-  TextAreaElement,
-  TooltipArrowElement,
-  TooltipContentElement,
-  TooltipElement,
-  TooltipTriggerElement
-} from '@queelag/web-components'
+  SelectOptionElement
+} from '@queelag/web-components/elements/input/select.element'
+import type { SliderElement, SliderThumbElement } from '@queelag/web-components/elements/input/slider.element'
+import type { SwitchElement } from '@queelag/web-components/elements/input/switch.element'
+import type { TextAreaElement } from '@queelag/web-components/elements/input/text.area.element'
+import type { DividerElement } from '@queelag/web-components/elements/layout/divider.element'
+import type { BreadcrumbElement, BreadcrumbItemElement, BreadcrumbListElement } from '@queelag/web-components/elements/navigation/breadcrumb.element'
+import type { MenuButtonElement, MenuElement, MenuItemElement, MenuSubMenuElement } from '@queelag/web-components/elements/navigation/menu.element'
+import type { NavigationBarElement, NavigationBarItemElement } from '@queelag/web-components/elements/navigation/navigation.bar.element'
+import type { NavigationRailElement, NavigationRailItemElement } from '@queelag/web-components/elements/navigation/navigation.rail.element'
+import type { TabsElement, TabsPanelElement, TabsTabElement } from '@queelag/web-components/elements/navigation/tabs.element'
+import type {
+  AccordionButtonElement,
+  AccordionElement,
+  AccordionHeaderElement,
+  AccordionPanelElement,
+  AccordionSectionElement
+} from '@queelag/web-components/elements/surface/accordion.element'
+import type {
+  DisclosureButtonElement,
+  DisclosureElement,
+  DisclosurePanelElement,
+  DisclosureSectionElement
+} from '@queelag/web-components/elements/surface/disclosure.element'
+
+import type {
+  AriaAccordionButtonElement,
+  AriaAccordionElement,
+  AriaAccordionHeaderElement,
+  AriaAccordionPanelElement,
+  AriaAccordionSectionElement
+} from '@queelag/web-components/elements/aria/aria.accordion.element'
+import type {
+  AriaAlertDialogDescriptionElement,
+  AriaAlertDialogElement,
+  AriaAlertDialogLabelElement
+} from '@queelag/web-components/elements/aria/aria.alert.dialog.element'
+import type { AriaAlertElement } from '@queelag/web-components/elements/aria/aria.alert.element'
+import type { AriaBreadcrumbElement, AriaBreadcrumbItemElement, AriaBreadcrumbListElement } from '@queelag/web-components/elements/aria/aria.breadcrumb.element'
+import type { AriaButtonElement } from '@queelag/web-components/elements/aria/aria.button.element'
+import type {
+  AriaCarouselElement,
+  AriaCarouselNextSlideControlElement,
+  AriaCarouselPreviousSlideControlElement,
+  AriaCarouselRotationControlElement,
+  AriaCarouselSlideElement,
+  AriaCarouselSlidesElement,
+  AriaCarouselTabElement,
+  AriaCarouselTabsElement
+} from '@queelag/web-components/elements/aria/aria.carousel.element'
+import type { AriaCheckBoxElement } from '@queelag/web-components/elements/aria/aria.check.box.element'
+import type {
+  AriaComboBoxButtonElement,
+  AriaComboBoxElement,
+  AriaComboBoxGroupElement,
+  AriaComboBoxInputElement,
+  AriaComboBoxListElement,
+  AriaComboBoxOptionElement
+} from '@queelag/web-components/elements/aria/aria.combo.box.element'
+import type { AriaDialogDescriptionElement, AriaDialogElement, AriaDialogLabelElement } from '@queelag/web-components/elements/aria/aria.dialog.element'
+import type {
+  AriaDisclosureButtonElement,
+  AriaDisclosureElement,
+  AriaDisclosurePanelElement,
+  AriaDisclosureSectionElement
+} from '@queelag/web-components/elements/aria/aria.disclosure.element'
+import type {
+  AriaFeedArticleDescriptionElement,
+  AriaFeedArticleElement,
+  AriaFeedArticleLabelElement,
+  AriaFeedElement
+} from '@queelag/web-components/elements/aria/aria.feed.element'
+import type { AriaLinkElement } from '@queelag/web-components/elements/aria/aria.link.element'
+import type { AriaListBoxElement, AriaListBoxOptionElement } from '@queelag/web-components/elements/aria/aria.list.box.element'
+import type {
+  AriaMenuButtonElement,
+  AriaMenuElement,
+  AriaMenuItemElement,
+  AriaMenuSubMenuElement
+} from '@queelag/web-components/elements/aria/aria.menu.element'
+import type { AriaMeterElement } from '@queelag/web-components/elements/aria/aria.meter.element'
+import type { AriaRadioButtonElement, AriaRadioGroupElement } from '@queelag/web-components/elements/aria/aria.radio.group.element'
+import type { AriaSliderElement, AriaSliderThumbElement } from '@queelag/web-components/elements/aria/aria.slider.element'
+import type { AriaSwitchElement } from '@queelag/web-components/elements/aria/aria.switch.element'
+import type { AriaTabsElement, AriaTabsPanelElement, AriaTabsTabElement } from '@queelag/web-components/elements/aria/aria.tabs.element'
+import type {
+  AriaTooltipArrowElement,
+  AriaTooltipContentElement,
+  AriaTooltipElement,
+  AriaTooltipTriggerElement
+} from '@queelag/web-components/elements/aria/aria.tooltip.element'
 import type { ElementComponentProps } from './types'
 
 /**

@@ -21,6 +21,8 @@ class TestElement extends HTMLElement {
   }
 }
 
+class BadElement extends HTMLElement {}
+
 interface TestElementAttributes {
   partying?: boolean
 }
