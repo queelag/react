@@ -16,5 +16,5 @@ export type ElementComponentProps<
 > = HTMLAttributes<Element> & RefAttributes<Element> & MapComponentAttributes<Attributes | Events>
 
 export type MapComponentAttributes<T extends ElementComponentAttributes> = {
-  [key in keyof T as key extends string ? (T[key] extends Event ? `on${PascalCase<key>}` : key) : key]: T[key] extends Event ? (event: T[key]) => any : T[key]
+  [key in keyof T as key extends string ? (T[key] extends Event ? `on${PascalCase<key>}` : key) : key]?: T[key] extends Event ? (event: T[key]) => any : T[key]
 }
