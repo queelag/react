@@ -21,17 +21,15 @@ class TestElement extends HTMLElement {
   }
 }
 
-class BadElement extends HTMLElement {}
-
 interface TestElementAttributes {
   partying?: boolean
 }
 
-type TestElementEvents = {
-  onParty: PartyEvent
+type TestElementEventMap = {
+  party: PartyEvent
 }
 
-type TestElementProps = ElementComponentProps<TestElement, TestElementAttributes, TestElementEvents>
+type TestElementProps = ElementComponentProps<TestElement, TestElementAttributes, TestElementEventMap>
 
 describe('createElementComponent', () => {
   let Component: ElementComponent<TestElement, TestElementProps>

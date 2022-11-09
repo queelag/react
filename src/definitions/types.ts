@@ -1,3 +1,4 @@
+import { PascalCase } from '@queelag/core'
 import type { DOMElement, ForwardedRef, HTMLAttributes, RefAttributes } from 'react'
 
 export type ElementComponent<Element extends HTMLElement, Props extends HTMLAttributes<Element> = {}> = (
@@ -15,5 +16,5 @@ export type ElementComponentProps<
 > = HTMLAttributes<Element> & RefAttributes<Element> & MapComponentAttributes<Attributes | Events>
 
 export type MapComponentAttributes<T extends ElementComponentAttributes> = {
-  [key in keyof T]: T[key] extends Event | undefined ? (event: NonNullable<T[key]>) => any : T[key]
+  [key in keyof T as key extends string ? (T[key] extends Event ? `on${PascalCase<key>}` : key) : key]: T[key] extends Event ? (event: T[key]) => any : T[key]
 }
