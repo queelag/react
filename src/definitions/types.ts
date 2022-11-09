@@ -6,8 +6,8 @@ export type ElementComponent<Element extends HTMLElement, Props extends HTMLAttr
   ref: ForwardedRef<Element>
 ) => DOMElement<Props, Element>
 
-export type ElementComponentAttributes = Record<string, any>
-export type ElementComponentEvents = Record<string, Event>
+export type ElementComponentAttributes = Record<PropertyKey, any>
+export type ElementComponentEvents = Record<PropertyKey, any>
 
 export type ElementComponentProps<
   Element extends HTMLElement,
