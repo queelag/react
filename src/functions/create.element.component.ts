@@ -8,7 +8,7 @@ export function createElementComponent<
   Events extends ElementComponentEvents = {},
   Props extends ElementComponentProps<Element, Attributes, Events> = ElementComponentProps<Element, Attributes, Events>,
   Key extends keyof HTMLElementTagNameMap = keyof HTMLElementTagNameMap
->(tag: Key, element: { new (): Element }, events?: Extract<KeyOf.Shallow<Events>, string>[]): ElementComponent<Element, Props> {
+>(tag: Key, element: { new (): Element }, events?: KeyOf.Shallow<Events>[]): ElementComponent<Element, Props> {
   return forwardRef((props: Props, _ref: ForwardedRef<Element>) => {
     const ref = _ref ?? useRef<Element>(null)
     const element: DOMElement<Props, Element> = createElement(tag, { ...props, ref })
@@ -22,8 +22,8 @@ export function createElementComponent<
       for (let key of events) {
         let type: string, listener: EventListenerOrEventListenerObject | undefined
 
-        type = getKebabCaseString(key).replace('on-', '')
-        listener = getObjectProperty(props, key)
+        type = getKebabCaseString(String(key)).replace('on-', '')
+        listener = getObjectProperty(props, String(key))
 
         if (typeof listener !== 'function') {
           continue
