@@ -1,4 +1,4 @@
-import { getObjectProperty, getStartCaseString, KeyOf } from '@queelag/core'
+import { getObjectProperty, getPascalCaseString, KeyOf } from '@queelag/core'
 import { createElement, createRef, DOMElement, ForwardedRef, forwardRef, Ref, useEffect } from 'react'
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types'
 
@@ -22,7 +22,7 @@ export function createElementComponent<
       for (let type of events) {
         let pct: string, listener: EventListenerOrEventListenerObject | undefined
 
-        pct = 'on' + getStartCaseString(String(type))
+        pct = 'on' + getPascalCaseString(String(type))
         listener = getObjectProperty(props, pct)
 
         if (typeof listener !== 'function') {
