@@ -1,5 +1,5 @@
 import { getObjectProperty, getStartCaseString, KeyOf } from '@queelag/core'
-import { createElement, DOMElement, ForwardedRef, forwardRef, useEffect, useRef } from 'react'
+import { createElement, createRef, DOMElement, ForwardedRef, forwardRef, Ref, useEffect } from 'react'
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types'
 
 export function createElementComponent<
@@ -10,8 +10,8 @@ export function createElementComponent<
   Key extends keyof HTMLElementTagNameMap = keyof HTMLElementTagNameMap
 >(tag: Key, element: { new (): Element }, events?: KeyOf.Shallow<Events>[]): ElementComponent<Element, Props> {
   return forwardRef((props: Props, _ref: ForwardedRef<Element>) => {
-    const ref = _ref ?? useRef<Element>(null)
-    const element: DOMElement<Props, Element> = createElement(tag, { ...props, ref })
+    const ref: Ref<Element> = _ref ?? createRef<Element>()
+    const element: DOMElement<Props, Element> = createElement(tag, { ...props, ref, suppressHydrationWarning: true })
     const listeners: [string, EventListenerOrEventListenerObject][] = []
 
     const addEventListeners = () => {
