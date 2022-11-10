@@ -1,4 +1,4 @@
-import { getKebabCaseString, getObjectProperty, KeyOf } from '@queelag/core'
+import { getObjectProperty, getStartCaseString, KeyOf } from '@queelag/core'
 import { createElement, DOMElement, ForwardedRef, forwardRef, useEffect, useRef } from 'react'
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types'
 
@@ -19,17 +19,17 @@ export function createElementComponent<
         return
       }
 
-      for (let key of events) {
-        let type: string, listener: EventListenerOrEventListenerObject | undefined
+      for (let type of events) {
+        let pct: string, listener: EventListenerOrEventListenerObject | undefined
 
-        type = getKebabCaseString(String(key)).replace('on-', '')
-        listener = getObjectProperty(props, String(key))
+        pct = 'on' + getStartCaseString(String(type))
+        listener = getObjectProperty(props, pct)
 
         if (typeof listener !== 'function') {
           continue
         }
 
-        ref.current.addEventListener(type, listener)
+        ref.current.addEventListener(String(type), listener)
       }
     }
 

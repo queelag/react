@@ -39,7 +39,7 @@ describe('createElementComponent', () => {
   })
 
   beforeEach(() => {
-    Component = createElementComponent('test-element', TestElement, ['onParty'])
+    Component = createElementComponent('test-element', TestElement, ['party'])
   })
 
   afterEach(() => {
