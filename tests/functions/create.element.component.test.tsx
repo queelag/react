@@ -53,7 +53,16 @@ describe('createElementComponent', () => {
     expect(screen.getByTestId('apple').getAttribute('partying')).not.toBeNull()
   })
 
-  it('adds and removes event listeners', () => {
+  it('adds and removes standard event listeners', () => {
+    let onClick: Mock = vi.fn()
+
+    render(<Component data-testid='apple' onClick={onClick} />)
+
+    screen.getByTestId<TestElement>('apple').click()
+    expect(onClick).toBeCalledTimes(1)
+  })
+
+  it('adds and removes custom event listeners', () => {
     let onParty: Mock = vi.fn()
 
     render(<Component data-testid='apple' onParty={onParty} />)
@@ -68,5 +77,11 @@ describe('createElementComponent', () => {
     render(<Component ref={ref} />)
 
     expect(ref?.current).toBeInstanceOf(TestElement)
+  })
+
+  it('passes className correctly', () => {
+    render(<Component className='apple' data-testid='apple' />)
+    expect(screen.getByTestId<TestElement>('apple').getAttribute('class')).toBe('apple')
+    expect(screen.getByTestId<TestElement>('apple').className).toBe('apple')
   })
 })
