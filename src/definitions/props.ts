@@ -263,9 +263,9 @@ import type {
   TooltipElementEventMap,
   TooltipTriggerElementAttributes,
   TooltipTriggerElementEventMap
-} from '@queelag/web'
-import type { AvatarElement } from '@queelag/web-components/elements/data/avatar.element'
-import type { BadgeElement } from '@queelag/web-components/elements/data/badge.element'
+} from '@aracna/web'
+import type { AvatarElement } from '@aracna/web-components/elements/data/avatar.element'
+import type { BadgeElement } from '@aracna/web-components/elements/data/badge.element'
 import type {
   CarouselElement,
   CarouselNextSlideControlElement,
@@ -275,29 +275,24 @@ import type {
   CarouselSlidesElement,
   CarouselTabElement,
   CarouselTabsElement
-} from '@queelag/web-components/elements/data/carousel.element'
-import type { ChipElement } from '@queelag/web-components/elements/data/chip.element'
-import type {
-  FeedArticleDescriptionElement,
-  FeedArticleElement,
-  FeedArticleLabelElement,
-  FeedElement
-} from '@queelag/web-components/elements/data/feed.element'
-import type { IconElement } from '@queelag/web-components/elements/data/icon.element'
-import type { ImageElement } from '@queelag/web-components/elements/data/image.element'
-import type { ListElement, ListItemElement } from '@queelag/web-components/elements/data/list.element'
-import type { TooltipArrowElement, TooltipContentElement, TooltipElement, TooltipTriggerElement } from '@queelag/web-components/elements/data/tooltip.element'
-import type { AlertDialogDescriptionElement, AlertDialogElement, AlertDialogLabelElement } from '@queelag/web-components/elements/feedback/alert.dialog.element'
-import type { AlertElement } from '@queelag/web-components/elements/feedback/alert.element'
-import type { DialogDescriptionElement, DialogElement, DialogLabelElement } from '@queelag/web-components/elements/feedback/dialog.element'
-import type { MeterElement } from '@queelag/web-components/elements/feedback/meter.element'
-import type { ButtonElement } from '@queelag/web-components/elements/input/button.element'
-import type { ButtonGroupElement } from '@queelag/web-components/elements/input/button.group.element'
-import type { CheckBoxElement } from '@queelag/web-components/elements/input/check.box.element'
-import type { FormElement } from '@queelag/web-components/elements/input/form.element'
-import type { InputElement } from '@queelag/web-components/elements/input/input.element'
-import type { InputFileElement } from '@queelag/web-components/elements/input/input.file.element'
-import type { RadioButtonElement, RadioGroupElement } from '@queelag/web-components/elements/input/radio.group.element'
+} from '@aracna/web-components/elements/data/carousel.element'
+import type { ChipElement } from '@aracna/web-components/elements/data/chip.element'
+import type { FeedArticleDescriptionElement, FeedArticleElement, FeedArticleLabelElement, FeedElement } from '@aracna/web-components/elements/data/feed.element'
+import type { IconElement } from '@aracna/web-components/elements/data/icon.element'
+import type { ImageElement } from '@aracna/web-components/elements/data/image.element'
+import type { ListElement, ListItemElement } from '@aracna/web-components/elements/data/list.element'
+import type { TooltipArrowElement, TooltipContentElement, TooltipElement, TooltipTriggerElement } from '@aracna/web-components/elements/data/tooltip.element'
+import type { AlertDialogDescriptionElement, AlertDialogElement, AlertDialogLabelElement } from '@aracna/web-components/elements/feedback/alert.dialog.element'
+import type { AlertElement } from '@aracna/web-components/elements/feedback/alert.element'
+import type { DialogDescriptionElement, DialogElement, DialogLabelElement } from '@aracna/web-components/elements/feedback/dialog.element'
+import type { MeterElement } from '@aracna/web-components/elements/feedback/meter.element'
+import type { ButtonElement } from '@aracna/web-components/elements/input/button.element'
+import type { ButtonGroupElement } from '@aracna/web-components/elements/input/button.group.element'
+import type { CheckBoxElement } from '@aracna/web-components/elements/input/check.box.element'
+import type { FormElement } from '@aracna/web-components/elements/input/form.element'
+import type { InputElement } from '@aracna/web-components/elements/input/input.element'
+import type { InputFileElement } from '@aracna/web-components/elements/input/input.file.element'
+import type { RadioButtonElement, RadioGroupElement } from '@aracna/web-components/elements/input/radio.group.element'
 import type {
   SelectButtonElement,
   SelectElement,
@@ -305,29 +300,29 @@ import type {
   SelectInputElement,
   SelectListElement,
   SelectOptionElement
-} from '@queelag/web-components/elements/input/select.element'
-import type { SliderElement, SliderThumbElement } from '@queelag/web-components/elements/input/slider.element'
-import type { SwitchElement } from '@queelag/web-components/elements/input/switch.element'
-import type { TextAreaElement } from '@queelag/web-components/elements/input/text.area.element'
-import type { DividerElement } from '@queelag/web-components/elements/layout/divider.element'
-import type { BreadcrumbElement, BreadcrumbItemElement, BreadcrumbListElement } from '@queelag/web-components/elements/navigation/breadcrumb.element'
-import type { MenuButtonElement, MenuElement, MenuItemElement, MenuSubMenuElement } from '@queelag/web-components/elements/navigation/menu.element'
-import type { NavigationBarElement, NavigationBarItemElement } from '@queelag/web-components/elements/navigation/navigation.bar.element'
-import type { NavigationRailElement, NavigationRailItemElement } from '@queelag/web-components/elements/navigation/navigation.rail.element'
-import type { TabsElement, TabsPanelElement, TabsTabElement } from '@queelag/web-components/elements/navigation/tabs.element'
+} from '@aracna/web-components/elements/input/select.element'
+import type { SliderElement, SliderThumbElement } from '@aracna/web-components/elements/input/slider.element'
+import type { SwitchElement } from '@aracna/web-components/elements/input/switch.element'
+import type { TextAreaElement } from '@aracna/web-components/elements/input/text.area.element'
+import type { DividerElement } from '@aracna/web-components/elements/layout/divider.element'
+import type { BreadcrumbElement, BreadcrumbItemElement, BreadcrumbListElement } from '@aracna/web-components/elements/navigation/breadcrumb.element'
+import type { MenuButtonElement, MenuElement, MenuItemElement, MenuSubMenuElement } from '@aracna/web-components/elements/navigation/menu.element'
+import type { NavigationBarElement, NavigationBarItemElement } from '@aracna/web-components/elements/navigation/navigation.bar.element'
+import type { NavigationRailElement, NavigationRailItemElement } from '@aracna/web-components/elements/navigation/navigation.rail.element'
+import type { TabsElement, TabsPanelElement, TabsTabElement } from '@aracna/web-components/elements/navigation/tabs.element'
 import type {
   AccordionButtonElement,
   AccordionElement,
   AccordionHeaderElement,
   AccordionPanelElement,
   AccordionSectionElement
-} from '@queelag/web-components/elements/surface/accordion.element'
+} from '@aracna/web-components/elements/surface/accordion.element'
 import type {
   DisclosureButtonElement,
   DisclosureElement,
   DisclosurePanelElement,
   DisclosureSectionElement
-} from '@queelag/web-components/elements/surface/disclosure.element'
+} from '@aracna/web-components/elements/surface/disclosure.element'
 
 import type {
   AriaAccordionButtonElement,
@@ -335,15 +330,15 @@ import type {
   AriaAccordionHeaderElement,
   AriaAccordionPanelElement,
   AriaAccordionSectionElement
-} from '@queelag/web-components/elements/aria/aria.accordion.element'
+} from '@aracna/web-components/elements/aria/aria.accordion.element'
 import type {
   AriaAlertDialogDescriptionElement,
   AriaAlertDialogElement,
   AriaAlertDialogLabelElement
-} from '@queelag/web-components/elements/aria/aria.alert.dialog.element'
-import type { AriaAlertElement } from '@queelag/web-components/elements/aria/aria.alert.element'
-import type { AriaBreadcrumbElement, AriaBreadcrumbItemElement, AriaBreadcrumbListElement } from '@queelag/web-components/elements/aria/aria.breadcrumb.element'
-import type { AriaButtonElement } from '@queelag/web-components/elements/aria/aria.button.element'
+} from '@aracna/web-components/elements/aria/aria.alert.dialog.element'
+import type { AriaAlertElement } from '@aracna/web-components/elements/aria/aria.alert.element'
+import type { AriaBreadcrumbElement, AriaBreadcrumbItemElement, AriaBreadcrumbListElement } from '@aracna/web-components/elements/aria/aria.breadcrumb.element'
+import type { AriaButtonElement } from '@aracna/web-components/elements/aria/aria.button.element'
 import type {
   AriaCarouselElement,
   AriaCarouselNextSlideControlElement,
@@ -353,8 +348,8 @@ import type {
   AriaCarouselSlidesElement,
   AriaCarouselTabElement,
   AriaCarouselTabsElement
-} from '@queelag/web-components/elements/aria/aria.carousel.element'
-import type { AriaCheckBoxElement } from '@queelag/web-components/elements/aria/aria.check.box.element'
+} from '@aracna/web-components/elements/aria/aria.carousel.element'
+import type { AriaCheckBoxElement } from '@aracna/web-components/elements/aria/aria.check.box.element'
 import type {
   AriaComboBoxButtonElement,
   AriaComboBoxElement,
@@ -362,39 +357,39 @@ import type {
   AriaComboBoxInputElement,
   AriaComboBoxListElement,
   AriaComboBoxOptionElement
-} from '@queelag/web-components/elements/aria/aria.combo.box.element'
-import type { AriaDialogDescriptionElement, AriaDialogElement, AriaDialogLabelElement } from '@queelag/web-components/elements/aria/aria.dialog.element'
+} from '@aracna/web-components/elements/aria/aria.combo.box.element'
+import type { AriaDialogDescriptionElement, AriaDialogElement, AriaDialogLabelElement } from '@aracna/web-components/elements/aria/aria.dialog.element'
 import type {
   AriaDisclosureButtonElement,
   AriaDisclosureElement,
   AriaDisclosurePanelElement,
   AriaDisclosureSectionElement
-} from '@queelag/web-components/elements/aria/aria.disclosure.element'
+} from '@aracna/web-components/elements/aria/aria.disclosure.element'
 import type {
   AriaFeedArticleDescriptionElement,
   AriaFeedArticleElement,
   AriaFeedArticleLabelElement,
   AriaFeedElement
-} from '@queelag/web-components/elements/aria/aria.feed.element'
-import type { AriaLinkElement } from '@queelag/web-components/elements/aria/aria.link.element'
-import type { AriaListBoxElement, AriaListBoxOptionElement } from '@queelag/web-components/elements/aria/aria.list.box.element'
+} from '@aracna/web-components/elements/aria/aria.feed.element'
+import type { AriaLinkElement } from '@aracna/web-components/elements/aria/aria.link.element'
+import type { AriaListBoxElement, AriaListBoxOptionElement } from '@aracna/web-components/elements/aria/aria.list.box.element'
 import type {
   AriaMenuButtonElement,
   AriaMenuElement,
   AriaMenuItemElement,
   AriaMenuSubMenuElement
-} from '@queelag/web-components/elements/aria/aria.menu.element'
-import type { AriaMeterElement } from '@queelag/web-components/elements/aria/aria.meter.element'
-import type { AriaRadioButtonElement, AriaRadioGroupElement } from '@queelag/web-components/elements/aria/aria.radio.group.element'
-import type { AriaSliderElement, AriaSliderThumbElement } from '@queelag/web-components/elements/aria/aria.slider.element'
-import type { AriaSwitchElement } from '@queelag/web-components/elements/aria/aria.switch.element'
-import type { AriaTabsElement, AriaTabsPanelElement, AriaTabsTabElement } from '@queelag/web-components/elements/aria/aria.tabs.element'
+} from '@aracna/web-components/elements/aria/aria.menu.element'
+import type { AriaMeterElement } from '@aracna/web-components/elements/aria/aria.meter.element'
+import type { AriaRadioButtonElement, AriaRadioGroupElement } from '@aracna/web-components/elements/aria/aria.radio.group.element'
+import type { AriaSliderElement, AriaSliderThumbElement } from '@aracna/web-components/elements/aria/aria.slider.element'
+import type { AriaSwitchElement } from '@aracna/web-components/elements/aria/aria.switch.element'
+import type { AriaTabsElement, AriaTabsPanelElement, AriaTabsTabElement } from '@aracna/web-components/elements/aria/aria.tabs.element'
 import type {
   AriaTooltipArrowElement,
   AriaTooltipContentElement,
   AriaTooltipElement,
   AriaTooltipTriggerElement
-} from '@queelag/web-components/elements/aria/aria.tooltip.element'
+} from '@aracna/web-components/elements/aria/aria.tooltip.element'
 import type { ElementComponentProps } from './types'
 
 /**

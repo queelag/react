@@ -1,4 +1,4 @@
-import { PascalCase } from '@queelag/core'
+import { PascalCase } from '@aracna/core'
 import type { DOMElement, ForwardedRef, HTMLAttributes, RefAttributes } from 'react'
 
 export type ElementComponent<Element extends HTMLElement, Props extends HTMLAttributes<Element> = {}> = (

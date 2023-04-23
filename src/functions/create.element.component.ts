@@ -1,4 +1,4 @@
-import { getObjectProperty, getPascalCaseString, KeyOf, setObjectProperty } from '@queelag/core'
+import { getObjectProperty, getPascalCaseString, KeyOf, setObjectProperty } from '@aracna/core'
 import { createElement, createRef, DOMElement, ForwardedRef, forwardRef, Ref, useEffect, useState } from 'react'
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types'
 

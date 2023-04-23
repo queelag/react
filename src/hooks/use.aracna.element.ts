@@ -1,4 +1,4 @@
-import type { AttributeChangeEvent, StateChangeEvent } from '@queelag/web'
+import type { AttributeChangeEvent, StateChangeEvent } from '@aracna/web'
 import { MutableRefObject, useEffect, useReducer, useRef } from 'react'
 import { useEventListener } from './use.event.listener'
 

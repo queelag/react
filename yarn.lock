@@ -362,9 +362,9 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@queelag/core@^1.1.14":
+"@aracna/core@^1.1.14":
   version "1.1.14"
-  resolved "https://registry.yarnpkg.com/@queelag/core/-/core-1.1.14.tgz#f8b6b068cae0b1d58c97ae09e454b63d2c087b7a"
+  resolved "https://registry.yarnpkg.com/@aracna/core/-/core-1.1.14.tgz#f8b6b068cae0b1d58c97ae09e454b63d2c087b7a"
   integrity sha512-KwQbS3wXswc0ruVPMug/4PrpJWxXl72GkMgsPGJMqUHWkVfrff/0zjx/oiPaWJzaddWtLumeH2lRmNf4YF2UYw==
   dependencies:
     "@types/cookie" "^0.5.1"
@@ -374,14 +374,14 @@
     node-fetch-cjs "^3.2.10"
     rfc4648 "^1.5.2"
 
-"@queelag/web-components@^1.0.6":
+"@aracna/web-components@^1.0.6":
   version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@queelag/web-components/-/web-components-1.0.6.tgz#4169d481e2ac9f767bad141d6b14803a7ca3708d"
+  resolved "https://registry.yarnpkg.com/@aracna/web-components/-/web-components-1.0.6.tgz#4169d481e2ac9f767bad141d6b14803a7ca3708d"
   integrity sha512-KFbDjrJkKyIiz+Wkx4XQWFmPILX7kLKRu18PHUHdabKDcg3aIkSFkqInFItYZ3D72nXT09frglOe+Gn8GmaPGg==
 
-"@queelag/web@^1.0.10":
+"@aracna/web@^1.0.10":
   version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@queelag/web/-/web-1.0.10.tgz#497d5f5f97f6abee33705be24b81645499a719e7"
+  resolved "https://registry.yarnpkg.com/@aracna/web/-/web-1.0.10.tgz#497d5f5f97f6abee33705be24b81645499a719e7"
   integrity sha512-kx2AlgndjJdrfvbtCq+VPKg2ehScfWectJ839cvgiDeJjK4Wc8JzFZLjNcjVNQc0hmK8db63vgjDo6YE/an+ZQ==
 
 "@rollup/plugin-strip@^3.0.1":

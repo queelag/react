@@ -1,4 +1,4 @@
-import { Environment } from '@queelag/core'
+import { Environment } from '@aracna/core'
 import { MutableRefObject, useRef } from 'react'
 
 export function useSafeRef<K extends keyof HTMLElementTagNameMap>(tagName: K, options?: ElementCreationOptions): MutableRefObject<HTMLElementTagNameMap[K]>

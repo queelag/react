@@ -4,7 +4,7 @@ import { defineConfig } from 'rollup'
 import { terser } from 'rollup-plugin-terser'
 
 export default defineConfig({
-  external: ['@queelag/core', '@queelag/web', 'react'],
+  external: ['@aracna/core', '@aracna/web', 'react'],
   input: 'src/index.ts',
   output: [
     {

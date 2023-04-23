@@ -1,5 +1,5 @@
-import { KeyOf } from '@queelag/core'
-import { FloatingElementAttributes, FloatingElementEventMap } from '@queelag/web'
+import { KeyOf } from '@aracna/core'
+import { FloatingElementAttributes, FloatingElementEventMap } from '@aracna/web'
 import { ElementComponent, ElementComponentProps } from '../definitions/types'
 import { createBaseElementComponent } from './create.base.element.component'
 
