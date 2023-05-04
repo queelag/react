@@ -4,7 +4,6 @@ import { glob } from 'glob'
 /** @type {import('esbuild').BuildOptions} */
 const OPTIONS = {
   logLevel: 'info',
-  logOverride: { 'import-is-undefined': 'silent' },
   minify: true
 }
 
@@ -16,6 +15,7 @@ build({
   entryPoints: await glob('./src/**/*.ts'),
   format: 'esm',
   outdir: 'dist',
+  outExtension: { '.js': '.mjs' },
   packages: 'external',
   platform: 'neutral'
 }).catch(() => process.exit(1))
@@ -25,10 +25,9 @@ build({
  */
 build({
   ...OPTIONS,
-  bundle: true,
-  entryPoints: ['src/index.ts'],
+  entryPoints: await glob('./src/**/*.ts'),
   format: 'cjs',
-  outfile: 'dist/index.cjs.js',
+  outdir: 'dist',
   packages: 'external',
   platform: 'neutral'
 }).catch(() => process.exit(1))
@@ -41,7 +40,7 @@ build({
   bundle: true,
   entryPoints: ['src/index.ts'],
   format: 'iife',
-  globalName: 'AracnaCore',
+  globalName: 'AracnaReact',
   outfile: 'dist/index.iife.js',
   platform: 'browser',
   treeShaking: true
