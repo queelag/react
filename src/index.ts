@@ -1,3 +1,4 @@
+export * from './definitions/enums'
 export * from './definitions/props'
 export * from './definitions/types'
 export * from './functions/create.base.element.component'
