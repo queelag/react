@@ -1,6 +1,6 @@
 export * from './definitions/enums'
-export * from './definitions/props'
-export * from './definitions/types'
+export type * from './definitions/props'
+export type * from './definitions/types'
 export * from './functions/create.base.element.component'
 export * from './functions/create.element.component'
 export * from './functions/create.floating.element.component'
