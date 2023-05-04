@@ -1,7 +1,7 @@
 import { KeyOf } from '@aracna/core'
 import { FocusTrapElementAttributes, FocusTrapElementEventMap } from '@aracna/web'
-import { ElementComponent, ElementComponentProps } from '../definitions/types'
-import { createBaseElementComponent } from './create.base.element.component'
+import { ElementComponent, ElementComponentProps } from '../definitions/types.js'
+import { createBaseElementComponent } from './create.base.element.component.js'
 
 export function createFocusTrapElementComponent<
   Element extends HTMLElementTagNameMap[Key],

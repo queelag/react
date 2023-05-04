@@ -1,6 +1,6 @@
 import { getObjectProperty, getPascalCaseString, KeyOf, setObjectProperty } from '@aracna/core'
 import { createElement, createRef, DOMElement, ForwardedRef, forwardRef, Ref, useEffect, useState } from 'react'
-import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types'
+import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types.js'
 
 export function createElementComponent<
   Element extends HTMLElementTagNameMap[Key],

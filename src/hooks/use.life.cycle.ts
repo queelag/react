@@ -1,5 +1,5 @@
 import { MutableRefObject, useEffect, useRef } from 'react'
-import { ComponentLifeCycle } from '../definitions/enums'
+import { ComponentLifeCycle } from '../definitions/enums.js'
 
 /**
  * Returns the life cycle of a component.
