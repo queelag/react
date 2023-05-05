@@ -24,7 +24,7 @@ for (let path of await glob('node_modules/@aracna/web-components/elements/{aria,
   ts = /* HTML */ `
     <script>
       import type { ${elements.map((element) => `${element}Attributes, ${element}EventMap`).join(', ')} } from '@aracna/web'
-      import type { ${elements.join(', ')} } from '@aracna/web-components/${folder}/${name.replace('-element', '')}'
+      import type { ${elements.join(', ')} } from '@aracna/web-components/elements/${folder}/${name}.js'
 
       ${elements
         .map((element) =>
