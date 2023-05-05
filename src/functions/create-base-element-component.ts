@@ -1,7 +1,7 @@
 import { KeyOf } from '@aracna/core'
 import { BaseElementAttributes, BaseElementEventMap } from '@aracna/web'
 import { ElementComponent, ElementComponentProps } from '../definitions/types.js'
-import { createElementComponent } from './create.element.component.js'
+import { createElementComponent } from './create-element-component.js'
 
 export function createBaseElementComponent<
   Element extends HTMLElementTagNameMap[Key],

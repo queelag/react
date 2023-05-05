@@ -1,6 +1,6 @@
 import { useReducer } from 'react'
 import { ComponentLifeCycle } from '../definitions/enums.js'
-import { useLifeCycle } from './use.life.cycle.js'
+import { useLifeCycle } from './use-life-cycle.js'
 
 /**
  * Forces a re-render if the component is mounted.

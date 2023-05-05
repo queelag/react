@@ -1,32 +1,34 @@
 {
   "author": "Dario Sechi",
   "devDependencies": {
-    "@aracna/core": "latest",
-    "@aracna/web": "latest",
-    "@aracna/web-components": "latest",
-    "@microsoft/api-extractor": "latest",
-    "@testing-library/react": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@vitejs/plugin-react": "latest",
-    "@vitest/coverage-c8": "latest",
-    "@vitest/ui": "latest",
-    "esbuild": "latest",
-    "glob": "latest",
-    "jsdom": "latest",
-    "prettier": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "tslib": "latest",
-    "typedoc": "latest",
-    "typescript": "latest",
-    "vitest": "latest"
+    "@aracna/core": "^1.1.25",
+    "@aracna/web": "^1.0.24",
+    "@aracna/web-components": "^1.0.22",
+    "@microsoft/api-extractor": "^7.34.8",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "^18.2.3",
+    "@vitejs/plugin-react": "^4.0.0",
+    "@vitest/coverage-c8": "^0.31.0",
+    "@vitest/ui": "^0.31.0",
+    "esbuild": "^0.17.18",
+    "glob": "^10.2.2",
+    "jsdom": "^22.0.0",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tslib": "^2.5.0",
+    "typedoc": "^0.24.6",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0"
   },
   "exports": {
-    "import": "./index.js",
-    "require": {
-      "default": "./index.cjs.js",
-      "types": "./index.d.ts"
+    ".": {
+      "import": "./index.js",
+      "require": {
+        "default": "./index.cjs.js",
+        "types": "./index.d.ts"
+      }
     }
   },
   "license": "MIT",
@@ -40,10 +42,6 @@
     "react-dom": ">= 18.2.0"
   },
   "repository": "https://github.com/aracna/react",
-  "resolutions": {
-    "@types/react": "18.2.5",
-    "@types/react-dom": "18.0.11"
-  },
   "scripts": {
     "test": "yarn vitest run",
     "build": "rm -rf dist && node esbuild.mjs && yarn tsc && yarn api-extractor run --local",
