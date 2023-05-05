@@ -14,7 +14,7 @@ import type {
   AriaTooltipArrowElement,
   AriaTooltipContentElement,
   AriaTooltipTriggerElement
-} from '@aracna/web-components/elements/aria/aria-tooltip-element.js'
+} from '@aracna/web-components/aria/aria-tooltip'
 
 export type AriaTooltipProps = ElementComponentProps<AriaTooltipElement, AriaTooltipElementAttributes, AriaTooltipElementEventMap>
 export type AriaTooltipArrowProps = ElementComponentProps<AriaTooltipArrowElement, AriaTooltipArrowElementAttributes, AriaTooltipArrowElementEventMap>
@@ -24,41 +24,41 @@ export type AriaTooltipTriggerProps = ElementComponentProps<AriaTooltipTriggerEl
 import type {
   AriaTabsElementAttributes,
   AriaTabsElementEventMap,
-  AriaTabsTabElementAttributes,
-  AriaTabsTabElementEventMap,
   AriaTabsPanelElementAttributes,
-  AriaTabsPanelElementEventMap
+  AriaTabsPanelElementEventMap,
+  AriaTabsTabElementAttributes,
+  AriaTabsTabElementEventMap
 } from '@aracna/web'
-import type { AriaTabsElement, AriaTabsTabElement, AriaTabsPanelElement } from '@aracna/web-components/elements/aria/aria-tabs-element.js'
+import type { AriaTabsElement, AriaTabsPanelElement, AriaTabsTabElement } from '@aracna/web-components/aria/aria-tabs'
 
 export type AriaTabsProps = ElementComponentProps<AriaTabsElement, AriaTabsElementAttributes, AriaTabsElementEventMap>
-export type AriaTabsTabProps = ElementComponentProps<AriaTabsTabElement, AriaTabsTabElementAttributes, AriaTabsTabElementEventMap>
 export type AriaTabsPanelProps = ElementComponentProps<AriaTabsPanelElement, AriaTabsPanelElementAttributes, AriaTabsPanelElementEventMap>
+export type AriaTabsTabProps = ElementComponentProps<AriaTabsTabElement, AriaTabsTabElementAttributes, AriaTabsTabElementEventMap>
 
 import type { AriaSwitchElementAttributes, AriaSwitchElementEventMap } from '@aracna/web'
-import type { AriaSwitchElement } from '@aracna/web-components/elements/aria/aria-switch-element.js'
+import type { AriaSwitchElement } from '@aracna/web-components/aria/aria-switch'
 
 export type AriaSwitchProps = ElementComponentProps<AriaSwitchElement, AriaSwitchElementAttributes, AriaSwitchElementEventMap>
 
 import type { AriaSliderElementAttributes, AriaSliderElementEventMap, AriaSliderThumbElementAttributes, AriaSliderThumbElementEventMap } from '@aracna/web'
-import type { AriaSliderElement, AriaSliderThumbElement } from '@aracna/web-components/elements/aria/aria-slider-element.js'
+import type { AriaSliderElement, AriaSliderThumbElement } from '@aracna/web-components/aria/aria-slider'
 
 export type AriaSliderProps = ElementComponentProps<AriaSliderElement, AriaSliderElementAttributes, AriaSliderElementEventMap>
 export type AriaSliderThumbProps = ElementComponentProps<AriaSliderThumbElement, AriaSliderThumbElementAttributes, AriaSliderThumbElementEventMap>
 
 import type {
-  AriaRadioGroupElementAttributes,
-  AriaRadioGroupElementEventMap,
   AriaRadioButtonElementAttributes,
-  AriaRadioButtonElementEventMap
+  AriaRadioButtonElementEventMap,
+  AriaRadioGroupElementAttributes,
+  AriaRadioGroupElementEventMap
 } from '@aracna/web'
-import type { AriaRadioGroupElement, AriaRadioButtonElement } from '@aracna/web-components/elements/aria/aria-radio-group-element.js'
+import type { AriaRadioButtonElement, AriaRadioGroupElement } from '@aracna/web-components/aria/aria-radio-group'
 
-export type AriaRadioGroupProps = ElementComponentProps<AriaRadioGroupElement, AriaRadioGroupElementAttributes, AriaRadioGroupElementEventMap>
 export type AriaRadioButtonProps = ElementComponentProps<AriaRadioButtonElement, AriaRadioButtonElementAttributes, AriaRadioButtonElementEventMap>
+export type AriaRadioGroupProps = ElementComponentProps<AriaRadioGroupElement, AriaRadioGroupElementAttributes, AriaRadioGroupElementEventMap>
 
 import type { AriaMeterElementAttributes, AriaMeterElementEventMap } from '@aracna/web'
-import type { AriaMeterElement } from '@aracna/web-components/elements/aria/aria-meter-element.js'
+import type { AriaMeterElement } from '@aracna/web-components/aria/aria-meter'
 
 export type AriaMeterProps = ElementComponentProps<AriaMeterElement, AriaMeterElementAttributes, AriaMeterElementEventMap>
 
@@ -72,12 +72,7 @@ import type {
   AriaMenuSubMenuElementAttributes,
   AriaMenuSubMenuElementEventMap
 } from '@aracna/web'
-import type {
-  AriaMenuElement,
-  AriaMenuButtonElement,
-  AriaMenuItemElement,
-  AriaMenuSubMenuElement
-} from '@aracna/web-components/elements/aria/aria-menu-element.js'
+import type { AriaMenuElement, AriaMenuButtonElement, AriaMenuItemElement, AriaMenuSubMenuElement } from '@aracna/web-components/aria/aria-menu'
 
 export type AriaMenuProps = ElementComponentProps<AriaMenuElement, AriaMenuElementAttributes<AriaMenuItemElement>, AriaMenuElementEventMap>
 export type AriaMenuButtonProps = ElementComponentProps<AriaMenuButtonElement, AriaMenuButtonElementAttributes, AriaMenuButtonElementEventMap>
@@ -90,13 +85,13 @@ import type {
   AriaListBoxOptionElementAttributes,
   AriaListBoxOptionElementEventMap
 } from '@aracna/web'
-import type { AriaListBoxElement, AriaListBoxOptionElement } from '@aracna/web-components/elements/aria/aria-list-box-element.js'
+import type { AriaListBoxElement, AriaListBoxOptionElement } from '@aracna/web-components/aria/aria-list-box'
 
 export type AriaListBoxProps = ElementComponentProps<AriaListBoxElement, AriaListBoxElementAttributes<AriaListBoxOptionElement>, AriaListBoxElementEventMap>
 export type AriaListBoxOptionProps = ElementComponentProps<AriaListBoxOptionElement, AriaListBoxOptionElementAttributes, AriaListBoxOptionElementEventMap>
 
 import type { AriaLinkElementAttributes, AriaLinkElementEventMap } from '@aracna/web'
-import type { AriaLinkElement } from '@aracna/web-components/elements/aria/aria-link-element.js'
+import type { AriaLinkElement } from '@aracna/web-components/aria/aria-link'
 
 export type AriaLinkProps = ElementComponentProps<AriaLinkElement, AriaLinkElementAttributes, AriaLinkElementEventMap>
 
@@ -105,54 +100,49 @@ import type {
   AriaFeedElementEventMap,
   AriaFeedArticleElementAttributes,
   AriaFeedArticleElementEventMap,
-  AriaFeedArticleLabelElementAttributes,
-  AriaFeedArticleLabelElementEventMap,
   AriaFeedArticleDescriptionElementAttributes,
-  AriaFeedArticleDescriptionElementEventMap
+  AriaFeedArticleDescriptionElementEventMap,
+  AriaFeedArticleLabelElementAttributes,
+  AriaFeedArticleLabelElementEventMap
 } from '@aracna/web'
 import type {
   AriaFeedElement,
   AriaFeedArticleElement,
-  AriaFeedArticleLabelElement,
-  AriaFeedArticleDescriptionElement
-} from '@aracna/web-components/elements/aria/aria-feed-element.js'
+  AriaFeedArticleDescriptionElement,
+  AriaFeedArticleLabelElement
+} from '@aracna/web-components/aria/aria-feed'
 
 export type AriaFeedProps = ElementComponentProps<AriaFeedElement, AriaFeedElementAttributes, AriaFeedElementEventMap>
 export type AriaFeedArticleProps = ElementComponentProps<AriaFeedArticleElement, AriaFeedArticleElementAttributes, AriaFeedArticleElementEventMap>
-export type AriaFeedArticleLabelProps = ElementComponentProps<
-  AriaFeedArticleLabelElement,
-  AriaFeedArticleLabelElementAttributes,
-  AriaFeedArticleLabelElementEventMap
->
 export type AriaFeedArticleDescriptionProps = ElementComponentProps<
   AriaFeedArticleDescriptionElement,
   AriaFeedArticleDescriptionElementAttributes,
   AriaFeedArticleDescriptionElementEventMap
 >
+export type AriaFeedArticleLabelProps = ElementComponentProps<
+  AriaFeedArticleLabelElement,
+  AriaFeedArticleLabelElementAttributes,
+  AriaFeedArticleLabelElementEventMap
+>
 
 import type {
   AriaDisclosureElementAttributes,
   AriaDisclosureElementEventMap,
-  AriaDisclosureSectionElementAttributes,
-  AriaDisclosureSectionElementEventMap,
   AriaDisclosureButtonElementAttributes,
   AriaDisclosureButtonElementEventMap,
   AriaDisclosurePanelElementAttributes,
-  AriaDisclosurePanelElementEventMap
+  AriaDisclosurePanelElementEventMap,
+  AriaDisclosureSectionElementAttributes,
+  AriaDisclosureSectionElementEventMap
 } from '@aracna/web'
 import type {
   AriaDisclosureElement,
-  AriaDisclosureSectionElement,
   AriaDisclosureButtonElement,
-  AriaDisclosurePanelElement
-} from '@aracna/web-components/elements/aria/aria-disclosure-element.js'
+  AriaDisclosurePanelElement,
+  AriaDisclosureSectionElement
+} from '@aracna/web-components/aria/aria-disclosure'
 
 export type AriaDisclosureProps = ElementComponentProps<AriaDisclosureElement, AriaDisclosureElementAttributes, AriaDisclosureElementEventMap>
-export type AriaDisclosureSectionProps = ElementComponentProps<
-  AriaDisclosureSectionElement,
-  AriaDisclosureSectionElementAttributes,
-  AriaDisclosureSectionElementEventMap
->
 export type AriaDisclosureButtonProps = ElementComponentProps<
   AriaDisclosureButtonElement,
   AriaDisclosureButtonElementAttributes,
@@ -163,6 +153,11 @@ export type AriaDisclosurePanelProps = ElementComponentProps<
   AriaDisclosurePanelElementAttributes,
   AriaDisclosurePanelElementEventMap
 >
+export type AriaDisclosureSectionProps = ElementComponentProps<
+  AriaDisclosureSectionElement,
+  AriaDisclosureSectionElementAttributes,
+  AriaDisclosureSectionElementEventMap
+>
 
 import type {
   AriaDialogElementAttributes,
@@ -172,7 +167,7 @@ import type {
   AriaDialogLabelElementAttributes,
   AriaDialogLabelElementEventMap
 } from '@aracna/web'
-import type { AriaDialogElement, AriaDialogDescriptionElement, AriaDialogLabelElement } from '@aracna/web-components/elements/aria/aria-dialog-element.js'
+import type { AriaDialogElement, AriaDialogDescriptionElement, AriaDialogLabelElement } from '@aracna/web-components/aria/aria-dialog'
 
 export type AriaDialogProps = ElementComponentProps<AriaDialogElement, AriaDialogElementAttributes, AriaDialogElementEventMap>
 export type AriaDialogDescriptionProps = ElementComponentProps<
@@ -185,10 +180,10 @@ export type AriaDialogLabelProps = ElementComponentProps<AriaDialogLabelElement,
 import type {
   AriaComboBoxElementAttributes,
   AriaComboBoxElementEventMap,
-  AriaComboBoxGroupElementAttributes,
-  AriaComboBoxGroupElementEventMap,
   AriaComboBoxButtonElementAttributes,
   AriaComboBoxButtonElementEventMap,
+  AriaComboBoxGroupElementAttributes,
+  AriaComboBoxGroupElementEventMap,
   AriaComboBoxInputElementAttributes,
   AriaComboBoxInputElementEventMap,
   AriaComboBoxListElementAttributes,
@@ -198,66 +193,59 @@ import type {
 } from '@aracna/web'
 import type {
   AriaComboBoxElement,
-  AriaComboBoxGroupElement,
   AriaComboBoxButtonElement,
+  AriaComboBoxGroupElement,
   AriaComboBoxInputElement,
   AriaComboBoxListElement,
   AriaComboBoxOptionElement
-} from '@aracna/web-components/elements/aria/aria-combo-box-element.js'
+} from '@aracna/web-components/aria/aria-combo-box'
 
 export type AriaComboBoxProps = ElementComponentProps<
   AriaComboBoxElement,
   AriaComboBoxElementAttributes<AriaComboBoxOptionElement>,
   AriaComboBoxElementEventMap
 >
-export type AriaComboBoxGroupProps = ElementComponentProps<AriaComboBoxGroupElement, AriaComboBoxGroupElementAttributes, AriaComboBoxGroupElementEventMap>
 export type AriaComboBoxButtonProps = ElementComponentProps<AriaComboBoxButtonElement, AriaComboBoxButtonElementAttributes, AriaComboBoxButtonElementEventMap>
+export type AriaComboBoxGroupProps = ElementComponentProps<AriaComboBoxGroupElement, AriaComboBoxGroupElementAttributes, AriaComboBoxGroupElementEventMap>
 export type AriaComboBoxInputProps = ElementComponentProps<AriaComboBoxInputElement, AriaComboBoxInputElementAttributes, AriaComboBoxInputElementEventMap>
 export type AriaComboBoxListProps = ElementComponentProps<AriaComboBoxListElement, AriaComboBoxListElementAttributes, AriaComboBoxListElementEventMap>
 export type AriaComboBoxOptionProps = ElementComponentProps<AriaComboBoxOptionElement, AriaComboBoxOptionElementAttributes, AriaComboBoxOptionElementEventMap>
 
 import type { AriaCheckBoxElementAttributes, AriaCheckBoxElementEventMap } from '@aracna/web'
-import type { AriaCheckBoxElement } from '@aracna/web-components/elements/aria/aria-check-box-element.js'
+import type { AriaCheckBoxElement } from '@aracna/web-components/aria/aria-check-box'
 
 export type AriaCheckBoxProps = ElementComponentProps<AriaCheckBoxElement, AriaCheckBoxElementAttributes, AriaCheckBoxElementEventMap>
 
 import type {
   AriaCarouselElementAttributes,
   AriaCarouselElementEventMap,
-  AriaCarouselSlidesElementAttributes,
-  AriaCarouselSlidesElementEventMap,
-  AriaCarouselSlideElementAttributes,
-  AriaCarouselSlideElementEventMap,
-  AriaCarouselRotationControlElementAttributes,
-  AriaCarouselRotationControlElementEventMap,
   AriaCarouselNextSlideControlElementAttributes,
   AriaCarouselNextSlideControlElementEventMap,
   AriaCarouselPreviousSlideControlElementAttributes,
   AriaCarouselPreviousSlideControlElementEventMap,
-  AriaCarouselTabsElementAttributes,
-  AriaCarouselTabsElementEventMap,
+  AriaCarouselRotationControlElementAttributes,
+  AriaCarouselRotationControlElementEventMap,
+  AriaCarouselSlideElementAttributes,
+  AriaCarouselSlideElementEventMap,
+  AriaCarouselSlidesElementAttributes,
+  AriaCarouselSlidesElementEventMap,
   AriaCarouselTabElementAttributes,
-  AriaCarouselTabElementEventMap
+  AriaCarouselTabElementEventMap,
+  AriaCarouselTabsElementAttributes,
+  AriaCarouselTabsElementEventMap
 } from '@aracna/web'
 import type {
   AriaCarouselElement,
-  AriaCarouselSlidesElement,
-  AriaCarouselSlideElement,
-  AriaCarouselRotationControlElement,
   AriaCarouselNextSlideControlElement,
   AriaCarouselPreviousSlideControlElement,
-  AriaCarouselTabsElement,
-  AriaCarouselTabElement
-} from '@aracna/web-components/elements/aria/aria-carousel-element.js'
+  AriaCarouselRotationControlElement,
+  AriaCarouselSlideElement,
+  AriaCarouselSlidesElement,
+  AriaCarouselTabElement,
+  AriaCarouselTabsElement
+} from '@aracna/web-components/aria/aria-carousel'
 
 export type AriaCarouselProps = ElementComponentProps<AriaCarouselElement, AriaCarouselElementAttributes, AriaCarouselElementEventMap>
-export type AriaCarouselSlidesProps = ElementComponentProps<AriaCarouselSlidesElement, AriaCarouselSlidesElementAttributes, AriaCarouselSlidesElementEventMap>
-export type AriaCarouselSlideProps = ElementComponentProps<AriaCarouselSlideElement, AriaCarouselSlideElementAttributes, AriaCarouselSlideElementEventMap>
-export type AriaCarouselRotationControlProps = ElementComponentProps<
-  AriaCarouselRotationControlElement,
-  AriaCarouselRotationControlElementAttributes,
-  AriaCarouselRotationControlElementEventMap
->
 export type AriaCarouselNextSlideControlProps = ElementComponentProps<
   AriaCarouselNextSlideControlElement,
   AriaCarouselNextSlideControlElementAttributes,
@@ -268,34 +256,37 @@ export type AriaCarouselPreviousSlideControlProps = ElementComponentProps<
   AriaCarouselPreviousSlideControlElementAttributes,
   AriaCarouselPreviousSlideControlElementEventMap
 >
-export type AriaCarouselTabsProps = ElementComponentProps<AriaCarouselTabsElement, AriaCarouselTabsElementAttributes, AriaCarouselTabsElementEventMap>
+export type AriaCarouselRotationControlProps = ElementComponentProps<
+  AriaCarouselRotationControlElement,
+  AriaCarouselRotationControlElementAttributes,
+  AriaCarouselRotationControlElementEventMap
+>
+export type AriaCarouselSlideProps = ElementComponentProps<AriaCarouselSlideElement, AriaCarouselSlideElementAttributes, AriaCarouselSlideElementEventMap>
+export type AriaCarouselSlidesProps = ElementComponentProps<AriaCarouselSlidesElement, AriaCarouselSlidesElementAttributes, AriaCarouselSlidesElementEventMap>
 export type AriaCarouselTabProps = ElementComponentProps<AriaCarouselTabElement, AriaCarouselTabElementAttributes, AriaCarouselTabElementEventMap>
+export type AriaCarouselTabsProps = ElementComponentProps<AriaCarouselTabsElement, AriaCarouselTabsElementAttributes, AriaCarouselTabsElementEventMap>
 
 import type { AriaButtonElementAttributes, AriaButtonElementEventMap } from '@aracna/web'
-import type { AriaButtonElement } from '@aracna/web-components/elements/aria/aria-button-element.js'
+import type { AriaButtonElement } from '@aracna/web-components/aria/aria-button'
 
 export type AriaButtonProps = ElementComponentProps<AriaButtonElement, AriaButtonElementAttributes, AriaButtonElementEventMap>
 
 import type {
   AriaBreadcrumbElementAttributes,
   AriaBreadcrumbElementEventMap,
-  AriaBreadcrumbListElementAttributes,
-  AriaBreadcrumbListElementEventMap,
   AriaBreadcrumbItemElementAttributes,
-  AriaBreadcrumbItemElementEventMap
+  AriaBreadcrumbItemElementEventMap,
+  AriaBreadcrumbListElementAttributes,
+  AriaBreadcrumbListElementEventMap
 } from '@aracna/web'
-import type {
-  AriaBreadcrumbElement,
-  AriaBreadcrumbListElement,
-  AriaBreadcrumbItemElement
-} from '@aracna/web-components/elements/aria/aria-breadcrumb-element.js'
+import type { AriaBreadcrumbElement, AriaBreadcrumbItemElement, AriaBreadcrumbListElement } from '@aracna/web-components/aria/aria-breadcrumb'
 
 export type AriaBreadcrumbProps = ElementComponentProps<AriaBreadcrumbElement, AriaBreadcrumbElementAttributes, AriaBreadcrumbElementEventMap>
-export type AriaBreadcrumbListProps = ElementComponentProps<AriaBreadcrumbListElement, AriaBreadcrumbListElementAttributes, AriaBreadcrumbListElementEventMap>
 export type AriaBreadcrumbItemProps = ElementComponentProps<AriaBreadcrumbItemElement, AriaBreadcrumbItemElementAttributes, AriaBreadcrumbItemElementEventMap>
+export type AriaBreadcrumbListProps = ElementComponentProps<AriaBreadcrumbListElement, AriaBreadcrumbListElementAttributes, AriaBreadcrumbListElementEventMap>
 
 import type { AriaAlertElementAttributes, AriaAlertElementEventMap } from '@aracna/web'
-import type { AriaAlertElement } from '@aracna/web-components/elements/aria/aria-alert-element.js'
+import type { AriaAlertElement } from '@aracna/web-components/aria/aria-alert'
 
 export type AriaAlertProps = ElementComponentProps<AriaAlertElement, AriaAlertElementAttributes, AriaAlertElementEventMap>
 
@@ -307,11 +298,7 @@ import type {
   AriaAlertDialogLabelElementAttributes,
   AriaAlertDialogLabelElementEventMap
 } from '@aracna/web'
-import type {
-  AriaAlertDialogElement,
-  AriaAlertDialogDescriptionElement,
-  AriaAlertDialogLabelElement
-} from '@aracna/web-components/elements/aria/aria-alert-dialog-element.js'
+import type { AriaAlertDialogElement, AriaAlertDialogDescriptionElement, AriaAlertDialogLabelElement } from '@aracna/web-components/aria/aria-alert-dialog'
 
 export type AriaAlertDialogProps = ElementComponentProps<AriaAlertDialogElement, AriaAlertDialogElementAttributes, AriaAlertDialogElementEventMap>
 export type AriaAlertDialogDescriptionProps = ElementComponentProps<
@@ -328,40 +315,40 @@ export type AriaAlertDialogLabelProps = ElementComponentProps<
 import type {
   AriaAccordionElementAttributes,
   AriaAccordionElementEventMap,
-  AriaAccordionSectionElementAttributes,
-  AriaAccordionSectionElementEventMap,
-  AriaAccordionHeaderElementAttributes,
-  AriaAccordionHeaderElementEventMap,
   AriaAccordionButtonElementAttributes,
   AriaAccordionButtonElementEventMap,
+  AriaAccordionHeaderElementAttributes,
+  AriaAccordionHeaderElementEventMap,
   AriaAccordionPanelElementAttributes,
-  AriaAccordionPanelElementEventMap
+  AriaAccordionPanelElementEventMap,
+  AriaAccordionSectionElementAttributes,
+  AriaAccordionSectionElementEventMap
 } from '@aracna/web'
 import type {
   AriaAccordionElement,
-  AriaAccordionSectionElement,
-  AriaAccordionHeaderElement,
   AriaAccordionButtonElement,
-  AriaAccordionPanelElement
-} from '@aracna/web-components/elements/aria/aria-accordion-element.js'
+  AriaAccordionHeaderElement,
+  AriaAccordionPanelElement,
+  AriaAccordionSectionElement
+} from '@aracna/web-components/aria/aria-accordion'
 
 export type AriaAccordionProps = ElementComponentProps<AriaAccordionElement, AriaAccordionElementAttributes, AriaAccordionElementEventMap>
-export type AriaAccordionSectionProps = ElementComponentProps<
-  AriaAccordionSectionElement,
-  AriaAccordionSectionElementAttributes,
-  AriaAccordionSectionElementEventMap
+export type AriaAccordionButtonProps = ElementComponentProps<
+  AriaAccordionButtonElement,
+  AriaAccordionButtonElementAttributes,
+  AriaAccordionButtonElementEventMap
 >
 export type AriaAccordionHeaderProps = ElementComponentProps<
   AriaAccordionHeaderElement,
   AriaAccordionHeaderElementAttributes,
   AriaAccordionHeaderElementEventMap
 >
-export type AriaAccordionButtonProps = ElementComponentProps<
-  AriaAccordionButtonElement,
-  AriaAccordionButtonElementAttributes,
-  AriaAccordionButtonElementEventMap
->
 export type AriaAccordionPanelProps = ElementComponentProps<AriaAccordionPanelElement, AriaAccordionPanelElementAttributes, AriaAccordionPanelElementEventMap>
+export type AriaAccordionSectionProps = ElementComponentProps<
+  AriaAccordionSectionElement,
+  AriaAccordionSectionElementAttributes,
+  AriaAccordionSectionElementEventMap
+>
 
 import type {
   TooltipElementAttributes,
@@ -373,7 +360,7 @@ import type {
   TooltipTriggerElementAttributes,
   TooltipTriggerElementEventMap
 } from '@aracna/web'
-import type { TooltipElement, TooltipArrowElement, TooltipContentElement, TooltipTriggerElement } from '@aracna/web-components/elements/data/tooltip-element.js'
+import type { TooltipElement, TooltipArrowElement, TooltipContentElement, TooltipTriggerElement } from '@aracna/web-components/data/tooltip'
 
 export type TooltipProps = ElementComponentProps<TooltipElement, TooltipElementAttributes, TooltipElementEventMap>
 export type TooltipArrowProps = ElementComponentProps<TooltipArrowElement, TooltipArrowElementAttributes, TooltipArrowElementEventMap>
@@ -381,18 +368,18 @@ export type TooltipContentProps = ElementComponentProps<TooltipContentElement, T
 export type TooltipTriggerProps = ElementComponentProps<TooltipTriggerElement, TooltipTriggerElementAttributes, TooltipTriggerElementEventMap>
 
 import type { ListElementAttributes, ListElementEventMap, ListItemElementAttributes, ListItemElementEventMap } from '@aracna/web'
-import type { ListElement, ListItemElement } from '@aracna/web-components/elements/data/list-element.js'
+import type { ListElement, ListItemElement } from '@aracna/web-components/data/list'
 
 export type ListProps = ElementComponentProps<ListElement, ListElementAttributes, ListElementEventMap>
 export type ListItemProps = ElementComponentProps<ListItemElement, ListItemElementAttributes, ListItemElementEventMap>
 
 import type { ImageElementAttributes, ImageElementEventMap } from '@aracna/web'
-import type { ImageElement } from '@aracna/web-components/elements/data/image-element.js'
+import type { ImageElement } from '@aracna/web-components/data/image'
 
 export type ImageProps = ElementComponentProps<ImageElement, ImageElementAttributes, ImageElementEventMap>
 
 import type { IconElementAttributes, IconElementEventMap } from '@aracna/web'
-import type { IconElement } from '@aracna/web-components/elements/data/icon-element.js'
+import type { IconElement } from '@aracna/web-components/data/icon'
 
 export type IconProps = ElementComponentProps<IconElement, IconElementAttributes, IconElementEventMap>
 
@@ -401,69 +388,57 @@ import type {
   FeedElementEventMap,
   FeedArticleElementAttributes,
   FeedArticleElementEventMap,
-  FeedArticleLabelElementAttributes,
-  FeedArticleLabelElementEventMap,
   FeedArticleDescriptionElementAttributes,
-  FeedArticleDescriptionElementEventMap
+  FeedArticleDescriptionElementEventMap,
+  FeedArticleLabelElementAttributes,
+  FeedArticleLabelElementEventMap
 } from '@aracna/web'
-import type {
-  FeedElement,
-  FeedArticleElement,
-  FeedArticleLabelElement,
-  FeedArticleDescriptionElement
-} from '@aracna/web-components/elements/data/feed-element.js'
+import type { FeedElement, FeedArticleElement, FeedArticleDescriptionElement, FeedArticleLabelElement } from '@aracna/web-components/data/feed'
 
 export type FeedProps = ElementComponentProps<FeedElement, FeedElementAttributes, FeedElementEventMap>
 export type FeedArticleProps = ElementComponentProps<FeedArticleElement, FeedArticleElementAttributes, FeedArticleElementEventMap>
-export type FeedArticleLabelProps = ElementComponentProps<FeedArticleLabelElement, FeedArticleLabelElementAttributes, FeedArticleLabelElementEventMap>
 export type FeedArticleDescriptionProps = ElementComponentProps<
   FeedArticleDescriptionElement,
   FeedArticleDescriptionElementAttributes,
   FeedArticleDescriptionElementEventMap
 >
+export type FeedArticleLabelProps = ElementComponentProps<FeedArticleLabelElement, FeedArticleLabelElementAttributes, FeedArticleLabelElementEventMap>
 
 import type { ChipElementAttributes, ChipElementEventMap } from '@aracna/web'
-import type { ChipElement } from '@aracna/web-components/elements/data/chip-element.js'
+import type { ChipElement } from '@aracna/web-components/data/chip'
 
 export type ChipProps = ElementComponentProps<ChipElement, ChipElementAttributes, ChipElementEventMap>
 
 import type {
   CarouselElementAttributes,
   CarouselElementEventMap,
-  CarouselSlidesElementAttributes,
-  CarouselSlidesElementEventMap,
-  CarouselSlideElementAttributes,
-  CarouselSlideElementEventMap,
-  CarouselRotationControlElementAttributes,
-  CarouselRotationControlElementEventMap,
   CarouselNextSlideControlElementAttributes,
   CarouselNextSlideControlElementEventMap,
   CarouselPreviousSlideControlElementAttributes,
   CarouselPreviousSlideControlElementEventMap,
-  CarouselTabsElementAttributes,
-  CarouselTabsElementEventMap,
+  CarouselRotationControlElementAttributes,
+  CarouselRotationControlElementEventMap,
+  CarouselSlideElementAttributes,
+  CarouselSlideElementEventMap,
+  CarouselSlidesElementAttributes,
+  CarouselSlidesElementEventMap,
   CarouselTabElementAttributes,
-  CarouselTabElementEventMap
+  CarouselTabElementEventMap,
+  CarouselTabsElementAttributes,
+  CarouselTabsElementEventMap
 } from '@aracna/web'
 import type {
   CarouselElement,
-  CarouselSlidesElement,
-  CarouselSlideElement,
-  CarouselRotationControlElement,
   CarouselNextSlideControlElement,
   CarouselPreviousSlideControlElement,
-  CarouselTabsElement,
-  CarouselTabElement
-} from '@aracna/web-components/elements/data/carousel-element.js'
+  CarouselRotationControlElement,
+  CarouselSlideElement,
+  CarouselSlidesElement,
+  CarouselTabElement,
+  CarouselTabsElement
+} from '@aracna/web-components/data/carousel'
 
 export type CarouselProps = ElementComponentProps<CarouselElement, CarouselElementAttributes, CarouselElementEventMap>
-export type CarouselSlidesProps = ElementComponentProps<CarouselSlidesElement, CarouselSlidesElementAttributes, CarouselSlidesElementEventMap>
-export type CarouselSlideProps = ElementComponentProps<CarouselSlideElement, CarouselSlideElementAttributes, CarouselSlideElementEventMap>
-export type CarouselRotationControlProps = ElementComponentProps<
-  CarouselRotationControlElement,
-  CarouselRotationControlElementAttributes,
-  CarouselRotationControlElementEventMap
->
 export type CarouselNextSlideControlProps = ElementComponentProps<
   CarouselNextSlideControlElement,
   CarouselNextSlideControlElementAttributes,
@@ -474,77 +449,80 @@ export type CarouselPreviousSlideControlProps = ElementComponentProps<
   CarouselPreviousSlideControlElementAttributes,
   CarouselPreviousSlideControlElementEventMap
 >
-export type CarouselTabsProps = ElementComponentProps<CarouselTabsElement, CarouselTabsElementAttributes, CarouselTabsElementEventMap>
+export type CarouselRotationControlProps = ElementComponentProps<
+  CarouselRotationControlElement,
+  CarouselRotationControlElementAttributes,
+  CarouselRotationControlElementEventMap
+>
+export type CarouselSlideProps = ElementComponentProps<CarouselSlideElement, CarouselSlideElementAttributes, CarouselSlideElementEventMap>
+export type CarouselSlidesProps = ElementComponentProps<CarouselSlidesElement, CarouselSlidesElementAttributes, CarouselSlidesElementEventMap>
 export type CarouselTabProps = ElementComponentProps<CarouselTabElement, CarouselTabElementAttributes, CarouselTabElementEventMap>
+export type CarouselTabsProps = ElementComponentProps<CarouselTabsElement, CarouselTabsElementAttributes, CarouselTabsElementEventMap>
 
 import type { BadgeElementAttributes, BadgeElementEventMap } from '@aracna/web'
-import type { BadgeElement } from '@aracna/web-components/elements/data/badge-element.js'
+import type { BadgeElement } from '@aracna/web-components/data/badge'
 
 export type BadgeProps = ElementComponentProps<BadgeElement, BadgeElementAttributes, BadgeElementEventMap>
 
 import type { AvatarElementAttributes, AvatarElementEventMap } from '@aracna/web'
-import type { AvatarElement } from '@aracna/web-components/elements/data/avatar-element.js'
+import type { AvatarElement } from '@aracna/web-components/data/avatar'
 
 export type AvatarProps = ElementComponentProps<AvatarElement, AvatarElementAttributes, AvatarElementEventMap>
 
 import type { MeterElementAttributes, MeterElementEventMap } from '@aracna/web'
-import type { MeterElement } from '@aracna/web-components/elements/feedback/meter-element.js'
+import type { MeterElement } from '@aracna/web-components/feedback/meter'
 
 export type MeterProps = ElementComponentProps<MeterElement, MeterElementAttributes, MeterElementEventMap>
 
 import type {
   DialogElementAttributes,
   DialogElementEventMap,
-  DialogLabelElementAttributes,
-  DialogLabelElementEventMap,
   DialogDescriptionElementAttributes,
-  DialogDescriptionElementEventMap
+  DialogDescriptionElementEventMap,
+  DialogLabelElementAttributes,
+  DialogLabelElementEventMap
 } from '@aracna/web'
-import type { DialogElement, DialogLabelElement, DialogDescriptionElement } from '@aracna/web-components/elements/feedback/dialog-element.js'
+import type { DialogElement, DialogDescriptionElement, DialogLabelElement } from '@aracna/web-components/feedback/dialog'
 
 export type DialogProps = ElementComponentProps<DialogElement, DialogElementAttributes, DialogElementEventMap>
-export type DialogLabelProps = ElementComponentProps<DialogLabelElement, DialogLabelElementAttributes, DialogLabelElementEventMap>
 export type DialogDescriptionProps = ElementComponentProps<DialogDescriptionElement, DialogDescriptionElementAttributes, DialogDescriptionElementEventMap>
+export type DialogLabelProps = ElementComponentProps<DialogLabelElement, DialogLabelElementAttributes, DialogLabelElementEventMap>
 
 import type { AlertElementAttributes, AlertElementEventMap } from '@aracna/web'
-import type { AlertElement } from '@aracna/web-components/elements/feedback/alert-element.js'
+import type { AlertElement } from '@aracna/web-components/feedback/alert'
 
 export type AlertProps = ElementComponentProps<AlertElement, AlertElementAttributes, AlertElementEventMap>
 
 import type {
   AlertDialogElementAttributes,
   AlertDialogElementEventMap,
-  AlertDialogLabelElementAttributes,
-  AlertDialogLabelElementEventMap,
   AlertDialogDescriptionElementAttributes,
-  AlertDialogDescriptionElementEventMap
+  AlertDialogDescriptionElementEventMap,
+  AlertDialogLabelElementAttributes,
+  AlertDialogLabelElementEventMap
 } from '@aracna/web'
-import type {
-  AlertDialogElement,
-  AlertDialogLabelElement,
-  AlertDialogDescriptionElement
-} from '@aracna/web-components/elements/feedback/alert-dialog-element.js'
+import type { AlertDialogElement, AlertDialogDescriptionElement, AlertDialogLabelElement } from '@aracna/web-components/feedback/alert-dialog'
 
 export type AlertDialogProps = ElementComponentProps<AlertDialogElement, AlertDialogElementAttributes, AlertDialogElementEventMap>
-export type AlertDialogLabelProps = ElementComponentProps<AlertDialogLabelElement, AlertDialogLabelElementAttributes, AlertDialogLabelElementEventMap>
 export type AlertDialogDescriptionProps = ElementComponentProps<
   AlertDialogDescriptionElement,
   AlertDialogDescriptionElementAttributes,
   AlertDialogDescriptionElementEventMap
 >
+export type AlertDialogLabelProps = ElementComponentProps<AlertDialogLabelElement, AlertDialogLabelElementAttributes, AlertDialogLabelElementEventMap>
 
 import type { TextAreaElementAttributes, TextAreaElementEventMap } from '@aracna/web'
-import type { TextAreaElement } from '@aracna/web-components/elements/input/text-area-element.js'
+import type { TextAreaElement } from '@aracna/web-components/input/text-area'
 
 export type TextAreaProps = ElementComponentProps<TextAreaElement, TextAreaElementAttributes, TextAreaElementEventMap>
 
 import type { SwitchElementAttributes, SwitchElementEventMap } from '@aracna/web'
-import type { SwitchElement } from '@aracna/web-components/elements/input/switch-element.js'
+import type { SwitchElement } from '@aracna/web-components/input/switch'
 
 export type SwitchProps = ElementComponentProps<SwitchElement, SwitchElementAttributes, SwitchElementEventMap>
 
 import type { SliderElementAttributes, SliderElementEventMap, SliderThumbElementAttributes, SliderThumbElementEventMap } from '@aracna/web'
-import type { SliderElement, SliderThumbElement } from '@aracna/web-components/elements/input/slider-element.js'
+import type { SliderElement, SliderThumbElement } from '@aracna/web-components/input/slider'
 
 export type SliderProps = ElementComponentProps<SliderElement, SliderElementAttributes, SliderElementEventMap>
 export type SliderThumbProps = ElementComponentProps<SliderThumbElement, SliderThumbElementAttributes, SliderThumbElementEventMap>
@@ -552,10 +530,10 @@ export type SliderThumbProps = ElementComponentProps<SliderThumbElement, SliderT
 import type {
   SelectElementAttributes,
   SelectElementEventMap,
-  SelectGroupElementAttributes,
-  SelectGroupElementEventMap,
   SelectButtonElementAttributes,
   SelectButtonElementEventMap,
+  SelectGroupElementAttributes,
+  SelectGroupElementEventMap,
   SelectInputElementAttributes,
   SelectInputElementEventMap,
   SelectListElementAttributes,
@@ -565,74 +543,74 @@ import type {
 } from '@aracna/web'
 import type {
   SelectElement,
-  SelectGroupElement,
   SelectButtonElement,
+  SelectGroupElement,
   SelectInputElement,
   SelectListElement,
   SelectOptionElement
-} from '@aracna/web-components/elements/input/select-element.js'
+} from '@aracna/web-components/input/select'
 
 export type SelectProps = ElementComponentProps<SelectElement, SelectElementAttributes<SelectOptionElement>, SelectElementEventMap>
-export type SelectGroupProps = ElementComponentProps<SelectGroupElement, SelectGroupElementAttributes, SelectGroupElementEventMap>
 export type SelectButtonProps = ElementComponentProps<SelectButtonElement, SelectButtonElementAttributes, SelectButtonElementEventMap>
+export type SelectGroupProps = ElementComponentProps<SelectGroupElement, SelectGroupElementAttributes, SelectGroupElementEventMap>
 export type SelectInputProps = ElementComponentProps<SelectInputElement, SelectInputElementAttributes, SelectInputElementEventMap>
 export type SelectListProps = ElementComponentProps<SelectListElement, SelectListElementAttributes, SelectListElementEventMap>
 export type SelectOptionProps = ElementComponentProps<SelectOptionElement, SelectOptionElementAttributes, SelectOptionElementEventMap>
 
 import type { RadioGroupElementAttributes, RadioGroupElementEventMap, RadioButtonElementAttributes, RadioButtonElementEventMap } from '@aracna/web'
-import type { RadioGroupElement, RadioButtonElement } from '@aracna/web-components/elements/input/radio-group-element.js'
+import type { RadioGroupElement, RadioButtonElement } from '@aracna/web-components/input/radio-group'
 
 export type RadioGroupProps = ElementComponentProps<RadioGroupElement, RadioGroupElementAttributes, RadioGroupElementEventMap>
 export type RadioButtonProps = ElementComponentProps<RadioButtonElement, RadioButtonElementAttributes, RadioButtonElementEventMap>
 
 import type { InputFileElementAttributes, InputFileElementEventMap } from '@aracna/web'
-import type { InputFileElement } from '@aracna/web-components/elements/input/input-file-element.js'
+import type { InputFileElement } from '@aracna/web-components/input/input-file'
 
 export type InputFileProps = ElementComponentProps<InputFileElement, InputFileElementAttributes, InputFileElementEventMap>
 
 import type { InputElementAttributes, InputElementEventMap } from '@aracna/web'
-import type { InputElement } from '@aracna/web-components/elements/input/input-element.js'
+import type { InputElement } from '@aracna/web-components/input/input'
 
 export type InputProps = ElementComponentProps<InputElement, InputElementAttributes, InputElementEventMap>
 
 import type { FormElementAttributes, FormElementEventMap } from '@aracna/web'
-import type { FormElement } from '@aracna/web-components/elements/input/form-element.js'
+import type { FormElement } from '@aracna/web-components/input/form'
 
 export type FormProps = ElementComponentProps<FormElement, FormElementAttributes, FormElementEventMap>
 
 import type { CheckBoxElementAttributes, CheckBoxElementEventMap } from '@aracna/web'
-import type { CheckBoxElement } from '@aracna/web-components/elements/input/check-box-element.js'
+import type { CheckBoxElement } from '@aracna/web-components/input/check-box'
 
 export type CheckBoxProps = ElementComponentProps<CheckBoxElement, CheckBoxElementAttributes, CheckBoxElementEventMap>
 
 import type { ButtonGroupElementAttributes, ButtonGroupElementEventMap } from '@aracna/web'
-import type { ButtonGroupElement } from '@aracna/web-components/elements/input/button-group-element.js'
+import type { ButtonGroupElement } from '@aracna/web-components/input/button-group'
 
 export type ButtonGroupProps = ElementComponentProps<ButtonGroupElement, ButtonGroupElementAttributes, ButtonGroupElementEventMap>
 
 import type { ButtonElementAttributes, ButtonElementEventMap } from '@aracna/web'
-import type { ButtonElement } from '@aracna/web-components/elements/input/button-element.js'
+import type { ButtonElement } from '@aracna/web-components/input/button'
 
 export type ButtonProps = ElementComponentProps<ButtonElement, ButtonElementAttributes, ButtonElementEventMap>
 
 import type { DividerElementAttributes, DividerElementEventMap } from '@aracna/web'
-import type { DividerElement } from '@aracna/web-components/elements/layout/divider-element.js'
+import type { DividerElement } from '@aracna/web-components/layout/divider'
 
 export type DividerProps = ElementComponentProps<DividerElement, DividerElementAttributes, DividerElementEventMap>
 
 import type {
   TabsElementAttributes,
   TabsElementEventMap,
-  TabsTabElementAttributes,
-  TabsTabElementEventMap,
   TabsPanelElementAttributes,
-  TabsPanelElementEventMap
+  TabsPanelElementEventMap,
+  TabsTabElementAttributes,
+  TabsTabElementEventMap
 } from '@aracna/web'
-import type { TabsElement, TabsTabElement, TabsPanelElement } from '@aracna/web-components/elements/navigation/tabs-element.js'
+import type { TabsElement, TabsPanelElement, TabsTabElement } from '@aracna/web-components/navigation/tabs'
 
 export type TabsProps = ElementComponentProps<TabsElement, TabsElementAttributes, TabsElementEventMap>
-export type TabsTabProps = ElementComponentProps<TabsTabElement, TabsTabElementAttributes, TabsTabElementEventMap>
 export type TabsPanelProps = ElementComponentProps<TabsPanelElement, TabsPanelElementAttributes, TabsPanelElementEventMap>
+export type TabsTabProps = ElementComponentProps<TabsTabElement, TabsTabElementAttributes, TabsTabElementEventMap>
 
 import type {
   NavigationRailElementAttributes,
@@ -640,7 +618,7 @@ import type {
   NavigationRailItemElementAttributes,
   NavigationRailItemElementEventMap
 } from '@aracna/web'
-import type { NavigationRailElement, NavigationRailItemElement } from '@aracna/web-components/elements/navigation/navigation-rail-element.js'
+import type { NavigationRailElement, NavigationRailItemElement } from '@aracna/web-components/navigation/navigation-rail'
 
 export type NavigationRailProps = ElementComponentProps<NavigationRailElement, NavigationRailElementAttributes, NavigationRailElementEventMap>
 export type NavigationRailItemProps = ElementComponentProps<NavigationRailItemElement, NavigationRailItemElementAttributes, NavigationRailItemElementEventMap>
@@ -651,7 +629,7 @@ import type {
   NavigationBarItemElementAttributes,
   NavigationBarItemElementEventMap
 } from '@aracna/web'
-import type { NavigationBarElement, NavigationBarItemElement } from '@aracna/web-components/elements/navigation/navigation-bar-element.js'
+import type { NavigationBarElement, NavigationBarItemElement } from '@aracna/web-components/navigation/navigation-bar'
 
 export type NavigationBarProps = ElementComponentProps<NavigationBarElement, NavigationBarElementAttributes, NavigationBarElementEventMap>
 export type NavigationBarItemProps = ElementComponentProps<NavigationBarItemElement, NavigationBarItemElementAttributes, NavigationBarItemElementEventMap>
@@ -666,7 +644,7 @@ import type {
   MenuSubMenuElementAttributes,
   MenuSubMenuElementEventMap
 } from '@aracna/web'
-import type { MenuElement, MenuButtonElement, MenuItemElement, MenuSubMenuElement } from '@aracna/web-components/elements/navigation/menu-element.js'
+import type { MenuElement, MenuButtonElement, MenuItemElement, MenuSubMenuElement } from '@aracna/web-components/navigation/menu'
 
 export type MenuProps = ElementComponentProps<MenuElement, MenuElementAttributes<MenuItemElement>, MenuElementEventMap>
 export type MenuButtonProps = ElementComponentProps<MenuButtonElement, MenuButtonElementAttributes, MenuButtonElementEventMap>
@@ -676,61 +654,56 @@ export type MenuSubMenuProps = ElementComponentProps<MenuSubMenuElement, MenuSub
 import type {
   BreadcrumbElementAttributes,
   BreadcrumbElementEventMap,
-  BreadcrumbListElementAttributes,
-  BreadcrumbListElementEventMap,
   BreadcrumbItemElementAttributes,
-  BreadcrumbItemElementEventMap
+  BreadcrumbItemElementEventMap,
+  BreadcrumbListElementAttributes,
+  BreadcrumbListElementEventMap
 } from '@aracna/web'
-import type { BreadcrumbElement, BreadcrumbListElement, BreadcrumbItemElement } from '@aracna/web-components/elements/navigation/breadcrumb-element.js'
+import type { BreadcrumbElement, BreadcrumbItemElement, BreadcrumbListElement } from '@aracna/web-components/navigation/breadcrumb'
 
 export type BreadcrumbProps = ElementComponentProps<BreadcrumbElement, BreadcrumbElementAttributes, BreadcrumbElementEventMap>
-export type BreadcrumbListProps = ElementComponentProps<BreadcrumbListElement, BreadcrumbListElementAttributes, BreadcrumbListElementEventMap>
 export type BreadcrumbItemProps = ElementComponentProps<BreadcrumbItemElement, BreadcrumbItemElementAttributes, BreadcrumbItemElementEventMap>
+export type BreadcrumbListProps = ElementComponentProps<BreadcrumbListElement, BreadcrumbListElementAttributes, BreadcrumbListElementEventMap>
 
 import type {
   DisclosureElementAttributes,
   DisclosureElementEventMap,
-  DisclosureSectionElementAttributes,
-  DisclosureSectionElementEventMap,
   DisclosureButtonElementAttributes,
   DisclosureButtonElementEventMap,
   DisclosurePanelElementAttributes,
-  DisclosurePanelElementEventMap
+  DisclosurePanelElementEventMap,
+  DisclosureSectionElementAttributes,
+  DisclosureSectionElementEventMap
 } from '@aracna/web'
-import type {
-  DisclosureElement,
-  DisclosureSectionElement,
-  DisclosureButtonElement,
-  DisclosurePanelElement
-} from '@aracna/web-components/elements/surface/disclosure-element.js'
+import type { DisclosureElement, DisclosureButtonElement, DisclosurePanelElement, DisclosureSectionElement } from '@aracna/web-components/surface/disclosure'
 
 export type DisclosureProps = ElementComponentProps<DisclosureElement, DisclosureElementAttributes, DisclosureElementEventMap>
-export type DisclosureSectionProps = ElementComponentProps<DisclosureSectionElement, DisclosureSectionElementAttributes, DisclosureSectionElementEventMap>
 export type DisclosureButtonProps = ElementComponentProps<DisclosureButtonElement, DisclosureButtonElementAttributes, DisclosureButtonElementEventMap>
 export type DisclosurePanelProps = ElementComponentProps<DisclosurePanelElement, DisclosurePanelElementAttributes, DisclosurePanelElementEventMap>
+export type DisclosureSectionProps = ElementComponentProps<DisclosureSectionElement, DisclosureSectionElementAttributes, DisclosureSectionElementEventMap>
 
 import type {
   AccordionElementAttributes,
   AccordionElementEventMap,
-  AccordionSectionElementAttributes,
-  AccordionSectionElementEventMap,
-  AccordionHeaderElementAttributes,
-  AccordionHeaderElementEventMap,
   AccordionButtonElementAttributes,
   AccordionButtonElementEventMap,
+  AccordionHeaderElementAttributes,
+  AccordionHeaderElementEventMap,
   AccordionPanelElementAttributes,
-  AccordionPanelElementEventMap
+  AccordionPanelElementEventMap,
+  AccordionSectionElementAttributes,
+  AccordionSectionElementEventMap
 } from '@aracna/web'
 import type {
   AccordionElement,
-  AccordionSectionElement,
-  AccordionHeaderElement,
   AccordionButtonElement,
-  AccordionPanelElement
-} from '@aracna/web-components/elements/surface/accordion-element.js'
+  AccordionHeaderElement,
+  AccordionPanelElement,
+  AccordionSectionElement
+} from '@aracna/web-components/surface/accordion'
 
 export type AccordionProps = ElementComponentProps<AccordionElement, AccordionElementAttributes, AccordionElementEventMap>
-export type AccordionSectionProps = ElementComponentProps<AccordionSectionElement, AccordionSectionElementAttributes, AccordionSectionElementEventMap>
-export type AccordionHeaderProps = ElementComponentProps<AccordionHeaderElement, AccordionHeaderElementAttributes, AccordionHeaderElementEventMap>
 export type AccordionButtonProps = ElementComponentProps<AccordionButtonElement, AccordionButtonElementAttributes, AccordionButtonElementEventMap>
+export type AccordionHeaderProps = ElementComponentProps<AccordionHeaderElement, AccordionHeaderElementAttributes, AccordionHeaderElementEventMap>
 export type AccordionPanelProps = ElementComponentProps<AccordionPanelElement, AccordionPanelElementAttributes, AccordionPanelElementEventMap>
+export type AccordionSectionProps = ElementComponentProps<AccordionSectionElement, AccordionSectionElementAttributes, AccordionSectionElementEventMap>

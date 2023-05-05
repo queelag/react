@@ -19,12 +19,12 @@ for (let path of await glob('node_modules/@aracna/web-components/elements/{aria,
   name = path.replace('node_modules/@aracna/web-components/elements/', '').split('/')[1].replace('.js', '')
 
   dts = await readFile(path.replace('.js', '.d.ts'), 'utf8')
-  elements = dts.match(/'aracna-[a-z-]+': [a-zA-Z]+/gm).map((match) => match.split(':')[0].replace(/'/g, ''))
+  elements = dts.match(/'aracna-[a-z-]+': [a-zA-Z]+/gm).map((match) => match.split(':')[1].trim())
 
   ts = /* HTML */ `
     <script>
       import type { ${elements.map((element) => `${element}Attributes, ${element}EventMap`).join(', ')} } from '@aracna/web'
-      import type { ${elements.join(', ')} } from '@aracna/web-components/elements/${folder}/${name}.js'
+      import type { ${elements.join(', ')} } from '@aracna/web-components/${folder}/${name.replace('-element', '')}'
 
       ${elements
         .map((element) =>
