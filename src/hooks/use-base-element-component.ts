@@ -20,7 +20,7 @@ interface ReturnInterface<K extends keyof HTMLElementTagNameMap> {
   ref: MutableRefObject<HTMLElementTagNameMap[K] | null>
 }
 
-export function useComponent<K extends keyof HTMLElementTagNameMap>(options?: Options): ReturnInterface<K> {
+export function useBaseElementComponent<K extends keyof HTMLElementTagNameMap>(options?: Options): ReturnInterface<K> {
   const ref = useRef(null)
   const [, dispatch] = useReducer(() => ({}), {})
 
