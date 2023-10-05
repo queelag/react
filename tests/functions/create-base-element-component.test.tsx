@@ -55,6 +55,7 @@ describe('createElementComponent', () => {
     )
 
     element = screen.getByTestId('component')
+    console.log(element.outerHTML)
 
     expect(element.getAttribute('background')).toBe('black')
     expect(element.getAttribute('height')).toBe('1')
@@ -98,7 +99,6 @@ describe('createElementComponent', () => {
     console.log(element.getAttribute('background'))
 
     await waitFor(() => {
-      console.log(element.getAttribute('background'))
       expect(onAttributeChange).toHaveBeenCalledTimes(1)
       expect(onStateChange).toHaveBeenCalledTimes(0)
     })

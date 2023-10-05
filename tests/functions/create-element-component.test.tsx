@@ -1,7 +1,9 @@
+import { createComponent } from '@lit-labs/react'
 import { cleanup, render, screen } from '@testing-library/react'
-import React, { createRef, Ref } from 'react'
-import { afterEach, beforeAll, beforeEach, describe, expect, it, Mock, vi } from 'vitest'
-import { createElementComponent, ElementComponent, ElementComponentProps } from '../../src'
+import { LitElement } from 'lit'
+import React, { Ref, createRef } from 'react'
+import { Mock, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
+import { ElementComponent, ElementComponentProps } from '../../src'
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -15,15 +17,21 @@ class PartyEvent extends Event {
   }
 }
 
-class TestElement extends HTMLElement {
+class TestElement extends LitElement {
+  partying?: boolean
+
   party(): void {
     this.dispatchEvent(new Event('party'))
+  }
+
+  static properties = {
+    partying: {type: Boolean,  reflect: true}
   }
 }
 
 interface TestElementAttributes {
-  partying?: boolean
-}
+    'partying'?: boolean
+  }
 
 type TestElementEventMap = {
   party: PartyEvent
@@ -39,14 +47,14 @@ describe('createElementComponent', () => {
   })
 
   beforeEach(() => {
-    Component = createElementComponent('test-element', TestElement, ['party'])
+    Component = createComponent({react: React, tagName: 'test-element', elementClass: TestElement, events: {onParty: 'party'}})
   })
 
   afterEach(() => {
     cleanup()
   })
 
-  it('works', () => {
+  it('works', async () => {
     render(<Component data-testid='apple' partying />)
 
     expect(screen.getByTestId('apple')).toBeInstanceOf(TestElement)
