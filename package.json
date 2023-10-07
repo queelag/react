@@ -48,7 +48,7 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "dependencies": {
     "@lit-labs/react": "^2.1.0"
   }
