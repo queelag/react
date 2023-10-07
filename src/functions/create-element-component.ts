@@ -1,7 +1,7 @@
 import { KeyOf, getPascalCaseString } from '@aracna/core'
 import { createComponent } from '@lit-labs/react'
 import React from 'react'
-import { HTML_ELEMENT_EVENTS } from '../definitions/constants.js'
+import { DEFAULT_ELEMENT_COMPONENT_EVENTS } from '../definitions/constants.js'
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types.js'
 
 export function createElementComponent<
@@ -13,7 +13,7 @@ export function createElementComponent<
 >(tag: Key, element: { new (): Element }, events: KeyOf.Shallow<Events>[] = []): ElementComponent<Element, Props> {
   return createComponent({
     elementClass: element,
-    events: [...HTML_ELEMENT_EVENTS, ...events].reduce((events, name) => ({ ...events, ['on' + getPascalCaseString(String(name))]: name }), {}),
+    events: { ...DEFAULT_ELEMENT_COMPONENT_EVENTS, ...events.reduce((events, name) => ({ ...events, ['on' + getPascalCaseString(String(name))]: name }), {}) },
     react: React,
     tagName: tag
   }) as any

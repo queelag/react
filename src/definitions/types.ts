@@ -3,7 +3,7 @@ import type { ForwardRefExoticComponent, HTMLAttributes, RefAttributes } from 'r
 
 export type ElementComponent<Element extends HTMLElement, Props extends HTMLAttributes<Element> = {}> = ForwardRefExoticComponent<Props>
 
-export type ElementComponentAttributes = Record<PropertyKey, any>
+export type ElementComponentAttributes = Record<string, any>
 export type ElementComponentEvents = Record<string, any>
 
 export type ElementComponentProps<
