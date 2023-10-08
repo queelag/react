@@ -3,11 +3,14 @@ import { glob } from 'glob'
 import { format } from 'prettier'
 
 const GENERICS = new Map([
-  ['AriaMenuElement', 'AriaMenuItemElement'],
-  ['AriaListBoxElement', 'AriaListBoxOptionElement'],
-  ['AriaComboBoxElement', 'AriaComboBoxOptionElement'],
-  ['SelectElement', 'SelectOptionElement'],
-  ['MenuElement', 'MenuItemElement']
+  ['AriaMenuElement', ['AriaMenuItemElement']],
+  ['AriaListBoxElement', ['AriaListBoxOptionElement']],
+  ['AriaComboBoxElement', ['AriaComboBoxOptionElement']],
+  ['ButtonGroupElement', ['T', 'ButtonElementAttributes']],
+  ['NavigationBarElement', ['T', 'NavigationBarItemElementAttributes']],
+  ['NavigationRailElement', ['T', 'NavigationRailItemElementAttributes']],
+  ['SelectElement', ['SelectOptionElement']],
+  ['MenuElement', ['MenuItemElement']]
 ])
 
 await writeFile('src/definitions/props.ts', `import type { ElementComponentProps } from './types.js'`)
@@ -29,8 +32,11 @@ for (let path of await glob('node_modules/@aracna/web-components/elements/{aria,
       ${elements
         .map((element) =>
           [
-            `export type ${element.replace('Element', '')}Props = `,
-            `ElementComponentProps<${element}, ${element}Attributes${GENERICS.has(element) ? `<${GENERICS.get(element)}>` : ''}, ${element}EventMap>`
+            `export type ${element.replace('Element', '')}Props`,
+            GENERICS.get(element)?.[1] ? `<${GENERICS.get(element)[0]} extends ${GENERICS.get(element)[1]} = ${GENERICS.get(element)[1]}>` : '',
+            ` = ElementComponentProps<${element}, ${element}Attributes`,
+            GENERICS.has(element) ? `<${GENERICS.get(element)[0]}>` : '',
+            `, ${element}EventMap>`
           ].join('')
         )
         .join('\n')}
@@ -39,14 +45,14 @@ for (let path of await glob('node_modules/@aracna/web-components/elements/{aria,
 
   ts =
     '\n' +
-    format(ts.replace(/<\/?script>/gm, ''), {
+    (await format(ts.replace(/<\/?script>/gm, ''), {
       jsxSingleQuote: true,
       parser: 'babel-ts',
       printWidth: 160,
       semi: false,
       singleQuote: true,
       trailingComma: 'none'
-    })
+    }))
 
   await appendFile('src/definitions/props.ts', ts)
 }

@@ -608,7 +608,11 @@ export type CheckBoxProps = ElementComponentProps<CheckBoxElement, CheckBoxEleme
 import type { ButtonGroupElementAttributes, ButtonGroupElementEventMap } from '@aracna/web'
 import type { ButtonGroupElement } from '@aracna/web-components/elements/input/button-group-element.js'
 
-export type ButtonGroupProps = ElementComponentProps<ButtonGroupElement, ButtonGroupElementAttributes, ButtonGroupElementEventMap>
+export type ButtonGroupProps<T extends ButtonElementAttributes = ButtonElementAttributes> = ElementComponentProps<
+  ButtonGroupElement,
+  ButtonGroupElementAttributes<T>,
+  ButtonGroupElementEventMap
+>
 
 import type { ButtonElementAttributes, ButtonElementEventMap } from '@aracna/web'
 import type { ButtonElement } from '@aracna/web-components/elements/input/button-element.js'
@@ -642,7 +646,11 @@ import type {
 } from '@aracna/web'
 import type { NavigationRailElement, NavigationRailItemElement } from '@aracna/web-components/elements/navigation/navigation-rail-element.js'
 
-export type NavigationRailProps = ElementComponentProps<NavigationRailElement, NavigationRailElementAttributes, NavigationRailElementEventMap>
+export type NavigationRailProps<T extends NavigationRailItemElementAttributes = NavigationRailItemElementAttributes> = ElementComponentProps<
+  NavigationRailElement,
+  NavigationRailElementAttributes<T>,
+  NavigationRailElementEventMap
+>
 export type NavigationRailItemProps = ElementComponentProps<NavigationRailItemElement, NavigationRailItemElementAttributes, NavigationRailItemElementEventMap>
 
 import type {
@@ -653,7 +661,11 @@ import type {
 } from '@aracna/web'
 import type { NavigationBarElement, NavigationBarItemElement } from '@aracna/web-components/elements/navigation/navigation-bar-element.js'
 
-export type NavigationBarProps = ElementComponentProps<NavigationBarElement, NavigationBarElementAttributes, NavigationBarElementEventMap>
+export type NavigationBarProps<T extends NavigationBarItemElementAttributes = NavigationBarItemElementAttributes> = ElementComponentProps<
+  NavigationBarElement,
+  NavigationBarElementAttributes<T>,
+  NavigationBarElementEventMap
+>
 export type NavigationBarItemProps = ElementComponentProps<NavigationBarItemElement, NavigationBarItemElementAttributes, NavigationBarItemElementEventMap>
 
 import type {
