@@ -1,4 +1,3 @@
-import { PascalCase } from '@aracna/core'
 import type { ForwardRefExoticComponent, HTMLAttributes, RefAttributes } from 'react'
 
 export type ElementComponent<Element extends HTMLElement, Props extends HTMLAttributes<Element> = {}> = ForwardRefExoticComponent<Props>
@@ -13,5 +12,8 @@ export type ElementComponentProps<
 > = HTMLAttributes<Element> & RefAttributes<Element> & Attributes & MapComponentEvents<Events>
 
 export type MapComponentEvents<Events extends ElementComponentEvents> = {
-  [key in keyof Events as key extends string ? `on${PascalCase<key>}` : key]?: (event: Events[key]) => any
+  [key in keyof Events as key extends string ? `on${KebabToPascalCase<key>}` : key]?: (event: Events[key]) => any
 }
+
+type KebabToCamelCase<S extends string> = S extends `${infer T}-${infer U}` ? `${T}${Capitalize<KebabToCamelCase<U>>}` : S
+type KebabToPascalCase<S extends string> = Capitalize<KebabToCamelCase<S>>
