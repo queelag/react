@@ -6,7 +6,6 @@ const GENERICS = new Map([
   ['AriaMenuElement', ['AriaMenuItemElement']],
   ['AriaListBoxElement', ['AriaListBoxOptionElement']],
   ['AriaComboBoxElement', ['AriaComboBoxOptionElement']],
-  ['ButtonGroupElement', ['T', 'ButtonElementAttributes']],
   ['NavigationBarElement', ['T', 'NavigationBarItemElementAttributes']],
   ['NavigationRailElement', ['T', 'NavigationRailItemElementAttributes']],
   ['SelectElement', ['SelectOptionElement']],
