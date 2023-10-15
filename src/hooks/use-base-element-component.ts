@@ -24,7 +24,7 @@ export function useBaseElementComponent<K extends keyof HTMLElementTagNameMap>(o
   const ref = useRef(null)
   const [, dispatch] = useReducer(() => ({}), {})
 
-  const onAttributeChanged = (event: AttributeChangeEvent) => {
+  const onAttributeChange = (event: AttributeChangeEvent) => {
     if (options?.attribute?.dispatch !== true) {
       return
     }
@@ -44,7 +44,7 @@ export function useBaseElementComponent<K extends keyof HTMLElementTagNameMap>(o
     dispatch()
   }
 
-  const onStateChanged = (event: StateChangeEvent<any>) => {
+  const onStateChange = (event: StateChangeEvent<any>) => {
     if (options?.state?.dispatch !== true) {
       return
     }
@@ -64,8 +64,8 @@ export function useBaseElementComponent<K extends keyof HTMLElementTagNameMap>(o
     dispatch()
   }
 
-  useEventListener(ref, 'attribute-changed', onAttributeChanged, [ref.current])
-  useEventListener(ref, 'state-changed', onStateChanged, [ref.current])
+  useEventListener(ref, 'attribute-change', onAttributeChange, [ref.current])
+  useEventListener(ref, 'state-change', onStateChange, [ref.current])
   useEffect(() => dispatch(), [ref.current])
 
   return { element: ref.current, ref }
