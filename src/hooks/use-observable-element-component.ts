@@ -1,5 +1,6 @@
 import type { AttributeChangeEvent, StateChangeEvent } from '@aracna/web'
-import { MutableRefObject, useCallback, useRef, useState } from 'react'
+import { MutableRefObject, useCallback, useEffect, useRef, useState } from 'react'
+import { useDispatch } from './use-dispatch.js'
 
 interface Options {
   blacklist?: string[]
@@ -19,7 +20,8 @@ interface ReturnInterface<K extends keyof HTMLElementTagNameMap, P extends Prope
 export function useObservableElementComponent<K extends keyof HTMLElementTagNameMap, P extends Properties = Properties>(
   options?: Options
 ): ReturnInterface<K, P> {
-  const ref = useRef(null)
+  const ref = useRef<HTMLElementTagNameMap[K]>(null)
+  const dispatch = useDispatch()
   const [properties, setProperties] = useState<P>({} as P)
 
   const onAttributeChange = useCallback(
@@ -59,6 +61,8 @@ export function useObservableElementComponent<K extends keyof HTMLElementTagName
     },
     [options?.blacklist, options?.whitelist]
   )
+
+  useEffect(() => dispatch(), [ref.current])
 
   return { element: ref.current, onAttributeChange, onStateChange, properties, ref }
 }
