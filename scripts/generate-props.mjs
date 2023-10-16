@@ -12,7 +12,7 @@ const GENERICS = new Map([
   ['MenuElement', ['MenuItemElement']]
 ])
 
-await writeFile('src/definitions/props.ts', `import type { ElementComponentProps } from './types.js'`)
+await writeFile('src/definitions/generated-props.ts', `import type { ElementComponentProps } from './types.js'`)
 
 for (let path of await glob('node_modules/@aracna/web-components/elements/{aria,data,feedback,input,layout,navigation,surface}/*-element.js')) {
   let folder, name, dts, elements, ts
@@ -31,7 +31,7 @@ for (let path of await glob('node_modules/@aracna/web-components/elements/{aria,
       ${elements
         .map((element) =>
           [
-            `export type ${element.replace('Element', '')}Props`,
+            `export type Aracna${element.replace('Element', '')}Props`,
             GENERICS.get(element)?.[1] ? `<${GENERICS.get(element)[0]} extends ${GENERICS.get(element)[1]} = ${GENERICS.get(element)[1]}>` : '',
             ` = ElementComponentProps<${element}, ${element}Attributes`,
             GENERICS.has(element) ? `<${GENERICS.get(element)[0]}>` : '',
@@ -53,5 +53,5 @@ for (let path of await glob('node_modules/@aracna/web-components/elements/{aria,
       trailingComma: 'none'
     }))
 
-  await appendFile('src/definitions/props.ts', ts)
+  await appendFile('src/definitions/generated-props.ts', ts)
 }

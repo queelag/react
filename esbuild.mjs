@@ -12,7 +12,7 @@ const OPTIONS = {
  */
 build({
   ...OPTIONS,
-  entryPoints: await glob('./src/**/*.ts'),
+  entryPoints: await glob('./src/**/*.{ts,tsx}'),
   format: 'esm',
   outdir: 'dist',
   packages: 'external',
