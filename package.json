@@ -47,7 +47,7 @@
   "sideEffects": false,
   "type": "module",
   "types": "index.d.ts",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "dependencies": {
     "@lit-labs/react": "^2.1.0"
   }
