@@ -3,13 +3,25 @@ import { glob } from 'glob'
 import { format } from 'prettier'
 
 const GENERICS = new Map([
+  ['AccordionElement', ['T']],
   ['AriaMenuElement', ['AriaMenuItemElement']],
   ['AriaListBoxElement', ['AriaListBoxOptionElement']],
   ['AriaComboBoxElement', ['AriaComboBoxOptionElement']],
-  ['NavigationBarElement', ['T', 'NavigationBarItemElementAttributes']],
-  ['NavigationRailElement', ['T', 'NavigationRailItemElementAttributes']],
-  ['SelectElement', ['SelectOptionElement']],
-  ['MenuElement', ['MenuItemElement']]
+  ['BreadcrumbElement', ['T']],
+  ['ButtonGroupElement', ['T']],
+  ['CarouselElement', ['T']],
+  ['DisclosureElement', ['T']],
+  ['FeedElement', ['T']],
+  ['FormElement', ['T']],
+  ['ListElement', ['T']],
+  ['MenuElement', ['MenuItemElement', 'T']],
+  ['MenuItemElement', ['T']],
+  ['NavigationBarElement', ['T']],
+  ['NavigationRailElement', ['T']],
+  ['RadioGroupElement', ['T']],
+  ['SelectElement', ['SelectOptionElement', 'T']],
+  ['SliderElement', ['T']],
+  ['TabsElement', ['T']]
 ])
 
 await writeFile('src/definitions/generated-props.ts', `import type { ElementComponentProps } from './types.js'`)
@@ -32,9 +44,9 @@ for (let path of await glob('node_modules/@aracna/web-components/elements/{aria,
         .map((element) =>
           [
             `export type Aracna${element.replace('Element', '')}Props`,
-            GENERICS.get(element)?.[1] ? `<${GENERICS.get(element)[0]} extends ${GENERICS.get(element)[1]} = ${GENERICS.get(element)[1]}>` : '',
+            GENERICS.get(element)?.[0] === 'T' ? `<T>` : GENERICS.get(element)?.[1] === 'T' ? '<T>' : '',
             ` = ElementComponentProps<${element}, ${element}Attributes`,
-            GENERICS.has(element) ? `<${GENERICS.get(element)[0]}>` : '',
+            GENERICS.has(element) ? `<${[...GENERICS.get(element)].join(',')}>` : '',
             `, ${element}EventMap>`
           ].join('')
         )
