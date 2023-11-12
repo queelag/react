@@ -14,6 +14,7 @@ const GENERICS = new Map([
   ['FeedElement', ['T']],
   ['FormElement', ['T']],
   ['ListElement', ['T']],
+  ['ListBoxElement', ['ListBoxOptionElement']],
   ['MenuElement', ['MenuItemElement', 'T']],
   ['MenuItemElement', ['T']],
   ['NavigationBarElement', ['T']],
