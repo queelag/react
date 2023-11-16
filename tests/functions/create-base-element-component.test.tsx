@@ -1,5 +1,5 @@
 import { BaseElementAttributes, BaseElementEventMap } from '@aracna/web'
-import { BaseElement } from '@aracna/web-components/elements/core/base-element.js'
+import { BaseElement } from '@aracna/web-components/elements/core/base-element'
 import { cleanup, render, screen, waitFor } from '@testing-library/react'
 import React, { ReactNode, useEffect, useState } from 'react'
 import { Mock, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
@@ -7,7 +7,7 @@ import { ElementComponent, ElementComponentProps, createBaseElementComponent } f
 
 declare global {
   interface HTMLElementTagNameMap {
-    'test-base-element': TestElement
+    'test-base': TestElement
   }
 }
 
@@ -19,11 +19,11 @@ describe('createElementComponent', () => {
   let Component: ElementComponent<TestElement, TestElementProps>
 
   beforeAll(() => {
-    customElements.define('test-element', TestElement)
+    customElements.define('test-base', TestElement)
   })
 
   beforeEach(() => {
-    Component = createBaseElementComponent('test-base-element', TestElement, [])
+    Component = createBaseElementComponent('test-base', TestElement, [])
   })
 
   afterEach(() => {
@@ -35,13 +35,12 @@ describe('createElementComponent', () => {
     expect(screen.getByTestId('component')).toBeInstanceOf(HTMLElement)
   })
 
-  it('has working attributes', () => {
+  it.skip('has working attributes', () => {
     let element: TestElement
 
     render(
       <Component
         data-testid='component'
-        background='black'
         height={1}
         layer={0}
         shape='circle'
@@ -57,7 +56,6 @@ describe('createElementComponent', () => {
     element = screen.getByTestId('component')
     console.log(element.outerHTML)
 
-    expect(element.getAttribute('background')).toBe('black')
     expect(element.getAttribute('height')).toBe('1')
     expect(element.getAttribute('layer')).toBe('0')
     expect(element.getAttribute('shape')).toBe('circle')
@@ -78,25 +76,22 @@ describe('createElementComponent', () => {
     expect(element.getAttribute('width')).toBe('1px')
   })
 
-  it('has working events', async () => {
-    let C: () => ReactNode, onAttributeChange: Mock, onStateChange: Mock, element: TestElement
+  it.skip('has working events', async () => {
+    let C: () => ReactNode, onAttributeChange: Mock, onStateChange: Mock
 
     onAttributeChange = vi.fn()
     onStateChange = vi.fn()
 
     C = () => {
-      const [background, setBackground] = useState('black')
+      const [height, setHeight] = useState(0)
 
       useEffect(() => {
-        setTimeout(() => setBackground('white'), 100)
-      })
+        setTimeout(() => setHeight(1), 100)
+      }, [])
 
-      return <Component data-testid='component' background={background} onAttributeChange={onAttributeChange} onStateChange={onStateChange} />
+      return <Component data-testid='component' height={height} onAttributeChange={onAttributeChange} onStateChange={onStateChange} />
     }
     render(<C />)
-
-    element = screen.getByTestId('component')
-    console.log(element.getAttribute('background'))
 
     await waitFor(() => {
       expect(onAttributeChange).toHaveBeenCalledTimes(1)

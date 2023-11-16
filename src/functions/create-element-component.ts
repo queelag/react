@@ -1,5 +1,5 @@
 import { KeyOf, getPascalCaseString } from '@aracna/core'
-import { createComponent } from '@lit-labs/react'
+import { createComponent } from '@lit/react'
 import React from 'react'
 import { DEFAULT_ELEMENT_COMPONENT_EVENTS } from '../definitions/constants.js'
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types.js'
