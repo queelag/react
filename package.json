@@ -4,7 +4,7 @@
     "@lit/react": "^1.0.2"
   },
   "devDependencies": {
-    "@aracna/core": "^1.1.59",
+    "@aracna/core": "^1.1.61",
     "@aracna/web": "^1.0.60",
     "@aracna/web-components": "^1.0.69",
     "@microsoft/api-extractor": "^7.38.3",

@@ -13,7 +13,10 @@ export function useDispatch(onDispatch?: () => any): () => void {
         break
       case ComponentLifeCycle.MOUNTED:
         reducer[1]()
-        onDispatch && onDispatch()
+
+        if (onDispatch) {
+          onDispatch()
+        }
 
         break
     }

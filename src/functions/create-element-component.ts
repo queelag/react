@@ -10,7 +10,7 @@ export function createElementComponent<
   Events extends ElementComponentEvents = ElementComponentEvents,
   Props extends ElementComponentProps<Element, Attributes, Events> = ElementComponentProps<Element, Attributes, Events>,
   Key extends keyof HTMLElementTagNameMap = keyof HTMLElementTagNameMap
->(tag: Key, element: { new (): Element }, events: KeyOf.Shallow<Events>[] = []): ElementComponent<Element, Props> {
+>(tag: Key, element: new () => Element, events: KeyOf.Shallow<Events>[] = []): ElementComponent<Element, Props> {
   return createComponent({
     elementClass: element,
     events: { ...DEFAULT_ELEMENT_COMPONENT_EVENTS, ...events.reduce((events, name) => ({ ...events, ['on' + getPascalCaseString(String(name))]: name }), {}) },
