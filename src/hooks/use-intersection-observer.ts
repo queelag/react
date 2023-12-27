@@ -1,3 +1,4 @@
+import { isArray } from '@aracna/core'
 import { DependencyList, MutableRefObject, useEffect, useRef, useState } from 'react'
 import {
   UseIntersectionObserverAreSomeIntersecting,
@@ -6,6 +7,11 @@ import {
   UseIntersectionObserverReturn
 } from '../definitions/interfaces.js'
 import { UseIntersectionObserverElement } from '../index.js'
+
+interface FilterEntries {
+  (elements: UseIntersectionObserverElement[]): IntersectionObserverEntry[]
+  (...elements: UseIntersectionObserverElement[]): IntersectionObserverEntry[]
+}
 
 /**
  * Creates an IntersectionObserver and observes the given targets.
@@ -23,26 +29,42 @@ export function useIntersectionObserver(
   const observer = useRef<IntersectionObserver>()
   const [entries, setEntries] = useState<IntersectionObserverEntry[]>([])
 
-  const areSomeIntersecting: UseIntersectionObserverAreSomeIntersecting = (...args: any[]): boolean => {
-    const elements: (Element | null | undefined)[] = args[0] instanceof Element ? args : args[0] ?? []
-    const refs: MutableRefObject<Element | null | undefined>[] = typeof args[0] === 'object' && Reflect.has(args[0], 'current') ? args : args[0] ?? []
+  const filterEntries: FilterEntries = (...args: any[]): IntersectionObserverEntry[] => {
+    const elements: (Element | null | undefined)[] = isArray<Element | null | undefined>(args[0])
+      ? args[0][0] instanceof Element
+        ? args[0]
+        : []
+      : args[0] instanceof Element
+        ? args
+        : []
+
+    if (elements.length > 0) {
+      return entries.filter((entry: IntersectionObserverEntry) => elements.includes(entry.target))
+    }
+
+    const refs: MutableRefObject<Element | null | undefined>[] = isArray<MutableRefObject<Element | null | undefined>>(args[0])
+      ? args[0][0]?.current instanceof Element
+        ? args[0]
+        : []
+      : args[0]?.current instanceof Element
+        ? args
+        : []
+
+    if (refs.length > 0) {
+      return entries.filter((entry: IntersectionObserverEntry) =>
+        refs.some((ref: MutableRefObject<Element | null | undefined>) => ref.current === entry.target)
+      )
+    }
 
     return entries
-      .filter((entry: IntersectionObserverEntry) =>
-        [elements.includes(entry.target), refs.some((ref: MutableRefObject<Element | null | undefined>) => ref.current === entry.target)].some(Boolean)
-      )
-      .some((entry: IntersectionObserverEntry) => entry.isIntersecting)
+  }
+
+  const areSomeIntersecting: UseIntersectionObserverAreSomeIntersecting = (...args: any[]): boolean => {
+    return filterEntries(...args).some((entry: IntersectionObserverEntry) => entry.isIntersecting)
   }
 
   const isEveryIntersecting: UseIntersectionObserverIsEveryIntersecting = (...args: any[]): boolean => {
-    const elements: (Element | null | undefined)[] = args[0] instanceof Element ? args : args[0] ?? []
-    const refs: MutableRefObject<Element | null | undefined>[] = typeof args[0] === 'object' && Reflect.has(args[0], 'current') ? args : args[0] ?? []
-
-    return entries
-      .filter((entry: IntersectionObserverEntry) =>
-        [elements.includes(entry.target), refs.some((ref: MutableRefObject<Element | null | undefined>) => ref.current === entry.target)].some(Boolean)
-      )
-      .every((entry: IntersectionObserverEntry) => entry.isIntersecting)
+    return filterEntries(...args).every((entry: IntersectionObserverEntry) => entry.isIntersecting)
   }
 
   const isIntersecting: UseIntersectionObserverIsIntersecting = (...args: any[]): boolean => {
@@ -68,7 +90,7 @@ export function useIntersectionObserver(
     }
 
     return () => observer.current?.disconnect()
-  }, [targets, options, ...deps])
+  }, [...targets, options?.root, options?.rootMargin, options?.threshold, ...deps])
 
   return { entries, observer, areSomeIntersecting, isEveryIntersecting, isIntersecting }
 }
