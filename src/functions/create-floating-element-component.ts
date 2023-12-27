@@ -4,7 +4,7 @@ import { ElementComponent, ElementComponentProps } from '../definitions/types.js
 import { createBaseElementComponent } from './create-base-element-component.js'
 
 /**
- * Creates a new React component that renders a custom element that extends `FloatingElement`.
+ * Creates a new React component that renders a custom element which extends `FloatingElement`.
  * Optionally the events can be defined as well.
  *
  * [Aracna Reference](https://aracna.dariosechi.it/react/functions/create-floating-element-component)

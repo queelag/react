@@ -4,7 +4,7 @@ import { ElementComponent, ElementComponentProps } from '../definitions/types.js
 import { createElementComponent } from './create-element-component.js'
 
 /**
- * Creates a new React component that renders a custom element that extends `BaseElement`.
+ * Creates a new React component that renders a custom element which extends `BaseElement`.
  * Optionally the events can be defined as well.
  *
  * [Aracna Reference](https://aracna.dariosechi.it/react/functions/create-base-element-component)

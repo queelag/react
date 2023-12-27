@@ -4,7 +4,7 @@ import { ElementComponent, ElementComponentProps } from '../definitions/types.js
 import { createBaseElementComponent } from './create-base-element-component.js'
 
 /**
- * Creates a new React component that renders a custom element that extends `FocusTrapElement`.
+ * Creates a new React component that renders a custom element which extends `FocusTrapElement`.
  * Optionally the events can be defined as well.
  *
  * [Aracna Reference](https://aracna.dariosechi.it/react/functions/create-focus-trap-element-component)
