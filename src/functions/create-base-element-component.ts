@@ -3,6 +3,12 @@ import { BaseElementAttributes, BaseElementEventMap } from '@aracna/web'
 import { ElementComponent, ElementComponentProps } from '../definitions/types.js'
 import { createElementComponent } from './create-element-component.js'
 
+/**
+ * Creates a new React component that renders a custom element that extends `BaseElement`.
+ * Optionally the events can be defined as well.
+ *
+ * [Aracna Reference](https://aracna.dariosechi.it/react/functions/create-base-element-component)
+ */
 export function createBaseElementComponent<
   Element extends HTMLElementTagNameMap[Key],
   Attributes extends BaseElementAttributes = BaseElementAttributes,

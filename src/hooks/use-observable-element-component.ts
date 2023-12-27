@@ -1,25 +1,19 @@
 import type { AttributeChangeEvent, StateChangeEvent } from '@aracna/web'
-import { MutableRefObject, useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { UseObservableElementComponentOptions, UseObservableElementComponentReturn } from '../definitions/interfaces.js'
 import { useDispatch } from './use-dispatch.js'
 
-interface Options {
-  blacklist?: string[]
-  whitelist?: string[]
-}
-
-interface Properties extends Record<string, any> {}
-
-interface ReturnInterface<K extends keyof HTMLElementTagNameMap, P extends Properties = Properties> {
-  element: HTMLElementTagNameMap[K] | null
-  onAttributeChange: (event: AttributeChangeEvent) => void
-  onStateChange: (event: StateChangeEvent<any>) => void
-  properties: P
-  ref: MutableRefObject<HTMLElementTagNameMap[K] | null>
-}
-
-export function useObservableElementComponent<K extends keyof HTMLElementTagNameMap, P extends Properties = Properties>(
-  options?: Options
-): ReturnInterface<K, P> {
+/**
+ * Observes a custom element that extends `BaseElement` by listening to its attribute and state changes.
+ *
+ * - Optionally a blacklist of attributes and states can be passed to ignore them.
+ * - Optionally a whitelist of attributes and states can be passed to only observe them.
+ *
+ * [Aracna Reference](https://aracna.dariosechi.it/react/hooks/use-observable-element-component)
+ */
+export function useObservableElementComponent<K extends keyof HTMLElementTagNameMap, P extends Record<string, string> = Record<string, string>>(
+  options?: UseObservableElementComponentOptions
+): UseObservableElementComponentReturn<K, P> {
   const ref = useRef<HTMLElementTagNameMap[K]>(null)
   const dispatch = useDispatch()
   const [properties, setProperties] = useState<P>({} as P)

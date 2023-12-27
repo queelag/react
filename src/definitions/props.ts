@@ -1,6 +1,6 @@
-import { DependencyList, ReactNode } from 'react'
+import type { DependencyList, ReactNode } from 'react'
 
 export interface MemoProps {
-  children: ReactNode
-  deps: DependencyList
+  children?: ReactNode
+  deps?: DependencyList
 }

@@ -4,6 +4,12 @@ import React from 'react'
 import { DEFAULT_ELEMENT_COMPONENT_EVENTS } from '../definitions/constants.js'
 import { ElementComponent, ElementComponentAttributes, ElementComponentEvents, ElementComponentProps } from '../definitions/types.js'
 
+/**
+ * Creates a new React component that renders a custom element.
+ * Optionally the events can be defined as well.
+ *
+ * [Aracna Reference](https://aracna.dariosechi.it/react/functions/create-element-component)
+ */
 export function createElementComponent<
   Element extends HTMLElementTagNameMap[Key],
   Attributes extends ElementComponentAttributes = ElementComponentAttributes,

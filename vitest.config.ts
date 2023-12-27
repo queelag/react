@@ -11,6 +11,7 @@ export default defineConfig({
     },
     environment: 'jsdom',
     globals: true,
-    include: ['tests/**/*.test.{ts,tsx}']
+    include: ['tests/**/*.test.{ts,tsx}'],
+    setupFiles: ['vitest/stubs/intersection-observer-stub']
   }
 })

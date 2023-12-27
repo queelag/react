@@ -3,6 +3,12 @@ import { FocusTrapElementAttributes, FocusTrapElementEventMap } from '@aracna/we
 import { ElementComponent, ElementComponentProps } from '../definitions/types.js'
 import { createBaseElementComponent } from './create-base-element-component.js'
 
+/**
+ * Creates a new React component that renders a custom element that extends `FocusTrapElement`.
+ * Optionally the events can be defined as well.
+ *
+ * [Aracna Reference](https://aracna.dariosechi.it/react/functions/create-focus-trap-element-component)
+ */
 export function createFocusTrapElementComponent<
   Element extends HTMLElementTagNameMap[Key],
   Attributes extends FocusTrapElementAttributes = FocusTrapElementAttributes,

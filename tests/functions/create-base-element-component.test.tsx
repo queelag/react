@@ -15,7 +15,7 @@ class TestElement extends BaseElement {}
 
 type TestElementProps = ElementComponentProps<TestElement, BaseElementAttributes, BaseElementEventMap>
 
-describe('createElementComponent', () => {
+describe('createBaseElementComponent', () => {
   let Component: ElementComponent<TestElement, TestElementProps>
 
   beforeAll(() => {

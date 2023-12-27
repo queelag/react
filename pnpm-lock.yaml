@@ -14,11 +14,11 @@ devDependencies:
     specifier: ^1.1.77
     version: 1.1.77
   '@aracna/web':
-    specifier: ^1.0.69
-    version: 1.0.69(@aracna/core@1.1.77)
+    specifier: ^1.0.72
+    version: 1.0.72(@aracna/core@1.1.77)
   '@aracna/web-components':
     specifier: ^1.0.72
-    version: 1.0.72(@aracna/core@1.1.77)(@aracna/web@1.0.69)(lit-html@3.1.0)(lit@3.1.0)
+    version: 1.0.72(@aracna/core@1.1.77)(@aracna/web@1.0.72)(lit-html@3.1.0)(lit@3.1.0)
   '@microsoft/api-extractor':
     specifier: ^7.39.0
     version: 7.39.0
@@ -95,7 +95,7 @@ packages:
       rfc4648: 1.5.3
     dev: true
 
-  /@aracna/web-components@1.0.72(@aracna/core@1.1.77)(@aracna/web@1.0.69)(lit-html@3.1.0)(lit@3.1.0):
+  /@aracna/web-components@1.0.72(@aracna/core@1.1.77)(@aracna/web@1.0.72)(lit-html@3.1.0)(lit@3.1.0):
     resolution: {integrity: sha512-Mx5IKhLSVQ+jo04sOH+Eu19+SWZqpG1aFJkDhpwqHh+7V0sIyueiiMgNzNmZoxhBd1zexZlHW2Msya8+VuhXRQ==}
     peerDependencies:
       '@aracna/core': '>= 1.1.0'
@@ -117,13 +117,13 @@ packages:
         optional: true
     dependencies:
       '@aracna/core': 1.1.77
-      '@aracna/web': 1.0.69(@aracna/core@1.1.77)
+      '@aracna/web': 1.0.72(@aracna/core@1.1.77)
       lit: 3.1.0
       lit-html: 3.1.0
     dev: true
 
-  /@aracna/web@1.0.69(@aracna/core@1.1.77):
-    resolution: {integrity: sha512-uE0jf6El+Vy6kUlzMKS7yMUH4VArZfhhVhVHx7pDXH02Bl2erIb73FHlF7057cBcqQ4tc8f4XaKW8AMnjRa+Dw==}
+  /@aracna/web@1.0.72(@aracna/core@1.1.77):
+    resolution: {integrity: sha512-GfLiOgPpQVKjcbQTVNPFzqjjZ2NBYUig/nlXTyqmojLc5Eyt1iHINlELASx12o3tU/Bfe0iQdPioHbhkLM71cQ==}
     engines: {node: '>=16', pnpm: '>=8'}
     peerDependencies:
       '@aracna/core': '>= 1.1.0'

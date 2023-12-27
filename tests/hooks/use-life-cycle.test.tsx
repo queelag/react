@@ -1,23 +1,28 @@
 import { render, RenderResult } from '@testing-library/react'
-import React, { Fragment, MutableRefObject, ReactElement } from 'react'
+import React, { Fragment, ReactElement, useEffect } from 'react'
 import { describe, expect, it } from 'vitest'
 import { ComponentLifeCycle, useLifeCycle } from '../../src'
 
 describe('useLifeCycle', () => {
   it('returns the correct life cycle', async () => {
-    let life: MutableRefObject<ComponentLifeCycle>, Component: () => ReactElement, result: RenderResult
-
-    life = { current: ComponentLifeCycle.CONSTRUCTED }
+    let Component: () => ReactElement, result: RenderResult
 
     Component = () => {
-      life = useLifeCycle()
+      const life = useLifeCycle()
+      expect(life.current).toBe(ComponentLifeCycle.CONSTRUCTED)
+
+      useEffect(() => {
+        expect(life.current).toBe(ComponentLifeCycle.MOUNTED)
+
+        return () => {
+          expect(life.current).toBe(ComponentLifeCycle.UNMOUNTED)
+        }
+      }, [])
+
       return <Fragment />
     }
 
     result = render(<Component />)
-    expect(life.current).toBe(ComponentLifeCycle.MOUNTED)
-
     result.unmount()
-    expect(life.current).toBe(ComponentLifeCycle.UNMOUNTED)
   })
 })

@@ -3,6 +3,12 @@ import { FloatingElementAttributes, FloatingElementEventMap } from '@aracna/web'
 import { ElementComponent, ElementComponentProps } from '../definitions/types.js'
 import { createBaseElementComponent } from './create-base-element-component.js'
 
+/**
+ * Creates a new React component that renders a custom element that extends `FloatingElement`.
+ * Optionally the events can be defined as well.
+ *
+ * [Aracna Reference](https://aracna.dariosechi.it/react/functions/create-floating-element-component)
+ */
 export function createFloatingElementComponent<
   Element extends HTMLElementTagNameMap[Key],
   Attributes extends FloatingElementAttributes = FloatingElementAttributes,

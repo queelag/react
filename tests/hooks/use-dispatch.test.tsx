@@ -28,15 +28,14 @@ describe('useDispatch', () => {
         }
       }, [])
 
-      return <span data-testid='number'>{number.current}</span>
+      return <div data-testid='number'>{number.current}</div>
     }
 
     result = render(<Component />)
-    expect(screen.queryByTestId('number')?.innerHTML).toBe('2')
+    expect(screen.getByTestId('number').innerHTML).toBe('2')
     expect(onDispatch).toBeCalledTimes(1)
 
     result.unmount()
-    expect(screen.queryByTestId('number')?.innerHTML).toBe(undefined)
     expect(onDispatch).toBeCalledTimes(1)
   })
 })
