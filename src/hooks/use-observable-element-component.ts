@@ -1,4 +1,4 @@
-import type { AttributeChangeEvent, StateChangeEvent } from '@aracna/web'
+import type { AttributeChangeEvent, StateChangeEvent } from '@aracna/web-components'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { UseObservableElementComponentOptions, UseObservableElementComponentReturn } from '../definitions/interfaces.js'
 import { useDispatch } from './use-dispatch.js'

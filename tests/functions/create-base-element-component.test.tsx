@@ -1,5 +1,5 @@
-import { BaseElementAttributes, BaseElementEventMap } from '@aracna/web'
-import { BaseElement } from '@aracna/web-components/elements/core/base-element'
+import { AracnaBaseElementAttributes, AracnaBaseElementEventMap } from '@aracna/web-components'
+import { AracnaBaseElement } from '@aracna/web-components/elements/core/base-element'
 import { cleanup, render, screen, waitFor } from '@testing-library/react'
 import React, { ReactNode, useEffect, useState } from 'react'
 import { Mock, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
@@ -11,9 +11,9 @@ declare global {
   }
 }
 
-class TestElement extends BaseElement {}
+class TestElement extends AracnaBaseElement {}
 
-type TestElementProps = ElementComponentProps<TestElement, BaseElementAttributes, BaseElementEventMap>
+type TestElementProps = ElementComponentProps<TestElement, AracnaBaseElementAttributes, AracnaBaseElementEventMap>
 
 describe('createBaseElementComponent', () => {
   let Component: ElementComponent<TestElement, TestElementProps>

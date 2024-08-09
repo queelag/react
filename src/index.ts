@@ -1,6 +1,5 @@
 export * from './components/memo.js'
 export * from './definitions/enums.js'
-export type * from './definitions/generated-props.js'
 export type * from './definitions/interfaces.js'
 export type * from './definitions/props.js'
 export type * from './definitions/types.js'

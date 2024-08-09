@@ -1,12 +1,12 @@
 import { defineCustomElement } from '@aracna/web'
-import { BaseElement } from '@aracna/web-components/elements/core/base-element'
+import { AracnaBaseElement } from '@aracna/web-components/elements/core/base-element'
 import { render } from '@testing-library/react'
 import type { PropertyDeclarations } from 'lit'
 import React, { ReactElement } from 'react'
 import { describe, it } from 'vitest'
 import { createElementComponent, useObservableElementComponent } from '../../src'
 
-class TestObservableElement extends BaseElement {
+class TestObservableElement extends AracnaBaseElement {
   attribute?: string
   state?: string
 

@@ -1,4 +1,4 @@
-import type { AttributeChangeEvent, StateChangeEvent } from '@aracna/web'
+import type { AttributeChangeEvent, StateChangeEvent } from '@aracna/web-components'
 import type { MutableRefObject } from 'react'
 import type { UseIntersectionObserverElement } from './types.js'
 

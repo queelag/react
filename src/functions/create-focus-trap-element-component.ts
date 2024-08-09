@@ -1,6 +1,6 @@
-import { KeyOf } from '@aracna/core'
-import { FocusTrapElementAttributes, FocusTrapElementEventMap } from '@aracna/web'
-import { ElementComponent, ElementComponentProps } from '../definitions/types.js'
+import type { KeyOf } from '@aracna/core'
+import type { AracnaFocusTrapElementAttributes, AracnaFocusTrapElementEventMap } from '@aracna/web-components'
+import type { ElementComponent, ElementComponentProps } from '../definitions/types.js'
 import { createBaseElementComponent } from './create-base-element-component.js'
 
 /**
@@ -11,8 +11,8 @@ import { createBaseElementComponent } from './create-base-element-component.js'
  */
 export function createFocusTrapElementComponent<
   Element extends HTMLElementTagNameMap[Key],
-  Attributes extends FocusTrapElementAttributes = FocusTrapElementAttributes,
-  Events extends FocusTrapElementEventMap = FocusTrapElementEventMap,
+  Attributes extends AracnaFocusTrapElementAttributes = AracnaFocusTrapElementAttributes,
+  Events extends AracnaFocusTrapElementEventMap = AracnaFocusTrapElementEventMap,
   Props extends ElementComponentProps<Element, Attributes, Events> = ElementComponentProps<Element, Attributes, Events>,
   Key extends keyof HTMLElementTagNameMap = keyof HTMLElementTagNameMap
 >(tag: Key, element: new () => Element, events: KeyOf.Shallow<Events>[] = []): ElementComponent<Element, Props> {

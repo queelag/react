@@ -1,6 +1,6 @@
-import { KeyOf } from '@aracna/core'
-import { FloatingElementAttributes, FloatingElementEventMap } from '@aracna/web'
-import { ElementComponent, ElementComponentProps } from '../definitions/types.js'
+import type { KeyOf } from '@aracna/core'
+import type { AracnaFloatingElementAttributes, AracnaFloatingElementEventMap } from '@aracna/web-components'
+import type { ElementComponent, ElementComponentProps } from '../definitions/types.js'
 import { createBaseElementComponent } from './create-base-element-component.js'
 
 /**
@@ -11,8 +11,8 @@ import { createBaseElementComponent } from './create-base-element-component.js'
  */
 export function createFloatingElementComponent<
   Element extends HTMLElementTagNameMap[Key],
-  Attributes extends FloatingElementAttributes = FloatingElementAttributes,
-  Events extends FloatingElementEventMap = FloatingElementEventMap,
+  Attributes extends AracnaFloatingElementAttributes = AracnaFloatingElementAttributes,
+  Events extends AracnaFloatingElementEventMap = AracnaFloatingElementEventMap,
   Props extends ElementComponentProps<Element, Attributes, Events> = ElementComponentProps<Element, Attributes, Events>,
   Key extends keyof HTMLElementTagNameMap = keyof HTMLElementTagNameMap
 >(tag: Key, element: new () => Element, events?: KeyOf.Shallow<Events>[]): ElementComponent<Element, Props> {
