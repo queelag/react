@@ -1,5 +1,5 @@
-import { DependencyList, useEffect } from 'react'
-import { UseEventListenerElement } from '../index.js'
+import { type DependencyList, useEffect } from 'react'
+import type { UseEventListenerElement } from '../definitions/types.js'
 
 /**
  * Adds an event listener to the given element.

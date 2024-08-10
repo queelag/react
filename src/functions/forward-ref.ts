@@ -1,4 +1,4 @@
-import { ForwardedRef, ReactElement, forwardRef as _ } from 'react'
+import { type ForwardedRef, type ReactElement, forwardRef as _ } from 'react'
 
 type ForwardRefRenderFunction<T, P = {}> = (props: P, ref: ForwardedRef<T>) => ReactElement<P>
 type NullableForwardRefRenderFunction<T, P = {}> = (props: P, ref: ForwardedRef<T>) => ReactElement<P> | null

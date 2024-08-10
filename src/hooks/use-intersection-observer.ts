@@ -1,12 +1,12 @@
 import { isArray } from '@aracna/core'
-import { DependencyList, MutableRefObject, useEffect, useRef, useState } from 'react'
-import {
+import { type DependencyList, type MutableRefObject, useEffect, useRef, useState } from 'react'
+import type {
   UseIntersectionObserverAreSomeIntersecting,
   UseIntersectionObserverIsEveryIntersecting,
   UseIntersectionObserverIsIntersecting,
   UseIntersectionObserverReturn
 } from '../definitions/interfaces.js'
-import { UseIntersectionObserverElement } from '../index.js'
+import type { UseIntersectionObserverElement } from '../definitions/types.js'
 
 interface FilterEntries {
   (elements: UseIntersectionObserverElement[]): IntersectionObserverEntry[]

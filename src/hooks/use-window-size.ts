@@ -1,5 +1,5 @@
 import { isWindowDefined } from '@aracna/core'
-import { DependencyList, useState } from 'react'
+import { type DependencyList, useState } from 'react'
 import { useWindowEventListener } from './use-window-event-listener.js'
 
 /**

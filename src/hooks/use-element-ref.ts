@@ -1,5 +1,5 @@
 import { isWindowDefined } from '@aracna/core'
-import { MutableRefObject, useRef } from 'react'
+import { type MutableRefObject, useRef } from 'react'
 
 /**
  * Returns a mutable ref object whose `.current` property is initialized with a matching element.

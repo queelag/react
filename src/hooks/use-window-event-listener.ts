@@ -1,4 +1,4 @@
-import { DependencyList, useEffect } from 'react'
+import { type DependencyList, useEffect } from 'react'
 
 /**
  * Adds an event listener to the window.

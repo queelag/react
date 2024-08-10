@@ -1,6 +1,6 @@
 import { StubDOMRect } from '@aracna/web'
-import { DependencyList, useEffect, useState } from 'react'
-import { UseDOMRectElement } from '../index.js'
+import { type DependencyList, useEffect, useState } from 'react'
+import type { UseDOMRectElement } from '../definitions/types.js'
 
 /**
  * Returns the DOMRect of an element.
