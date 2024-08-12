@@ -6,7 +6,6 @@
   "devDependencies": {
     "@aracna/core": "^1.1.82",
     "@aracna/web": "^1.0.75",
-    "@aracna/web-components": "^1.0.79",
     "@microsoft/api-extractor": "^7.47.5",
     "@testing-library/react": "^16.0.0",
     "@types/react": "^18.3.3",
