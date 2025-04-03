@@ -26,7 +26,7 @@ export function useIntersectionObserver(
   options?: IntersectionObserverInit,
   deps: DependencyList = []
 ): UseIntersectionObserverReturn {
-  const observer = useRef<IntersectionObserver>()
+  const observer = useRef<IntersectionObserver>(undefined)
   const [entries, setEntries] = useState<IntersectionObserverEntry[]>([])
 
   const filterEntries: FilterEntries = (...args: any[]): IntersectionObserverEntry[] => {
