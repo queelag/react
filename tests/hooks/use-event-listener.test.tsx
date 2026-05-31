@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import React, { ReactElement } from 'react'
+import { ReactElement, useRef } from 'react'
 import { Mock, describe, expect, it, vi } from 'vitest'
 import { useEventListener } from '../../src'
 
@@ -10,7 +10,7 @@ describe('useEventListener', () => {
     callback = vi.fn()
 
     Component = () => {
-      const ref = React.useRef<HTMLDivElement>(null)
+      const ref = useRef<HTMLDivElement>(null)
 
       useEventListener(ref, 'click', callback)
 

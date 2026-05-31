@@ -1,4 +1,4 @@
-import type { MutableRefObject } from 'react'
+import type { RefObject } from 'react'
 import type { UseIntersectionObserverElement } from './types.js'
 
 export interface UseIntersectionObserverAreSomeIntersecting {
@@ -14,7 +14,7 @@ export interface UseIntersectionObserverReturn {
   entries: IntersectionObserverEntry[]
   isIntersecting: UseIntersectionObserverIsIntersecting
   isEveryIntersecting: UseIntersectionObserverIsEveryIntersecting
-  observer: MutableRefObject<IntersectionObserver | undefined>
+  observer: RefObject<IntersectionObserver | undefined>
 }
 
 export interface UseWindowSizeReturn {

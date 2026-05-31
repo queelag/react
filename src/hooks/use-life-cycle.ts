@@ -1,4 +1,4 @@
-import { type MutableRefObject, useEffect, useRef } from 'react'
+import { type RefObject, useEffect, useRef } from 'react'
 import { ComponentLifeCycle } from '../definitions/enums.js'
 
 /**
@@ -10,7 +10,7 @@ import { ComponentLifeCycle } from '../definitions/enums.js'
  *
  * [Aracna Reference](https://aracna.dariosechi.it/react/hooks/use-life-cycle)
  */
-export function useLifeCycle(): MutableRefObject<ComponentLifeCycle> {
+export function useLifeCycle(): RefObject<ComponentLifeCycle> {
   const value = useRef<ComponentLifeCycle>(ComponentLifeCycle.CONSTRUCTED)
 
   useEffect(() => {

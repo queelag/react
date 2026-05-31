@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import React, { ReactElement, useEffect, useRef } from 'react'
+import { ReactElement, useEffect, useRef } from 'react'
 import { describe, expect, it } from 'vitest'
 import { useDOMRect } from '../../src'
 

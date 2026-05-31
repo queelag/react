@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react'
 import { LitElement } from 'lit'
-import React, { Ref, createRef } from 'react'
+import { Ref, createRef } from 'react'
 import { Mock, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { ElementComponent, ElementComponentProps, createElementComponent } from '../../src'
 

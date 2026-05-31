@@ -1,5 +1,5 @@
 import { isArray } from '@aracna/core'
-import { type DependencyList, type MutableRefObject, useEffect, useRef, useState } from 'react'
+import { type DependencyList, type RefObject, useEffect, useRef, useState } from 'react'
 import type {
   UseIntersectionObserverAreSomeIntersecting,
   UseIntersectionObserverIsEveryIntersecting,
@@ -42,7 +42,7 @@ export function useIntersectionObserver(
       return entries.filter((entry: IntersectionObserverEntry) => elements.includes(entry.target))
     }
 
-    const refs: MutableRefObject<Element | null | undefined>[] = isArray<MutableRefObject<Element | null | undefined>>(args[0])
+    const refs: RefObject<Element | null | undefined>[] = isArray<RefObject<Element | null | undefined>>(args[0])
       ? args[0][0]?.current instanceof Element
         ? args[0]
         : []
@@ -51,9 +51,7 @@ export function useIntersectionObserver(
         : []
 
     if (refs.length > 0) {
-      return entries.filter((entry: IntersectionObserverEntry) =>
-        refs.some((ref: MutableRefObject<Element | null | undefined>) => ref.current === entry.target)
-      )
+      return entries.filter((entry: IntersectionObserverEntry) => refs.some((ref: RefObject<Element | null | undefined>) => ref.current === entry.target))
     }
 
     return entries

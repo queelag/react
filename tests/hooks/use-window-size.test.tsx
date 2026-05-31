@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import React, { Fragment, ReactElement, useEffect } from 'react'
+import { Fragment, ReactElement, useEffect } from 'react'
 import { describe, expect, it } from 'vitest'
 import { useWindowSize } from '../../src'
 

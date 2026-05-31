@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import React, { ReactElement, useState } from 'react'
+import { ReactElement, useState } from 'react'
 import { describe, expect, it } from 'vitest'
 import { Memo } from '../../src'
 
