@@ -23,7 +23,7 @@
   },
   "engines": {
     "node": ">=18",
-    "pnpm": ">=10"
+    "pnpm": ">=11"
   },
   "exports": {
     "types": "./index.d.ts",
