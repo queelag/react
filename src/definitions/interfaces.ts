@@ -12,8 +12,8 @@ export interface UseIntersectionObserverIsIntersecting extends UseIntersectionOb
 export interface UseIntersectionObserverReturn {
   areSomeIntersecting: UseIntersectionObserverAreSomeIntersecting
   entries: IntersectionObserverEntry[]
-  isIntersecting: UseIntersectionObserverIsIntersecting
   isEveryIntersecting: UseIntersectionObserverIsEveryIntersecting
+  isIntersecting: UseIntersectionObserverIsIntersecting
   observer: RefObject<IntersectionObserver | undefined>
 }
 

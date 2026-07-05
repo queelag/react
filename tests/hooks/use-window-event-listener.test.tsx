@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/react'
 import { Fragment, ReactElement } from 'react'
-import { Mock, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it, Mock, vi } from 'vitest'
 import { useWindowEventListener } from '../../src'
 
 describe('useWindowEventListener', () => {

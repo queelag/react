@@ -1,8 +1,8 @@
 import { cleanup, render, screen } from '@testing-library/react'
 import { LitElement } from 'lit'
-import { Ref, createRef } from 'react'
-import { Mock, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
-import { ElementComponent, ElementComponentProps, createElementComponent } from '../../src'
+import { createRef, Ref } from 'react'
+import { afterEach, beforeAll, beforeEach, describe, expect, it, Mock, vi } from 'vitest'
+import { createElementComponent, ElementComponent, ElementComponentProps } from '../../src'
 
 declare global {
   interface HTMLElementTagNameMap {

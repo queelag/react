@@ -1,5 +1,5 @@
 export enum ComponentLifeCycle {
-  CONSTRUCTED = 'CONSTRUCTED',
-  MOUNTED = 'MOUNTED',
-  UNMOUNTED = 'UNMOUNTED'
+  Constructed = 'CONSTRUCTED',
+  Mounted = 'MOUNTED',
+  Unmounted = 'UNMOUNTED'
 }

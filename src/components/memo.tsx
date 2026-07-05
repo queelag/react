@@ -1,4 +1,4 @@
-import { ReactNode, useMemo } from 'react'
+import { type ReactNode, useMemo } from 'react'
 import type { MemoProps } from '../definitions/props.js'
 
 /**
@@ -7,5 +7,6 @@ import type { MemoProps } from '../definitions/props.js'
  * [Aracna Reference](https://aracna.dariosechi.it/react/components/memo)
  */
 export function Memo(props: MemoProps): ReactNode {
+  // biome-ignore lint/correctness/useExhaustiveDependencies: ok
   return useMemo(() => props.children, props.deps ?? [])
 }

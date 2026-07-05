@@ -1,6 +1,6 @@
 import type { ForwardRefExoticComponent, HTMLAttributes, RefAttributes, RefObject } from 'react'
 
-export type ElementComponent<Element extends HTMLElement, Props extends HTMLAttributes<Element> = {}> = ForwardRefExoticComponent<Props>
+export type ElementComponent<Element extends HTMLElement, Props extends HTMLAttributes<Element> = HTMLAttributes<Element>> = ForwardRefExoticComponent<Props>
 
 export type ElementComponentAttributes = Record<string, any>
 export type ElementComponentEvents = Record<string, any>
@@ -12,7 +12,7 @@ export type ElementComponentProps<
 > = HTMLAttributes<Element> & RefAttributes<Element> & Attributes & MapComponentEvents<Events>
 
 export type MapComponentEvents<Events extends ElementComponentEvents> = {
-  [key in keyof Events as key extends string ? `on${KebabToPascalCase<key>}` : key]?: (event: Events[key]) => any
+  [Key in keyof Events as Key extends string ? `on${KebabToPascalCase<Key>}` : Key]?: (event: Events[Key]) => any
 }
 
 type KebabToCamelCase<S extends string> = S extends `${infer T}-${infer U}` ? `${T}${Capitalize<KebabToCamelCase<U>>}` : S

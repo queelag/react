@@ -1,8 +1,29 @@
 {
+  "name": "@aracna/react",
+  "version": "1.0.60",
+  "repository": "https://github.com/queelag/react",
+  "license": "MIT",
   "author": "Dario Sechi",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./index.js",
+    "require": "./index.cjs"
+  },
+  "main": "index.cjs",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "biome check --write",
+    "prepublish": "vitest run && node scripts/build.mjs",
+    "test": "vitest run"
+  },
   "devDependencies": {
     "@aracna/core": "workspace:*",
     "@aracna/web": "workspace:*",
+    "@biomejs/biome": "^2.5.2",
     "@lit/react": "^1.0.8",
     "@microsoft/api-extractor": "^7.58.7",
     "@testing-library/react": "^16.3.2",
@@ -14,51 +35,24 @@
     "glob": "^13.0.6",
     "jsdom": "^29.1.1",
     "lit": "^3.3.3",
-    "prettier": "^3.8.3",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "typedoc": "^0.28.19",
     "typescript": "^6.0.3",
     "vitest": "^4.1.7"
   },
-  "engines": {
-    "node": ">=18",
-    "pnpm": ">=11"
-  },
-  "exports": {
-    "types": "./index.d.ts",
-    "import": "./index.js",
-    "require": "./index.cjs"
-  },
-  "license": "MIT",
-  "main": "index.cjs",
-  "module": "index.js",
-  "name": "@aracna/react",
-  "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1",
   "peerDependencies": {
     "@aracna/core": ">= 1.5.0",
     "@aracna/web": ">= 1.1.0",
     "@lit/react": ">= 1.0.0",
     "react": ">= 19.2.0"
   },
-  "prettier": {
-    "jsxSingleQuote": true,
-    "printWidth": 160,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none"
+  "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=11"
   },
   "publishConfig": {
     "directory": "dist"
-  },
-  "repository": "https://github.com/queelag/react",
-  "scripts": {
-    "build": "node scripts/build.mjs",
-    "prepublish": "vitest run && node scripts/build.mjs",
-    "test": "vitest run"
-  },
-  "sideEffects": false,
-  "type": "module",
-  "types": "index.d.ts",
-  "version": "1.0.60"
+  }
 }

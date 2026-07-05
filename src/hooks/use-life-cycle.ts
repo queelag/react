@@ -11,12 +11,12 @@ import { ComponentLifeCycle } from '../definitions/enums.js'
  * [Aracna Reference](https://aracna.dariosechi.it/react/hooks/use-life-cycle)
  */
 export function useLifeCycle(): RefObject<ComponentLifeCycle> {
-  const value = useRef<ComponentLifeCycle>(ComponentLifeCycle.CONSTRUCTED)
+  const value = useRef<ComponentLifeCycle>(ComponentLifeCycle.Constructed)
 
   useEffect(() => {
-    value.current = ComponentLifeCycle.MOUNTED
+    value.current = ComponentLifeCycle.Mounted
     return () => {
-      value.current = ComponentLifeCycle.UNMOUNTED
+      value.current = ComponentLifeCycle.Unmounted
     }
   }, [])
 

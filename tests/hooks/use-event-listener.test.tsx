@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { ReactElement, useRef } from 'react'
-import { Mock, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it, Mock, vi } from 'vitest'
 import { useEventListener } from '../../src'
 
 describe('useEventListener', () => {

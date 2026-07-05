@@ -1,4 +1,4 @@
-import { type KeyOf, getPascalCaseString } from '@aracna/core'
+import { getPascalCaseString, type KeyOf } from '@aracna/core'
 import { createComponent } from '@lit/react'
 import React from 'react'
 import { DEFAULT_ELEMENT_COMPONENT_EVENTS } from '../definitions/constants.js'
@@ -17,9 +17,15 @@ export function createElementComponent<
   Props extends ElementComponentProps<Element, Attributes, Events> = ElementComponentProps<Element, Attributes, Events>,
   Key extends keyof HTMLElementTagNameMap = keyof HTMLElementTagNameMap
 >(tag: Key, element: new () => Element, events: KeyOf.Shallow<Events>[] = []): ElementComponent<Element, Props> {
+  let es: Record<string, string> = DEFAULT_ELEMENT_COMPONENT_EVENTS
+
+  for (let key of events) {
+    es['on' + getPascalCaseString(String(key))] = String(key)
+  }
+
   return createComponent({
     elementClass: element,
-    events: { ...DEFAULT_ELEMENT_COMPONENT_EVENTS, ...events.reduce((events, name) => ({ ...events, ['on' + getPascalCaseString(String(name))]: name }), {}) },
+    events: es,
     react: React,
     tagName: tag
   }) as any

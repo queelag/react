@@ -1,5 +1,5 @@
 import { isArray } from '@aracna/core'
-import { type DependencyList, type RefObject, useEffect, useRef, useState } from 'react'
+import { type DependencyList, type RefObject, useCallback, useEffect, useRef, useState } from 'react'
 import type {
   UseIntersectionObserverAreSomeIntersecting,
   UseIntersectionObserverIsEveryIntersecting,
@@ -69,9 +69,9 @@ export function useIntersectionObserver(
     return areSomeIntersecting(...args)
   }
 
-  const callback = (entries: IntersectionObserverEntry[]): void => {
-    setEntries(entries)
-  }
+  const callback = useCallback((es: IntersectionObserverEntry[]): void => {
+    setEntries(es)
+  }, [])
 
   useEffect(() => {
     observer.current = new IntersectionObserver(callback, options)
@@ -88,7 +88,7 @@ export function useIntersectionObserver(
     }
 
     return () => observer.current?.disconnect()
-  }, [...targets, options?.root, options?.rootMargin, options?.threshold, ...deps])
+  }, [targets, options, callback, ...deps])
 
   return { entries, observer, areSomeIntersecting, isEveryIntersecting, isIntersecting }
 }

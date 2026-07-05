@@ -3,5 +3,5 @@
   "darkHighlightTheme": "github-dark",
   "entryPoints": ["./src/index.ts"],
   "includeVersion": true,
-  "lightHighlightTheme": "github-light",
+  "lightHighlightTheme": "github-light"
 }

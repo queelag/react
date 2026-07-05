@@ -14,16 +14,18 @@ export function useDispatch(onDispatch?: () => unknown): () => void {
 
   const dispatch = () => {
     switch (life.current) {
-      case ComponentLifeCycle.CONSTRUCTED:
-      case ComponentLifeCycle.UNMOUNTED:
+      case ComponentLifeCycle.Constructed:
+      case ComponentLifeCycle.Unmounted:
         break
-      case ComponentLifeCycle.MOUNTED:
+      case ComponentLifeCycle.Mounted:
         reducer[1]()
 
         if (onDispatch) {
           onDispatch()
         }
 
+        break
+      default:
         break
     }
   }

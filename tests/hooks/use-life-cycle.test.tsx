@@ -1,4 +1,4 @@
-import { render, RenderResult } from '@testing-library/react'
+import { RenderResult, render } from '@testing-library/react'
 import { Fragment, ReactElement, useEffect } from 'react'
 import { describe, expect, it } from 'vitest'
 import { ComponentLifeCycle, useLifeCycle } from '../../src'
