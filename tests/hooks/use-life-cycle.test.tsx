@@ -9,13 +9,13 @@ describe('useLifeCycle', () => {
 
     Component = () => {
       const life = useLifeCycle()
-      expect(life.current).toBe(ComponentLifeCycle.CONSTRUCTED)
+      expect(life.current).toBe(ComponentLifeCycle.Constructed)
 
       useEffect(() => {
-        expect(life.current).toBe(ComponentLifeCycle.MOUNTED)
+        expect(life.current).toBe(ComponentLifeCycle.Mounted)
 
         return () => {
-          expect(life.current).toBe(ComponentLifeCycle.UNMOUNTED)
+          expect(life.current).toBe(ComponentLifeCycle.Unmounted)
         }
       }, [])
 
